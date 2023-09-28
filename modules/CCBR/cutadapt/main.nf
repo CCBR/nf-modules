@@ -22,7 +22,7 @@ process CUTADAPT {
             '--trim-n -n 5 -O 5',
             '-q 10,10',
             '-m 20',
-            '-b /opt2/TruSeq_and_nextera_adapters.consolidated.fa'
+            '-b "/opt2/TruSeq_and_nextera_adapters.consolidated.fa"'
         ].join(' ').trim()
     def prefix = task.ext.prefix ?: "${meta.id}"
     def trimmed  = meta.single_end ? "-o ${prefix}.trim.fastq.gz" : "-o ${prefix}_1.trim.fastq.gz -p ${prefix}_2.trim.fastq.gz"
