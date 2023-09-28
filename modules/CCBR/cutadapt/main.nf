@@ -17,13 +17,11 @@ process CUTADAPT {
     task.ext.when == null || task.ext.when
 
     script:
-    def args = task.ext.args ?: """
-        --nextseq-trim=2 \\
+    def args = task.ext.args ?: """--nextseq-trim=2 \\
         --trim-n -n 5 -O 5 \\
         -q ${params.cutadapt.leadingquality},${params.cutadapt.trailingquality} \\
         -m ${params.cutadapt.minlen} \\
-        -b file:${params.cutadapt.adapters}
-    """
+        -b file:${params.cutadapt.adapters}"""
     def prefix = task.ext.prefix ?: "${meta.id}"
     def trimmed  = meta.single_end ? "-o ${prefix}.trim.fastq.gz" : "-o ${prefix}_1.trim.fastq.gz -p ${prefix}_2.trim.fastq.gz"
     """
