@@ -3,7 +3,7 @@ process CUTADAPT {
     label 'process_high'
 
     conda "bioconda::cutadapt=3.4"
-    container "${params.containers.cutadapt}"
+    container 'nciccbr/ncigb_cutadapt_v1.18:latest'
 
     input:
     tuple val(meta), path(reads)
