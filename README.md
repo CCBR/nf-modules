@@ -32,3 +32,4 @@ Many of the modules and subworkflows in this project reuse and adapt code from [
 In those cases, credit is noted in the `meta.yml` file of the module/subworkflow and also listed here:
 
 - [cutadapt](modules/CCBR/cutadapt) adapts the [nf-core cutadapt module](https://github.com/nf-core/modules/tree/master/modules/nf-core/cutadapt)
+- [bwa_mem](modules/CCBR/bwa/mem) adapts the [nf-core bwa-mem module](https://github.com/nf-core/chipseq/tree/51eba00b32885c4d0bec60db3cb0a45eb61e34c5/modules/nf-core/modules/bwa/mem)
