@@ -2,6 +2,8 @@
 
 Reusable modules and subworkflows for Nextflow pipelines
 
+[![test](https://github.com/CCBR/nf-modules/actions/workflows/test.yml/badge.svg)](https://github.com/CCBR/nf-modules/actions/workflows/test.yml)
+
 ## Usage
 
 To re-use a module in your nextflow pipeline, first [install `nf-core tools`](https://nf-co.re/tools#installation), then run
