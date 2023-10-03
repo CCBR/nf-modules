@@ -2,7 +2,6 @@ process CUTADAPT {
     tag { meta.id }
     label 'process_high'
 
-    conda "bioconda::cutadapt=3.4"
     container 'nciccbr/ncigb_cutadapt_v1.18:latest'
 
     input:
