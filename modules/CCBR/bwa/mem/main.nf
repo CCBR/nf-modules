@@ -6,8 +6,7 @@ process BWA_MEM {
 
     input:
         tuple val(meta), path(fastq)
-        path(index_files)
-        val(index_name)
+        tuple val(meta_idx), path(index_files)
 
     output:
         tuple val(meta), path("*.bam"), emit: bam
@@ -24,7 +23,9 @@ process BWA_MEM {
     mkdir \$TMP
     trap 'rm -rf "\$TMP"' EXIT
 
-    bwa mem -t ${task.cpus} ${index_name} ${fastq} -o \$TMP/align.bam
+    INDEX=`find -L ./ -name "*.amb" | sed 's/\\.amb\$//'`
+
+    bwa mem -t ${task.cpus} \$INDEX ${fastq} -o \$TMP/align.bam
 
     samtools sort \\
       -@ ${task.cpus} \\
