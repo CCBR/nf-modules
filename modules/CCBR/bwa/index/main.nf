@@ -5,14 +5,14 @@ process BWA_INDEX {
     container 'nciccbr/ccbr_ubuntu_base_20.04:v5'
 
     input:
-    tuple val(meta), path(fasta)
+        tuple val(meta), path(fasta)
 
     output:
-    tuple val(meta), path(bwa) , emit: index
-    path "versions.yml"        , emit: versions
+        tuple val(meta), path(bwa) , emit: index
+        path "versions.yml"        , emit: versions
 
     when:
-    task.ext.when == null || task.ext.when
+        task.ext.when == null || task.ext.when
 
     script:
     def prefix = task.ext.prefix ?: "${fasta.baseName}"

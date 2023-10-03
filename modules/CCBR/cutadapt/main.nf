@@ -5,15 +5,15 @@ process CUTADAPT {
     container 'nciccbr/ncigb_cutadapt_v1.18:latest'
 
     input:
-    tuple val(meta), path(reads)
+        tuple val(meta), path(reads)
 
     output:
-    tuple val(meta), path('*.trim.fastq.gz'), emit: reads
-    tuple val(meta), path('*.log')          , emit: log
-    path "versions.yml"                     , emit: versions
+        tuple val(meta), path('*.trim.fastq.gz'), emit: reads
+        tuple val(meta), path('*.log')          , emit: log
+        path "versions.yml"                     , emit: versions
 
     when:
-    task.ext.when == null || task.ext.when
+        task.ext.when == null || task.ext.when
 
     script:
     def args = task.ext.args ?: [
