@@ -7,7 +7,9 @@ Reusable modules and subworkflows for Nextflow pipelines
 To re-use a module in your nextflow pipeline, first [install `nf-core tools`](https://nf-co.re/tools#installation), then run
 
 ```sh
-nf-core modules --git-remote https://github.com/CCBR/nf-modules install [module]
+nf-core modules \
+  --git-remote https://github.com/CCBR/nf-modules \
+  install [module]
 ```
 
 replacing `[module]` with the name of the module you wish to install.
@@ -15,7 +17,9 @@ replacing `[module]` with the name of the module you wish to install.
 To update your local version of a module, run
 
 ```sh
-nf-core modules --git-remote https://github.com/CCBR/nf-modules update [module]
+nf-core modules \
+  --git-remote https://github.com/CCBR/nf-modules \
+  update [module]
 ```
 
 ## Help & Contributing
