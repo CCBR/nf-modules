@@ -1,0 +1,11 @@
+bwa/index:
+  - modules/CCBR/bwa/index/**
+  - tests/modules/CCBR/bwa/index/**
+
+bwa/mem:
+  - modules/CCBR/bwa/mem/**
+  - tests/modules/CCBR/bwa/mem/**
+
+cutadapt:
+  - modules/CCBR/cutadapt/**
+  - tests/modules/CCBR/cutadapt/**
