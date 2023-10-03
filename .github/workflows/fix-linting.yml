@@ -9,7 +9,8 @@ jobs:
     # Only run if comment is on a PR with the main repo, and if it contains the magic keywords
     if: >
       contains(github.event.comment.html_url, '/pull/') &&
-      contains(github.event.comment.body, '@nf-core-bot fix linting') &&
+      contains(github.event.comment.body, '/fix linting') &&
+      (github.event.comment.author_association == 'MEMBER' || github.event.comment.author_association == 'OWNER') &&
       github.repository == 'CCBR/nf-modules'
     runs-on: ubuntu-latest
     steps:
@@ -62,10 +63,10 @@ jobs:
       - name: Commit & push changes
         if: steps.prettier_status.outputs.result == 'fail'
         run: |
-          git config user.email "core@nf-co.re"
-          git config user.name "nf-core-bot"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git config push.default upstream
           git add .
           git status
-          git commit -m "[automated] Fix linting with Prettier"
+          git commit -m "🤖 Fix linting with Prettier"
           git push
