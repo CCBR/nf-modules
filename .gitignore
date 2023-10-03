@@ -1,2 +1,14 @@
+*.code-workspace
+*.pyc
+*.pyo
+.*.sw?
+.DS_Store
 .nextflow*
-*.log
+.nf-test/
+.screenrc
+__pycache__
+output/
+results/
+test_output/
+tests/data/
+work/

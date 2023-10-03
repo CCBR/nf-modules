@@ -2,3 +2,5 @@
 
 - new modules:
   - cutadapt
+  - bwa/index
+  - bwa/mem
