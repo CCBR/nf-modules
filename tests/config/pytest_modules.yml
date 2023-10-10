@@ -9,3 +9,7 @@ bwa/mem:
 cutadapt:
   - modules/CCBR/cutadapt/**
   - tests/modules/CCBR/cutadapt/**
+
+khmer:
+  - modules/CCBR/khmer/**
+  - tests/CCBR/khmer/**
