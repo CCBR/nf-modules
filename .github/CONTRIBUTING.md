@@ -10,6 +10,14 @@ then use nf-core tools to automatically create a test YAML file with:
 nf-core modules create-test-yml [module-name] --run-tests --force --no-prompts
 ```
 
+Add the module to `tests/config/pytest_modules.yml`
+
+Run the tests with:
+
+```sh
+PROFILE=docker nf-core modules test [module-name] --no-prompts
+```
+
 ## Pre-commit hooks
 
 Pre-commit can automatically format your code, check for spelling errors, etc. every time you commit.
