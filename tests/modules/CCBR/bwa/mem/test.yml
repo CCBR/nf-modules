@@ -1,8 +1,8 @@
 - name: bwa mem test_bwa_mem_single_end
   command: nextflow run ./tests/modules/CCBR/bwa/mem -entry test_bwa_mem_single_end -c ./tests/config/nextflow.config
   tags:
-    - bwa
     - bwa/mem
+    - bwa
   files:
     - path: output/bwa/bwa/genome.amb
       md5sum: 3a68b8b2287e07dd3f5f95f4344ba76e
@@ -15,14 +15,14 @@
     - path: output/bwa/bwa/genome.sa
       md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: fe5a30103b245d81a8d37d6144794f5
+      md5sum: 0b4396fc8d99d4240a1213344a5adc93
     - path: output/bwa/versions.yml
 
 - name: bwa mem test_bwa_mem_paired_end
   command: nextflow run ./tests/modules/CCBR/bwa/mem -entry test_bwa_mem_paired_end -c ./tests/config/nextflow.config
   tags:
-    - bwa
     - bwa/mem
+    - bwa
   files:
     - path: output/bwa/bwa/genome.amb
       md5sum: 3a68b8b2287e07dd3f5f95f4344ba76e
@@ -35,14 +35,14 @@
     - path: output/bwa/bwa/genome.sa
       md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: 06b8e7424d97add946ddb07e55f12962
+      md5sum: 7550b90915da2fbc36be5584878ceaba
     - path: output/bwa/versions.yml
 
 - name: bwa mem test_bwa_mem_paired_end_stub
   command: nextflow run ./tests/modules/CCBR/bwa/mem -entry test_bwa_mem_paired_end_stub -c ./tests/config/nextflow.config
   tags:
-    - bwa
     - bwa/mem
+    - bwa
   files:
     - path: output/bwa/bwa/genome.amb
       md5sum: 3a68b8b2287e07dd3f5f95f4344ba76e
@@ -55,14 +55,14 @@
     - path: output/bwa/bwa/genome.sa
       md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: 06b8e7424d97add946ddb07e55f12962
+      md5sum: 7550b90915da2fbc36be5584878ceaba
     - path: output/bwa/versions.yml
 
 - name: bwa mem test_bwa_mem_single_end_stub
   command: nextflow run ./tests/modules/CCBR/bwa/mem -entry test_bwa_mem_single_end_stub -c ./tests/config/nextflow.config
   tags:
-    - bwa
     - bwa/mem
+    - bwa
   files:
     - path: output/bwa/bwa/genome.amb
       md5sum: 3a68b8b2287e07dd3f5f95f4344ba76e
@@ -75,5 +75,5 @@
     - path: output/bwa/bwa/genome.sa
       md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: fe5a30103b245d81a8d37d6144794f56
+      md5sum: 0b4396fc8d99d4240a1213344a5adc93
     - path: output/bwa/versions.yml
