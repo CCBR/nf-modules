@@ -35,7 +35,7 @@ process KHMER_UNIQUEKMERS {
 
     stub:
     """
-    touch report.txt khmers.txt
+    touch report.txt kmers.txt
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
