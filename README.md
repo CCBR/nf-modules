@@ -30,7 +30,7 @@ Come across a **bug**? Open an [issue](https://github.com/CCBR/nf-modules/issues
 
 Have a **question**? Ask it in [discussions](https://github.com/CCBR/nf-modules/discussions).
 
-Want to **contribute** to this project? Check out the [contributing guidelines](docs/CONTRIBUTING.md).
+Want to **contribute** to this project? Check out the [contributing guidelines](.github/CONTRIBUTING.md).
 
 ## References
 

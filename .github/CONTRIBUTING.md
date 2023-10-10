@@ -1,20 +1,22 @@
 # Contributing to nf-modules
 
-TODO -- describe gitflow, require PRs...
+## Unit tests
 
-## Use pre-commit hooks
+Once you've written or updated a module under `modules/CCBR/[module-name]` and
+a test workflow under `tests/modules/CCBR/[module-name]`,
+then use nf-core tools to automatically create a test YAML file with:
+
+```sh
+nf-core modules create-test-yml [module-name] --run-tests --force --no-prompts
+```
+
+## Pre-commit hooks
 
 Pre-commit can automatically format your code, check for spelling errors, etc. every time you commit.
 
 Install [pre-commit](https://pre-commit.com/#installation) if you haven't already,
 then run `pre-commit install` to install the hooks specified in `.pre-commit-config.yaml`.
 Pre-commit will run the hooks every time you commit.
-
-## Versions
-
-Increment the version number following semantic versioning[^1] in the `VERSION` file.
-
-[^1]: semantic versioning guidelines https://semver.org/
 
 ## Changelog
 
