@@ -1,6 +1,7 @@
 ## development version
 
 - new modules:
-  - cutadapt
   - bwa/index
   - bwa/mem
+  - cutadapt
+  - khmer/uniquekmers
