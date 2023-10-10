@@ -1,5 +1,5 @@
 - name: khmer uniquekmers test_khmer_uniquekmers
-  command: nextflow run ./tests/modules/CCBR/khmer/uniquekmers -entry test_khmer_uniquekmers -c ./tests/config/nextflow.config  -c ./tests/modules/CCBR/khmer/uniquekmers/nextflow.config
+  command: nextflow run ./tests/modules/CCBR/khmer/uniquekmers -entry test_khmer_uniquekmers -c ./tests/config/nextflow.config
   tags:
     - khmer
     - khmer/uniquekmers
@@ -8,3 +8,4 @@
       md5sum: 496ebf23653a01c7a42d743e47c19f65
     - path: output/khmer/report.txt
       md5sum: ee489abd3b244dea3640649e1790d55e
+    - path: output/khmer/versions.yml
