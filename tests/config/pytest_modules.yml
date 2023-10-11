@@ -10,6 +10,6 @@ cutadapt:
   - modules/CCBR/cutadapt/**
   - tests/modules/CCBR/cutadapt/**
 
-khmer:
-  - modules/CCBR/khmer/**
-  - tests/CCBR/khmer/**
+khmer/uniquekmers:
+  - modules/CCBR/khmer/uniquekmers/**
+  - tests/CCBR/khmer/uniquekmers/**
