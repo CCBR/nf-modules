@@ -44,6 +44,6 @@ process BWA_MEM {
 
     stub:
     """
-    touch ${meta.id}.bam ${prefix}.bam.bai versions.yml
+    touch ${meta.id}.bam ${meta.id}.bam.bai versions.yml
     """
 }
