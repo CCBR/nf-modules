@@ -32,7 +32,8 @@ process BWA_MEM {
       -m 2G \\
       -T \$TMP \\
       --write-index \\
-      \$TMP/align.bam > ${prefix}.bam##idx##${prefix}.bam.bai
+      -o ${prefix}.bam##idx##${prefix}.bam.bai \\
+      \$TMP/align.bam
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
@@ -43,6 +44,6 @@ process BWA_MEM {
 
     stub:
     """
-    touch ${meta.id}.bam versions.yml
+    touch ${meta.id}.bam ${prefix}.bam.bai versions.yml
     """
 }
