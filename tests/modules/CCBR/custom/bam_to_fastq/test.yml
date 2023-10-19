@@ -15,7 +15,7 @@
     - custom
   files:
     - path: output/bam/test.R1.fastq.gz
-      contains: 01f03a1da6c771e90c72f4f2da02f048
+      md5sum: 01f03a1da6c771e90c72f4f2da02f048
     - path: output/bam/test.R2.fastq.gz
       md5sum: 494e15da6c4ffc9c7e4fa429278c720e
     - path: output/bam/test.unpaired.fastq.gz
