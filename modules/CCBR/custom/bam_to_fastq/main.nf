@@ -9,6 +9,7 @@ process BAM_TO_FASTQ {
     output:
         tuple val(meta), path("*.R?.fastq*"),       emit: reads
         tuple val(meta), path("*.unpaired.fastq*"), emit: unpaired, optional: true
+        path("versions.yml"),                       emit: versions
 
     when:
         task.ext.when == null || task.ext.when
@@ -17,6 +18,11 @@ process BAM_TO_FASTQ {
     if (meta.single_end) {
         """
         samtools bam2fq ${bam} | pigz -p ${task.cpus} > ${bam.baseName}.R1.fastq.gz
+
+        cat <<-END_VERSIONS > versions.yml
+        "${task.process}":
+            samtools: \$(echo \$(samtools --version 2>&1) | sed 's/^.*samtools //; s/Using.*\$//')
+        END_VERSIONS
         """
     } else {
         """
@@ -27,10 +33,15 @@ process BAM_TO_FASTQ {
             --SECOND_END_FASTQ ${bam.baseName}.R2.fastq \\
             --UNPAIRED_FASTQ ${bam.baseName}.unpaired.fastq
         pigz -p ${task.cpus} *.fastq
+
+        cat <<-END_VERSIONS > versions.yml
+        "${task.process}":
+            picard: \$(picard FastqToSam --version 2>&1 | grep -o 'Version:.*' | cut -f2- -d:)
+        END_VERSIONS
         """
     }
     stub:
     """
-    touch ${bam.baseName}.R1.fastq
+    touch ${bam.baseName}.R1.fastq versions.yml
     """
 }
