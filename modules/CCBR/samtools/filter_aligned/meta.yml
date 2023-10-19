@@ -1,4 +1,4 @@
-name: filter_blacklist
+name: filter_aligned
 description: Filter out aligned reads from a BAM file.
 keywords:
   - bam
@@ -20,19 +20,18 @@ input:
       description: |
         Groovy Map containing reference information.
         e.g. [ id:'test', single_end:false ]
-  - fasta:
+  - bam:
       type: file
-      description: Input genome fasta file
+      description: Input BAM file
 output:
   - meta:
       type: map
       description: |
         Groovy Map containing reference information.
         e.g. [ id:'test', single_end:false ]
-  - index:
+  - bam:
       type: file
-      description: BWA genome index files
-      pattern: "*.{amb,ann,bwt,pac,sa}"
+      description: Output BAM file with only reads that were not aligned
   - versions:
       type: file
       description: File containing software versions

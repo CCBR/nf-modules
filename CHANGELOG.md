@@ -6,3 +6,4 @@
     - also runs samtools sort & outputs index in bai format.
   - cutadapt
   - khmer/uniquekmers
+  - samtools/filter_aligned
