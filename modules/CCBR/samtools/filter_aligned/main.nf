@@ -13,8 +13,8 @@ process FILTER_ALIGNED {
         tuple val(meta), path(bam), path(bai)
 
     output:
-        tuple val(meta), path("*.unaligned.bam"), path("*.unaligned.bam.bai"), emit: bam
-        path  "versions.yml"                                                 , emit: versions
+        tuple val(meta), path("*.unaligned.bam"), emit: bam
+        path  "versions.yml"                    , emit: versions
 
     script:
     def prefix = task.ext.prefix ?: "${meta.id}"
@@ -24,7 +24,7 @@ process FILTER_ALIGNED {
       -@ ${task.cpus} \\
       -f ${filter_flag} \\
       -b \\
-      -o ${prefix}.unaligned.bam##idx##${prefix}.unaligned.bam.bai \\
+      -o ${prefix}.unaligned.bam \\
       ${prefix}.bam
 
     cat <<-END_VERSIONS > versions.yml
@@ -35,6 +35,6 @@ process FILTER_ALIGNED {
 
     stub:
     """
-    touch ${meta.id}.unaligned.bam ${prefix}.unaligned.bam.bai
+    touch ${meta.id}.unaligned.bam versions.yml
     """
 }
