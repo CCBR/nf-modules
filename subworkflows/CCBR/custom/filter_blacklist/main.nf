@@ -1,8 +1,8 @@
 
 
-include { BWA_MEM        } from '../../../modules/ccbr/bwa/mem'
-include { FILTER_ALIGNED } from '../../../modules/ccbr/samtools/filter_aligned'
-include { BAM_TO_FASTQ   } from '../../../modules/ccbr/custom/bam_to_fastq'
+include { BWA_MEM        } from '../../../../modules/ccbr/bwa/mem'
+include { FILTER_ALIGNED } from '../../../../modules/ccbr/samtools/filter_aligned'
+include { BAM_TO_FASTQ   } from '../../../../modules/ccbr/custom/bam_to_fastq'
 
 workflow FILTER_BLACKLIST {
     take:
