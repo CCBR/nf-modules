@@ -1,0 +1,29 @@
+- name: custom bam_to_fastq test_bam2fastq_single
+  command: nextflow run ./tests/modules/CCBR/custom/bam_to_fastq -entry test_bam2fastq_single -c ./tests/config/nextflow.config
+  tags:
+    - custom/bam_to_fastq
+    - custom
+  files:
+    - path: output/bam/test.R1.fastq.gz
+      contains:
+        - "@ERR5069949.29668/1"
+        - "AAAAAEEEEA/E//AE/E/EEEE6EEEE/E6/6A/E6E/6AEA/E<EEEE//E/EEEA//AEE///A//E/A"
+    - path: output/bwa/versions.yml
+
+- name: custom bam_to_fastq test_bam2fastq_paired
+  command: nextflow run ./tests/modules/CCBR/custom/bam_to_fastq -entry test_bam2fastq_paired -c ./tests/config/nextflow.config
+  tags:
+    - custom/bam_to_fastq
+    - custom
+  files:
+    - path: output/bam/test.R1.fastq.gz
+      contains:
+        - "@ERR5069949.29668/1"
+        - "AAAAAEEEEA/E//AE/E/EEEE6EEEE/E6/6A/E6E/6AEA/E<EEEE//E/EEEA//AEE///A//E/A"
+    - path: output/bam/test.R2.fastq.gz
+      contains:
+        - "@ERR5069949.29668/2"
+        - "AAAA/AEEEEEE/EEAEEEEE/EEEEAE/EEEEAA/<EAE6EA//AEEA/A/</EE6<E//EE//E/E"
+    - path: output/bam/test.unpaired.fastq.gz
+      md5sum: 0e16a48615d34b142b14fe1aa4b8758e
+    - path: output/bwa/versions.yml

@@ -6,6 +6,10 @@ bwa/mem:
   - modules/CCBR/bwa/mem/**
   - tests/modules/CCBR/bwa/mem/**
 
+custom/bam_to_fastq:
+  - modules/CCBR/custom/bam_to_fastq/**
+  - tests/modules/CCBR/custom/bam_to_fastq/**
+
 cutadapt:
   - modules/CCBR/cutadapt/**
   - tests/modules/CCBR/cutadapt/**
