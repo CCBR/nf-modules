@@ -4,7 +4,11 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+      contains:
+        - "Command line parameters: --cores 2 --nextseq-trim=2 --trim-n -n 5 -O 5 -q 10,10 -b file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa -m 20 -o test.trim.fastq.gz test_1.fastq.gz"
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test.trim.fastq.gz
+      md5sum: 457a0f3ce7901051741998cb0fdde4e6
 
 - name: cutadapt single-end stub
   command: nextflow run ./tests/modules/CCBR/cutadapt -entry test_cutadapt_single_end -c ./tests/config/nextflow.config -c ./tests/modules/CCBR/cutadapt/nextflow.config -stub-run
@@ -12,6 +16,7 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test.trim.fastq.gz
 
 - name: cutadapt paired-end
@@ -20,8 +25,13 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+      contains:
+        - "Command line parameters: --cores 2 --nextseq-trim=2 --trim-n -n 5 -O 5 -q 10,10 -b file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa -B file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa -m 20:20 -o test_1.trim.fastq.gz -p test_2.trim.fastq.gz test_1.fastq.gz test_2.fastq.gz"
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test_1.trim.fastq.gz
+      md5sum: 61b8cabfa206d4867b5be4c78f0b9015
     - path: ./output/cutadapt/test_2.trim.fastq.gz
+      md5sum: cff4ada2ab02c3b95bc91efa59d12ac0
 
 - name: cutadapt paired-end stub
   command: nextflow run ./tests/modules/CCBR/cutadapt -entry test_cutadapt_paired_end -c ./tests/config/nextflow.config -c ./tests/modules/CCBR/cutadapt/nextflow.config -stub-run
@@ -29,5 +39,6 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test_1.trim.fastq.gz
     - path: ./output/cutadapt/test_2.trim.fastq.gz
