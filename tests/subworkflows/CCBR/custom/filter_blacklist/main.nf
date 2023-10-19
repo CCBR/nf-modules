@@ -3,7 +3,7 @@
 nextflow.enable.dsl = 2
 
 include { BWA_INDEX        } from "../../../../modules/CCBR/bwa/index"
-include { FILTER_BLACKLIST } from '../../../../subworkflows/CCBR/filter_blacklist'
+include { FILTER_BLACKLIST } from '../../../../subworkflows/CCBR/custom/filter_blacklist'
 
 
 workflow test_filter_blacklist_single {
