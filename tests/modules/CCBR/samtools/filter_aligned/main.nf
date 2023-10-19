@@ -5,6 +5,7 @@ nextflow.enable.dsl = 2
 include { BWA_INDEX      } from '../../../../../modules/CCBR/bwa/index/main.nf'
 include { BWA_MEM        } from '../../../../../modules/CCBR/bwa/mem/main.nf'
 include { FILTER_ALIGNED } from '../../../../../modules/CCBR/samtools/filter_aligned/main.nf'
+
 //
 // Test with single-end data
 //
