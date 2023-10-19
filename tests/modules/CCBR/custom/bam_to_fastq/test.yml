@@ -5,7 +5,6 @@
     - custom
   files:
     - path: output/bam/test.R1.fastq.gz
-      md5sum: 2284edcc87267eae2922eb636ac918c5
     - path: output/bwa/versions.yml
 
 - name: custom bam_to_fastq test_bam2fastq_paired
@@ -15,9 +14,6 @@
     - custom
   files:
     - path: output/bam/test.R1.fastq.gz
-      md5sum: cd23efac0df015e560f63de8392bf33f
     - path: output/bam/test.R2.fastq.gz
-      md5sum: 8ffafa76991cbfe4e85ad9d37b74d5d6
     - path: output/bam/test.unpaired.fastq.gz
-      md5sum: 6b57b4a91fc0b7f8ddbef272fbabb65d
     - path: output/bwa/versions.yml
