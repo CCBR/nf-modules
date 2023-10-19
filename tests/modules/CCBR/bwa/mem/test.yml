@@ -19,6 +19,16 @@
     - path: output/bwa/test.bam.bai
     - path: output/bwa/versions.yml
 
+- name: bwa mem test_bwa_mem_single_end stub
+  command: nextflow run ./tests/modules/CCBR/bwa/mem -entry test_bwa_mem_single_end -c ./tests/config/nextflow.config -stub
+  tags:
+    - bwa/mem
+    - bwa
+  files:
+    - path: output/bwa/test.bam
+    - path: output/bwa/test.bam.bai
+    - path: output/bwa/versions.yml
+
 - name: bwa mem test_bwa_mem_paired_end
   command: nextflow run ./tests/modules/CCBR/bwa/mem -entry test_bwa_mem_paired_end -c ./tests/config/nextflow.config
   tags:
