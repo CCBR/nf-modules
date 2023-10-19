@@ -1,6 +1,3 @@
-# https://pytest-workflow.readthedocs.io/en/stable/#writing-custom-tests
-# https://github.com/CCBR/CHAMPAGNE/issues/116
-# https://github.com/CCBR/CHAMPAGNE/issues/117
 import pathlib
 import pysam
 import pytest
