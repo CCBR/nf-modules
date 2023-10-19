@@ -16,15 +16,25 @@ process CUTADAPT {
         task.ext.when == null || task.ext.when
 
     script:
+    def prefix = task.ext.prefix ?: "${meta.id}"
+    def trimmed  = meta.single_end ? "-o ${prefix}.trim.fastq.gz" : "-o ${prefix}_1.trim.fastq.gz -p ${prefix}_2.trim.fastq.gz"
     def args = task.ext.args ?: [
             '--nextseq-trim=2',
             '--trim-n -n 5 -O 5',
             '-q 10,10',
-            '-m 20',
             '-b file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa'
-        ].join(' ').trim()
-    def prefix = task.ext.prefix ?: "${meta.id}"
-    def trimmed  = meta.single_end ? "-o ${prefix}.trim.fastq.gz" : "-o ${prefix}_1.trim.fastq.gz -p ${prefix}_2.trim.fastq.gz"
+        ]
+    if (meta.single_end) {
+        args += [
+            '-m 20'
+        ]
+    } else {
+        args += [
+            '-B file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa',
+            '-m 20:20',
+        ]
+    }
+    args = args.join(' ').trim()
     """
     cutadapt \\
         --cores ${task.cpus} \\

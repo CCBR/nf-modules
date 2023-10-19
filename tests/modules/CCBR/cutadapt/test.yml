@@ -4,6 +4,9 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+      contains:
+        - "Command line parameters: --cores 2 --nextseq-trim=2 --trim-n -n 5 -O 5 -q 10,10 -b file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa -m 20 -o test.trim.fastq.gz test_1.fastq.gz"
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test.trim.fastq.gz
 
 - name: cutadapt single-end stub
@@ -12,6 +15,7 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test.trim.fastq.gz
 
 - name: cutadapt paired-end
@@ -20,6 +24,9 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+      contains:
+        - "Command line parameters: --cores 2 --nextseq-trim=2 --trim-n -n 5 -O 5 -q 10,10 -b file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa -B file:/opt2/TruSeq_and_nextera_adapters.consolidated.fa -m 20:20 -o test_1.trim.fastq.gz -p test_2.trim.fastq.gz test_1.fastq.gz test_2.fastq.gz"
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test_1.trim.fastq.gz
     - path: ./output/cutadapt/test_2.trim.fastq.gz
 
@@ -29,5 +36,6 @@
     - cutadapt
   files:
     - path: ./output/cutadapt/test.cutadapt.log
+    - path: ./output/cutadapt/versions.yml
     - path: ./output/cutadapt/test_1.trim.fastq.gz
     - path: ./output/cutadapt/test_2.trim.fastq.gz
