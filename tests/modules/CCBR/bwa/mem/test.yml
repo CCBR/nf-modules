@@ -15,7 +15,18 @@
     - path: output/bwa/bwa/genome.sa
       md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: fe5a30103b245d81a8d37d6144794f56
+      md5sum: 0f7b7413436295bcd839fec262eabb18
+    - path: output/bwa/test.bam.bai
+    - path: output/bwa/versions.yml
+
+- name: bwa mem test_bwa_mem_single_end stub
+  command: nextflow run ./tests/modules/CCBR/bwa/mem -entry test_bwa_mem_single_end -c ./tests/config/nextflow.config -stub
+  tags:
+    - bwa/mem
+    - bwa
+  files:
+    - path: output/bwa/test.bam
+    - path: output/bwa/test.bam.bai
     - path: output/bwa/versions.yml
 
 - name: bwa mem test_bwa_mem_paired_end
@@ -35,5 +46,6 @@
     - path: output/bwa/bwa/genome.sa
       md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: 06b8e7424d97add946ddb07e55f12962
+      md5sum: ae4a49f2dd6a487d75f99c9d3b42858b
+    - path: output/bwa/test.bam.bai
     - path: output/bwa/versions.yml
