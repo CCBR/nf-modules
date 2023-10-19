@@ -5,9 +5,7 @@
     - custom
   files:
     - path: output/bam/test.R1.fastq.gz
-      contains:
-        - "@ERR5069949.29668/1"
-        - "AAAAAEEEEA/E//AE/E/EEEE6EEEE/E6/6A/E6E/6AEA/E<EEEE//E/EEEA//AEE///A//E/A"
+      md5sum: 9331676d420f0cd61cca89cfd816083c
     - path: output/bwa/versions.yml
 
 - name: custom bam_to_fastq test_bam2fastq_paired
@@ -17,13 +15,9 @@
     - custom
   files:
     - path: output/bam/test.R1.fastq.gz
-      contains:
-        - "@ERR5069949.29668/1"
-        - "AAAAAEEEEA/E//AE/E/EEEE6EEEE/E6/6A/E6E/6AEA/E<EEEE//E/EEEA//AEE///A//E/A"
+      contains: 01f03a1da6c771e90c72f4f2da02f048
     - path: output/bam/test.R2.fastq.gz
-      contains:
-        - "@ERR5069949.29668/2"
-        - "AAAA/AEEEEEE/EEAEEEEE/EEEEAE/EEEEAA/<EAE6EA//AEEA/A/</EE6<E//EE//E/E"
+      md5sum: 494e15da6c4ffc9c7e4fa429278c720e
     - path: output/bam/test.unpaired.fastq.gz
-      md5sum: 0e16a48615d34b142b14fe1aa4b8758e
+      md5sum: f19d078647f1f0a25b350492be90df08
     - path: output/bwa/versions.yml
