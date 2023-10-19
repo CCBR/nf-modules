@@ -8,7 +8,7 @@ process BAM_TO_FASTQ {
 
     output:
         tuple val(meta), path("*.R?.fastq*"),       emit: reads
-        tuple val(meta), path("*.unpaired.fastq*"), optional: true
+        tuple val(meta), path("*.unpaired.fastq*"), emit: unpaired, optional: true
 
     when:
         task.ext.when == null || task.ext.when
