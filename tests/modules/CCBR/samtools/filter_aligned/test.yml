@@ -4,23 +4,13 @@
     - samtools/filter_aligned
     - samtools
   files:
-    - path: output/bwa/bwa/genome.amb
-      md5sum: 3a68b8b2287e07dd3f5f95f4344ba76e
-    - path: output/bwa/bwa/genome.ann
-      md5sum: c32e11f6c859f166c7525a9c1d583567
-    - path: output/bwa/bwa/genome.bwt
-      md5sum: 0469c30a1e239dd08f68afe66fde99da
-    - path: output/bwa/bwa/genome.pac
-      md5sum: 983e3d2cd6f36e2546e6d25a0da78d66
-    - path: output/bwa/bwa/genome.sa
-      md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: 4d511b037deea555746ba19ccf901d86
+      md5sum: 0f7b7413436295bcd839fec262eabb18
     - path: output/bwa/test.bam.bai
-      md5sum: cac25a1bb8dc177fe4a54a1b303d51a9
+      md5sum: 61faacff2817f9a6051a7a44a5e3a142
     - path: output/bwa/versions.yml
     - path: output/filter/test.unaligned.bam
-      md5sum: 1f88a22f6e8136b2d53d581a98b4af93
+      md5sum: e583cf9b78d2f635c22d3df53a32bfbc
     - path: output/filter/versions.yml
 
 - name: samtools filter_aligned test_filter_aligned_paired_end
@@ -29,23 +19,13 @@
     - samtools/filter_aligned
     - samtools
   files:
-    - path: output/bwa/bwa/genome.amb
-      md5sum: 3a68b8b2287e07dd3f5f95f4344ba76e
-    - path: output/bwa/bwa/genome.ann
-      md5sum: c32e11f6c859f166c7525a9c1d583567
-    - path: output/bwa/bwa/genome.bwt
-      md5sum: 0469c30a1e239dd08f68afe66fde99da
-    - path: output/bwa/bwa/genome.pac
-      md5sum: 983e3d2cd6f36e2546e6d25a0da78d66
-    - path: output/bwa/bwa/genome.sa
-      md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: 1cc1046a999d37435130ccf275652d5a
+      md5sum: ae4a49f2dd6a487d75f99c9d3b42858b
     - path: output/bwa/test.bam.bai
-      md5sum: b31c4a8f3cf9fd9e3f59a013f3fba96a
+      md5sum: 4626411a76af5ef7ece110c14464b52c
     - path: output/bwa/versions.yml
     - path: output/filter/test.unaligned.bam
-      md5sum: ab182064e5765f03ab6c540c1bfadbc9
+      md5sum: ae07b575c772327232797e0bb0b306d6
     - path: output/filter/versions.yml
 
 - name: samtools filter_aligned test_filter_aligned_single_end stub
@@ -54,21 +34,8 @@
     - samtools/filter_aligned
     - samtools
   files:
-    - path: output/bwa/bwa/genome.amb
-      md5sum: 3a68b8b2287e07dd3f5f95f4344ba76e
-    - path: output/bwa/bwa/genome.ann
-      md5sum: c32e11f6c859f166c7525a9c1d583567
-    - path: output/bwa/bwa/genome.bwt
-      md5sum: 0469c30a1e239dd08f68afe66fde99da
-    - path: output/bwa/bwa/genome.pac
-      md5sum: 983e3d2cd6f36e2546e6d25a0da78d66
-    - path: output/bwa/bwa/genome.sa
-      md5sum: ab3952cabf026b48cd3eb5bccbb636d1
     - path: output/bwa/test.bam
-      md5sum: 4d511b037deea555746ba19ccf901d86
     - path: output/bwa/test.bam.bai
-      md5sum: cac25a1bb8dc177fe4a54a1b303d51a9
     - path: output/bwa/versions.yml
     - path: output/filter/test.unaligned.bam
-      md5sum: 1f88a22f6e8136b2d53d581a98b4af93
     - path: output/filter/versions.yml
