@@ -26,7 +26,7 @@ def test_unaligned_paired(workflow_dir):
 
 
 @pytest.mark.workflow("samtools filter_aligned test_filter_aligned_single_end")
-def test_unaligned_single():
+def test_unaligned_single(workflow_dir):
     unaligned_bam_file = pysam.AlignmentFile(
         pathlib.Path(workflow_dir, "output/filter/test.unaligned.bam"), "rb"
     )
