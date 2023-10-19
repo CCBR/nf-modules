@@ -9,8 +9,8 @@ process BWA_MEM {
         tuple val(meta_idx), path(index_files)
 
     output:
-        tuple val(meta), path("*.bam"), emit: bam
-        path  "versions.yml"          , emit: versions
+        tuple val(meta), path("*.bam"), path("*.bai"), emit: bam
+        path  "versions.yml"                         , emit: versions
 
     when:
         task.ext.when == null || task.ext.when
@@ -31,7 +31,8 @@ process BWA_MEM {
       -@ ${task.cpus} \\
       -m 2G \\
       -T \$TMP \\
-      \$TMP/align.bam > ${prefix}.bam
+      --write-index \\
+      \$TMP/align.bam > ${prefix}.bam##idx##${prefix}.bam.bai
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
