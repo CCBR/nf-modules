@@ -4,10 +4,9 @@ process FILTER_ALIGNED {
     Given a bam file, filter out reads that aligned.
     '''
     tag { meta.id }
-    label 'align'
-    label 'process_higher'
+    label 'process_high'
 
-    container 'nciccbr/ccbr_ubuntu_base_20.04:v5'
+    container 'nciccbr/ccbr_ubuntu_base_20.04:v6'
 
     input:
         tuple val(meta), path(bam), path(bai)
@@ -15,6 +14,9 @@ process FILTER_ALIGNED {
     output:
         tuple val(meta), path("*.unaligned.bam"), emit: bam
         path  "versions.yml"                    , emit: versions
+
+    when:
+        task.ext.when == null || task.ext.when
 
     script:
     def prefix = task.ext.prefix ?: "${meta.id}"
