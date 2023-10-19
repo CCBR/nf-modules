@@ -1,0 +1,41 @@
+- name: samtools filter_aligned test_filter_aligned_single_end
+  command: nextflow run ./tests/modules/CCBR/samtools/filter_aligned -entry test_filter_aligned_single_end -c ./tests/config/nextflow.config
+  tags:
+    - samtools/filter_aligned
+    - samtools
+  files:
+    - path: output/bwa/test.bam
+      md5sum: 0f7b7413436295bcd839fec262eabb18
+    - path: output/bwa/test.bam.bai
+      md5sum: 61faacff2817f9a6051a7a44a5e3a142
+    - path: output/bwa/versions.yml
+    - path: output/filter/test.unaligned.bam
+      md5sum: e583cf9b78d2f635c22d3df53a32bfbc
+    - path: output/filter/versions.yml
+
+- name: samtools filter_aligned test_filter_aligned_paired_end
+  command: nextflow run ./tests/modules/CCBR/samtools/filter_aligned -entry test_filter_aligned_paired_end -c ./tests/config/nextflow.config
+  tags:
+    - samtools/filter_aligned
+    - samtools
+  files:
+    - path: output/bwa/test.bam
+      md5sum: ae4a49f2dd6a487d75f99c9d3b42858b
+    - path: output/bwa/test.bam.bai
+      md5sum: 4626411a76af5ef7ece110c14464b52c
+    - path: output/bwa/versions.yml
+    - path: output/filter/test.unaligned.bam
+      md5sum: ae07b575c772327232797e0bb0b306d6
+    - path: output/filter/versions.yml
+
+- name: samtools filter_aligned test_filter_aligned_single_end stub
+  command: nextflow run ./tests/modules/CCBR/samtools/filter_aligned -entry test_filter_aligned_single_end -c ./tests/config/nextflow.config -stub
+  tags:
+    - samtools/filter_aligned
+    - samtools
+  files:
+    - path: output/bwa/test.bam
+    - path: output/bwa/test.bam.bai
+    - path: output/bwa/versions.yml
+    - path: output/filter/test.unaligned.bam
+    - path: output/filter/versions.yml

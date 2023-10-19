@@ -17,3 +17,7 @@ cutadapt:
 khmer/uniquekmers:
   - modules/CCBR/khmer/uniquekmers/**
   - tests/CCBR/khmer/uniquekmers/**
+
+samtools/filter_aligned:
+  - modules/CCBR/samtools/filter_aligned/**
+  - tests/modules/CCBR/samtools/filter_aligned/**
