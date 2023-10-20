@@ -10,7 +10,7 @@ keywords:
 components:
   - bwa/mem
   - samtools/filter_aligned
-  - custom/bam_to_fastq
+  - custom/bam2fastq
 input:
   - ch_fastq_input:
       description: |

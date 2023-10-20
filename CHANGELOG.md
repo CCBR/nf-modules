@@ -4,7 +4,7 @@
 
 - bwa/index
 - bwa/mem
-- custom/bam_to_fastq (#14)
+- custom/bam2fastq (#14)
 - cutadapt (#11)
 - khmer/uniquekmers (#7)
 - samtools/filter_aligned (#13)
