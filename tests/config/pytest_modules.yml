@@ -6,6 +6,10 @@ bwa/mem:
   - modules/CCBR/bwa/mem/**
   - tests/modules/CCBR/bwa/mem/**
 
+custom/filter_blacklist:
+  - subworkflows/CCBR/custom/filter_blacklist/**
+  - tests/subworkflows/CCBR/custom/filter_blacklist/**
+
 custom/bam_to_fastq:
   - modules/CCBR/custom/bam_to_fastq/**
   - tests/modules/CCBR/custom/bam_to_fastq/**
