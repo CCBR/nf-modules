@@ -21,14 +21,7 @@ def test_unaligned_single(workflow_dir):
     unaligned_bam_file = pysam.AlignmentFile(
         pathlib.Path(workflow_dir, "output/filter/test.unaligned.bam"), "rb"
     )
-    reads_single = list()
-    reads_unmapped = list()
+    reads_are_good = list()
     for read in unaligned_bam_file:
-        is_single = not read.is_paired
-        reads_single.append(is_single)
-        reads_unmapped.append(read.is_unmapped)
-        if not is_single or not read.is_unmapped:
-            print(
-                f"{read.query_name}; is_single: {is_paired} is_unmapped: {read.is_unmapped}"
-            )
-    assert all(reads_single) and all(reads_unmapped)
+        reads_are_good.append(not read.is_paired and read.is_unmapped)
+    assert all(reads_are_good)
