@@ -8,10 +8,11 @@ include { FILTER_BLACKLIST } from "../../../../../subworkflows/CCBR/custom/filte
 
 workflow test_filter_blacklist_single {
     input = [ [ id:'test', single_end:true ], // meta map
-              file(params.test_data['test_1_fastq_gz'], checkIfExists: true),
+               file(params.test_data['test_1_fastq_gz'], checkIfExists: true)
     ]
-    blacklist_reads = [ [ id:'test', single_end:true ], // meta map
-              file(params.test_data['test_1_subset_fastq_gz'], checkIfExists: true),
+    blacklist_reads = [
+            [ id:'test', single_end:true ], // meta map
+            file(params.test_data['test_1_subset_fastq_gz'], checkIfExists: true)
     ]
     BWA_INDEX(blacklist_reads)
     FILTER_BLACKLIST(input, BWA_INDEX.out.index)
@@ -19,12 +20,12 @@ workflow test_filter_blacklist_single {
 
 workflow test_filter_blacklist_paired {
     input = [ [ id:'test', single_end:false ], // meta map
-              file(params.test_data['test_1_fastq_gz'], checkIfExists: true),
-              file(params.test_data['test_2_fastq_gz'], checkIfExists: true),
+              [ file(params.test_data['test_1_fastq_gz'], checkIfExists: true),
+                file(params.test_data['test_2_fastq_gz'], checkIfExists: true) ]
     ]
-    blacklist_reads = [ [ id:'test', single_end:false ], // meta map
-              file(params.test_data['test_1_subset_fastq_gz'], checkIfExists: true),
-              file(params.test_data['test_2_subset_fastq_gz'], checkIfExists: true),
+    blacklist_reads = [
+              [ id:'test', single_end:false ], // meta map
+              file(params.test_data['test_1_subset_fastq_gz'], checkIfExists: true)
     ]
     BWA_INDEX(blacklist_reads)
     FILTER_BLACKLIST(input, BWA_INDEX.out.index)
