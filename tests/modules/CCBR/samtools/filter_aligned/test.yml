@@ -5,12 +5,12 @@
     - samtools
   files:
     - path: output/bwa/test.bam
-      md5sum: 0f7b7413436295bcd839fec262eabb18
+      md5sum: 33be5394f2873956dcac679d78c7e559
     - path: output/bwa/test.bam.bai
-      md5sum: 61faacff2817f9a6051a7a44a5e3a142
+      md5sum: 9965a3eaf16130c34ded277653b3811f
     - path: output/bwa/versions.yml
     - path: output/filter/test.unaligned.bam
-      md5sum: e583cf9b78d2f635c22d3df53a32bfbc
+      md5sum: 60121474c99a15d030b866f459e83a88
     - path: output/filter/versions.yml
 
 - name: samtools filter_aligned test_filter_aligned_paired_end
@@ -20,12 +20,12 @@
     - samtools
   files:
     - path: output/bwa/test.bam
-      md5sum: ae4a49f2dd6a487d75f99c9d3b42858b
+      md5sum: 319a128e8959023f52490030b5ee457c
     - path: output/bwa/test.bam.bai
-      md5sum: 4626411a76af5ef7ece110c14464b52c
+      md5sum: 55703b9bdf1b9816853dd5222c31fc2e
     - path: output/bwa/versions.yml
     - path: output/filter/test.unaligned.bam
-      md5sum: ae07b575c772327232797e0bb0b306d6
+      md5sum: 029fb4355a96008d6b30c0dcc0f210cb
     - path: output/filter/versions.yml
 
 - name: samtools filter_aligned test_filter_aligned_single_end stub
