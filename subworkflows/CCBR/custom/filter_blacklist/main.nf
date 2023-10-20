@@ -12,7 +12,7 @@ workflow FILTER_BLACKLIST {
     main:
         ch_versions = Channel.empty()
 
-        BWA_MEM ( ch_fastq, ch_blacklist_index )
+        BWA_MEM ( ch_fastq_input, ch_blacklist_index )
         FILTER_ALIGNED( BWA_MEM.out.bam )
         BAM_TO_FASTQ( BWA_MEM.out.bam )
 

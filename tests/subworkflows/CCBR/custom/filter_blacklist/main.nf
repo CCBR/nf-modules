@@ -14,7 +14,7 @@ workflow test_filter_blacklist_single {
               file(params.test_data['test_1_subset_fastq_gz'], checkIfExists: true),
     ]
     BWA_INDEX(blacklist_reads)
-    FILTER_BLACKLIST(input, blacklist_reads)
+    FILTER_BLACKLIST(input, BWA_INDEX.out.index)
 }
 
 workflow test_filter_blacklist_paired {
@@ -27,5 +27,5 @@ workflow test_filter_blacklist_paired {
               file(params.test_data['test_2_subset_fastq_gz'], checkIfExists: true),
     ]
     BWA_INDEX(blacklist_reads)
-    FILTER_BLACKLIST(input, blacklist_reads)
+    FILTER_BLACKLIST(input, BWA_INDEX.out.index)
 }
