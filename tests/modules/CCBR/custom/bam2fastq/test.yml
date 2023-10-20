@@ -4,7 +4,7 @@
     - custom/bam2fastq
     - custom
   files:
-    - path: output/bam/test.R1.fastq.gz
+    - path: output/bam2fastq/test.R1.fastq.gz
     - path: output/bwa/versions.yml
 
 - name: custom bam2fastq test_bam2fastq_paired
@@ -13,7 +13,7 @@
     - custom/bam2fastq
     - custom
   files:
-    - path: output/bam/test.R1.fastq.gz
-    - path: output/bam/test.R2.fastq.gz
-    - path: output/bam/test.unpaired.fastq.gz
+    - path: output/bam2fastq/test.R1.fastq.gz
+    - path: output/bam2fastq/test.R2.fastq.gz
+    - path: output/bam2fastq/test.unpaired.fastq.gz
     - path: output/bwa/versions.yml
