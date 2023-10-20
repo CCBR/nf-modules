@@ -1,6 +1,6 @@
 name: filter_blacklist
 description: Filter out reads that align to an index
-tags:
+keywords:
   - bwa
   - samtools
   - fastq
