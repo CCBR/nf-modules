@@ -3,7 +3,7 @@
 ### new modules
 
 - bwa/index
-- bwa/mem  
+- bwa/mem
 - custom/bam_to_fastq (#14)
 - cutadapt (#11)
 - khmer/uniquekmers (#7)
