@@ -1,2 +1,2 @@
-pysam
+pysam>=0.22.0
 pytest-workflow
