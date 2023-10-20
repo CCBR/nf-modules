@@ -22,6 +22,6 @@ samtools/filteraligned:
   - modules/CCBR/samtools/filteraligned/**
   - tests/modules/CCBR/samtools/filteraligned/**
 
-subworkflows/custom/filter_blacklist:
-  - subworkflows/CCBR/custom/filter_blacklist/**
-  - tests/subworkflows/CCBR/custom/filter_blacklist/**
+subworkflows/filter_blacklist:
+  - subworkflows/CCBR/filter_blacklist/**
+  - tests/subworkflows/CCBR/filter_blacklist/**
