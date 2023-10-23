@@ -1,4 +1,4 @@
-import os
+import gzip
 import pathlib
 import pytest
 
@@ -8,4 +8,6 @@ def test_unpaired_is_empty(workflow_dir):
     unpaired_fastq = pathlib.Path(
         workflow_dir, "output", "bam2fastq", "test.unpaired.fastq.gz"
     )
-    assert os.stat(unpaired_fastq).st_size == 0
+    with gzip.open(unpaired_fastq, "rt") as infile:
+        lines = infile.readlines()
+    assert len(lines) == 0
