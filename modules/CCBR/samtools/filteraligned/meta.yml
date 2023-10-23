@@ -1,4 +1,4 @@
-name: samtools_filter_aligned
+name: samtools_filteraligned
 description: Filter out aligned reads from a BAM file.
 keywords:
   - bam

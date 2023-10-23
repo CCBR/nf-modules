@@ -1,5 +1,5 @@
 
-process SAMTOOLS_FILTER_ALIGNED {
+process SAMTOOLS_FILTERALIGNED {
     '''
     Given a bam file, filter out reads that aligned.
     '''
