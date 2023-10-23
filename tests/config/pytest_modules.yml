@@ -18,6 +18,10 @@ khmer/uniquekmers:
   - modules/CCBR/khmer/uniquekmers/**
   - tests/CCBR/khmer/uniquekmers/**
 
+picard/samtofastq:
+  - modules/CCBR/picard/samtofastq/**
+  - tests/modules/CCBR/picard/samtofastq/**
+
 samtools/filteraligned:
   - modules/CCBR/samtools/filteraligned/**
   - tests/modules/CCBR/samtools/filteraligned/**
