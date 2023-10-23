@@ -1,7 +1,7 @@
 
 
 include { BWA_MEM        } from '../../../modules/ccbr/bwa/mem'
-include { FILTER_ALIGNED } from '../../../modules/ccbr/samtools/filteraligned'
+include { SAMTOOLS_FILTER_ALIGNED } from '../../../modules/ccbr/samtools/filteraligned'
 include { BAM2FASTQ   } from '../../../modules/ccbr/custom/bam2fastq'
 
 workflow FILTER_BLACKLIST {
@@ -13,12 +13,12 @@ workflow FILTER_BLACKLIST {
         ch_versions = Channel.empty()
 
         BWA_MEM ( ch_fastq_input, ch_blacklist_index )
-        FILTER_ALIGNED( BWA_MEM.out.bam )
+        SAMTOOLS_FILTER_ALIGNED( BWA_MEM.out.bam )
         BAM2FASTQ( BWA_MEM.out.bam )
 
         ch_versions = ch_versions.mix(
             BWA_MEM.out.versions,
-            FILTER_ALIGNED.out.versions,
+            SAMTOOLS_FILTER_ALIGNED.out.versions,
             BAM2FASTQ.out.versions
         )
 
