@@ -43,6 +43,6 @@ process PICARD_SAMTOFASTQ {
     stub:
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    touch ${prefix}.fastq.gz
+    touch ${prefix}.fastq.gz versions.yml
     """
 }
