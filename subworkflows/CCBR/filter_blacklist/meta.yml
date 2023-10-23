@@ -9,7 +9,7 @@ keywords:
   - blacklist
 components:
   - bwa/mem
-  - samtools/filter_aligned
+  - samtools/filteraligned
   - custom/bam2fastq
 input:
   - ch_fastq_input:
