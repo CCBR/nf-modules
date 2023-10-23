@@ -6,9 +6,9 @@ bwa/mem:
   - modules/CCBR/bwa/mem/**
   - tests/modules/CCBR/bwa/mem/**
 
-custom/bam_to_fastq:
-  - modules/CCBR/custom/bam_to_fastq/**
-  - tests/modules/CCBR/custom/bam_to_fastq/**
+custom/bam2fastq:
+  - modules/CCBR/custom/bam2fastq/**
+  - tests/modules/CCBR/custom/bam2fastq/**
 
 cutadapt:
   - modules/CCBR/cutadapt/**
@@ -18,6 +18,6 @@ khmer/uniquekmers:
   - modules/CCBR/khmer/uniquekmers/**
   - tests/CCBR/khmer/uniquekmers/**
 
-samtools/filter_aligned:
-  - modules/CCBR/samtools/filter_aligned/**
-  - tests/modules/CCBR/samtools/filter_aligned/**
+samtools/filteraligned:
+  - modules/CCBR/samtools/filteraligned/**
+  - tests/modules/CCBR/samtools/filteraligned/**
