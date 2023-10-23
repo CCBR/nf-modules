@@ -44,5 +44,5 @@ workflow test_filter_aligned_paired_end {
 
     BWA_INDEX ( fasta )
     BWA_MEM ( input, BWA_INDEX.out.index )
-    SAMTOOLS_FILTER_ALIGNED( BWA_MEM.out.bam )
+    SAMTOOLS_FILTERALIGNED( BWA_MEM.out.bam )
 }
