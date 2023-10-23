@@ -1,5 +1,5 @@
 name: "picard_samtofastq"
-description: Converts a BAM or SAM file to fastq.
+description: Converts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq module.
 keywords:
   - fastq
   - bam
