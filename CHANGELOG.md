@@ -1,6 +1,6 @@
-## development version
+## Development version
 
-### new modules
+### New modules
 
 - bwa/index
 - bwa/mem
@@ -10,3 +10,7 @@
 - khmer/uniquekmers (#7)
 - picard/samtofastq (#21)
 - samtools/filteraligned (#13,#20)
+
+### New subworkflows
+
+- custom/filter_blacklist (#17)

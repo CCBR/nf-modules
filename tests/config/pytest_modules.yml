@@ -25,3 +25,7 @@ picard/samtofastq:
 samtools/filteraligned:
   - modules/CCBR/samtools/filteraligned/**
   - tests/modules/CCBR/samtools/filteraligned/**
+
+subworkflows/filter_blacklist:
+  - subworkflows/CCBR/filter_blacklist/**
+  - tests/subworkflows/CCBR/filter_blacklist/**
