@@ -24,6 +24,14 @@ nf-core modules \
   update [module]
 ```
 
+Use the `subworkflows` command in place of the `modules` command to install or update subworkflows.
+
+```sh
+nf-core subworkflows \
+  --git-remote https://github.com/CCBR/nf-modules \
+  update [subworkflow]
+```
+
 ## Help & Contributing
 
 Come across a **bug**? Open an [issue](https://github.com/CCBR/nf-modules/issues) and include a minimal reproducible example.
