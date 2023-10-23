@@ -1,0 +1,34 @@
+- name: picard samtofastq test_picard_samtofastq_single
+  command: nextflow run ./tests/modules/CCBR/picard/samtofastq -entry test_picard_samtofastq_single -c ./tests/config/nextflow.config
+  tags:
+    - picard/samtofastq
+    - picard
+  files:
+    - path: output/picard/test.fastq.gz
+      contains:
+        - "@ERR5069949.2151832"
+    - path: output/picard/versions.yml
+
+- name: picard samtofastq test_picard_samtofastq_paired
+  command: nextflow run ./tests/modules/CCBR/picard/samtofastq -entry test_picard_samtofastq_paired -c ./tests/config/nextflow.config
+  tags:
+    - picard/samtofastq
+    - picard
+  files:
+    - path: output/picard/test_1.fastq.gz
+      contains:
+        - "@ERR5069949.2151832/1"
+    - path: output/picard/test_2.fastq.gz
+      contains:
+        - "@ERR5069949.2151832/2"
+    - path: output/picard/test.unpaired.fastq.gz
+    - path: output/picard/versions.yml
+
+- name: picard samtofastq test_picard_samtofastq_single stub
+  command: nextflow run ./tests/modules/CCBR/picard/samtofastq -entry test_picard_samtofastq_single -c ./tests/config/nextflow.config -stub
+  tags:
+    - picard/samtofastq
+    - picard
+  files:
+    - path: output/picard/test.fastq.gz
+    - path: output/picard/versions.yml

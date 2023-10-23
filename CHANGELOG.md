@@ -8,4 +8,5 @@
 - custom/bam_to_fastq (#14)
 - cutadapt (#11)
 - khmer/uniquekmers (#7)
+- picard/samtofastq (#21)
 - samtools/filteraligned (#13,#20)
