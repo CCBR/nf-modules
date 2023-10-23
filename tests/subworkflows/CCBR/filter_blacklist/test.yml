@@ -23,6 +23,7 @@
   files:
     - path: output/bam2fastq/test.R1.fastq.gz
     - path: output/bam2fastq/test.R2.fastq.gz
+    - path: output/bam2fastq/test.unpaired.fastq.gz
 - name: filter_blacklist test_filter_blacklist_single stub
   command: nextflow run ./tests/subworkflows/CCBR/filter_blacklist/main.nf -entry test_filter_blacklist_single -c tests/config/nextflow.config -c tests/config/test_data_CCBR.config -stub
   tags:
@@ -34,4 +35,4 @@
     - bwa/mem
     - bwa
   files:
-    - path: output/bam2fastq/test.R1.fastq.gz
+    - path: output/bam2fastq/test.R1.fastq
