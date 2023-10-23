@@ -1,4 +1,4 @@
-name: bam_to_fastq
+name: bam2fastq
 description: |
   The module converts a BAM file to FASTQ format.
   It uses samtools bam2fq if reads are single end,
