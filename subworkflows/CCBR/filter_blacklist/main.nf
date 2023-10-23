@@ -1,8 +1,8 @@
 
 
-include { BWA_MEM        } from '../../../modules/CCBR/bwa/mem'
+include { BWA_MEM                 } from '../../../modules/CCBR/bwa/mem'
 include { SAMTOOLS_FILTER_ALIGNED } from '../../../modules/CCBR/samtools/filteraligned'
-include { BAM2FASTQ   } from '../../../modules/CCBR/custom/bam2fastq'
+include { PICARD_SAMTOFASTQ       } from '../../../modules/CCBR/picard/samtofastq'
 
 workflow FILTER_BLACKLIST {
     take:
@@ -14,15 +14,15 @@ workflow FILTER_BLACKLIST {
 
         BWA_MEM ( ch_fastq_input, ch_blacklist_index )
         SAMTOOLS_FILTER_ALIGNED( BWA_MEM.out.bam )
-        BAM2FASTQ( BWA_MEM.out.bam )
+        PICARD_SAMTOFASTQ( BWA_MEM.out.bam )
 
         ch_versions = ch_versions.mix(
             BWA_MEM.out.versions,
             SAMTOOLS_FILTER_ALIGNED.out.versions,
-            BAM2FASTQ.out.versions
+            PICARD_SAMTOFASTQ.out.versions
         )
 
     emit:
-        reads =  BAM2FASTQ.out.reads  // channel: [ val(meta), path(fastq) ]
+        reads =  PICARD_SAMTOFASTQ.out.reads  // channel: [ val(meta), path(fastq) ]
         versions = ch_versions           // channel: [ path(versions.yml) ]
 }

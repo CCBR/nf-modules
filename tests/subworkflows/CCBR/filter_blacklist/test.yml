@@ -3,41 +3,41 @@
   tags:
     - subworkflows
     - subworkflows/filter_blacklist
-    - custom
-    - custom/bam2fastq
+    - picard
+    - picard/samtofastq
     - samtools
     - samtools/filteraligned
     - bwa
     - bwa/mem
   files:
-    - path: output/bam2fastq/test.R1.fastq.gz
+    - path: output/picard/test.fastq.gz
 
 - name: filter_blacklist test_filter_blacklist_paired
   command: nextflow run ./tests/subworkflows/CCBR/filter_blacklist/main.nf -entry test_filter_blacklist_paired -c tests/config/nextflow.config -c tests/config/test_data_CCBR.config
   tags:
     - subworkflows
     - subworkflows/filter_blacklist
-    - custom
-    - custom/bam2fastq
+    - picard
+    - picard/samtofastq
     - samtools
     - samtools/filteraligned
     - bwa
     - bwa/mem
   files:
-    - path: output/bam2fastq/test.R1.fastq.gz
-    - path: output/bam2fastq/test.R2.fastq.gz
-    - path: output/bam2fastq/test.unpaired.fastq.gz
+    - path: output/picard/test_1.fastq.gz
+    - path: output/picard/test_2.fastq.gz
+    - path: output/picard/test.unpaired.fastq.gz
 
 - name: filter_blacklist test_filter_blacklist_single stub
   command: nextflow run ./tests/subworkflows/CCBR/filter_blacklist/main.nf -entry test_filter_blacklist_single -c tests/config/nextflow.config -c tests/config/test_data_CCBR.config -stub
   tags:
     - subworkflows
     - subworkflows/filter_blacklist
-    - custom
-    - custom/bam2fastq
+    - picard
+    - picard/samtofastq
     - samtools
     - samtools/filteraligned
     - bwa
     - bwa/mem
   files:
-    - path: output/bam2fastq/test.R1.fastq
+    - path: output/picard/test.fastq.gz
