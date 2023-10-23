@@ -4,8 +4,8 @@
     - custom/bam2fastq
     - custom
   files:
-    - path: output/bam2fastq/test.R1.fastq.gz
-    - path: output/bwa/versions.yml
+    - path: output/custom/test.R1.fastq.gz
+    - path: output/custom/versions.yml
 
 - name: custom bam2fastq test_bam2fastq_paired
   command: nextflow run ./tests/modules/CCBR/custom/bam2fastq -entry test_bam2fastq_paired -c ./tests/config/nextflow.config
@@ -13,7 +13,7 @@
     - custom/bam2fastq
     - custom
   files:
-    - path: output/bam2fastq/test.R1.fastq.gz
-    - path: output/bam2fastq/test.R2.fastq.gz
-    - path: output/bam2fastq/test.unpaired.fastq.gz
-    - path: output/bwa/versions.yml
+    - path: output/custom/test.R1.fastq.gz
+    - path: output/custom/test.R2.fastq.gz
+    - path: output/custom/test.unpaired.fastq.gz
+    - path: output/custom/versions.yml
