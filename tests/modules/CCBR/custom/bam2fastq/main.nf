@@ -4,7 +4,7 @@ nextflow.enable.dsl = 2
 
 include { BWA_INDEX      } from '../../../../../modules/CCBR/bwa/index/main.nf'
 include { BWA_MEM        } from '../../../../../modules/CCBR/bwa/mem/main.nf'
-include { BAM_TO_FASTQ   } from '../../../../../modules/CCBR/custom/bam_to_fastq/main.nf'
+include { BAM2FASTQ   } from '../../../../../modules/CCBR/custom/bam2fastq/main.nf'
 
 //
 // Test with single-end data
@@ -23,7 +23,7 @@ workflow test_bam2fastq_single {
 
     BWA_INDEX ( fasta )
     BWA_MEM ( input, BWA_INDEX.out.index )
-    BAM_TO_FASTQ( BWA_MEM.out.bam )
+    BAM2FASTQ( BWA_MEM.out.bam )
 }
 
 //
@@ -44,5 +44,5 @@ workflow test_bam2fastq_paired {
 
     BWA_INDEX ( fasta )
     BWA_MEM ( input, BWA_INDEX.out.index )
-    BAM_TO_FASTQ( BWA_MEM.out.bam )
+    BAM2FASTQ( BWA_MEM.out.bam )
 }
