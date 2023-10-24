@@ -5,10 +5,12 @@
 .DS_Store
 .nextflow*
 .nf-test/
+.nf-test.log
 .screenrc
 __pycache__
 output/
 results/
+test.tap
 test_output/
 tests/data/
 work/
