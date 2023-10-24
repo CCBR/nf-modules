@@ -8,14 +8,14 @@
                             "id": "test",
                             "single_end": false
                         },
-                        "test.sorted.bam:md5,a29570e7607d217c2fa4d75829e09cd7"
+                        "test.sorted.bam:md5,309fd06ed676e7851eda22505132f728"
                     ]
                 ],
                 "1": [
 
                 ],
                 "2": [
-                    "versions.yml:md5,46f7a36082fa1f68285fe30d689244e8"
+                    "versions.yml:md5,71140c760cb15f7f02cc48f3ed90149e"
                 ],
                 "bam": [
                     [
@@ -23,17 +23,54 @@
                             "id": "test",
                             "single_end": false
                         },
-                        "test.sorted.bam:md5,a29570e7607d217c2fa4d75829e09cd7"
+                        "test.sorted.bam:md5,309fd06ed676e7851eda22505132f728"
                     ]
                 ],
                 "csi": [
 
                 ],
                 "versions": [
-                    "versions.yml:md5,46f7a36082fa1f68285fe30d689244e8"
+                    "versions.yml:md5,71140c760cb15f7f02cc48f3ed90149e"
                 ]
             }
         ],
-        "timestamp": "2023-10-17T17:21:46.5427968"
+        "timestamp": "2023-10-24T12:35:29.864751"
+    },
+    "test_samtools_sort_stub": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test",
+                            "single_end": false
+                        },
+                        "test.sorted.bam:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
+                ],
+                "1": [
+
+                ],
+                "2": [
+                    "versions.yml:md5,71140c760cb15f7f02cc48f3ed90149e"
+                ],
+                "bam": [
+                    [
+                        {
+                            "id": "test",
+                            "single_end": false
+                        },
+                        "test.sorted.bam:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
+                ],
+                "csi": [
+
+                ],
+                "versions": [
+                    "versions.yml:md5,71140c760cb15f7f02cc48f3ed90149e"
+                ]
+            }
+        ],
+        "timestamp": "2023-10-24T12:32:18.504111"
     }
 }
