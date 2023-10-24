@@ -35,6 +35,10 @@ output:
       type: file
       description: Sorted BAM/CRAM/SAM file
       pattern: "*.{bam,cram,sam}"
+  - bai:
+      type: file
+      description: Sorted BAM Index file
+      pattern: "*.bai"
   - versions:
       type: file
       description: File containing software versions
