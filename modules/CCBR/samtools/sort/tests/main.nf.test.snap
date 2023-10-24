@@ -8,8 +8,8 @@
                             "id": "test",
                             "single_end": false
                         },
-                        "test.sorted.bam:md5,309fd06ed676e7851eda22505132f728",
-                        "test.sorted.bam.bai:md5,2c02a9b519c6979eebf07e3ad40fa12e"
+                        "test.sorted.bam:md5,2488c73846ea4d9cb67187af1c58c716",
+                        "test.sorted.bam.bai:md5,be2757b9479e364588d855a77a251940"
                     ]
                 ],
                 "1": [
