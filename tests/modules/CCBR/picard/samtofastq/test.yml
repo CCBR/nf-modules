@@ -4,7 +4,7 @@
     - picard/samtofastq
     - picard
   files:
-    - path: output/picard/test.fastq.gz
+    - path: output/picard/test_1.fastq.gz
       contains:
         - "@ERR5069949.2151832"
     - path: output/picard/versions.yml
@@ -30,5 +30,5 @@
     - picard/samtofastq
     - picard
   files:
-    - path: output/picard/test.fastq.gz
+    - path: output/picard/test_1.fastq.gz
     - path: output/picard/versions.yml
