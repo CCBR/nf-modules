@@ -6,8 +6,6 @@
   files:
     - path: output/bwa/test.bam
       md5sum: 33be5394f2873956dcac679d78c7e559
-    - path: output/bwa/test.bam.bai
-      md5sum: 9965a3eaf16130c34ded277653b3811f
     - path: output/bwa/versions.yml
     - path: output/samtools/test.unaligned.bam
       md5sum: 60121474c99a15d030b866f459e83a88
@@ -21,8 +19,6 @@
   files:
     - path: output/bwa/test.bam
       md5sum: 319a128e8959023f52490030b5ee457c
-    - path: output/bwa/test.bam.bai
-      md5sum: 55703b9bdf1b9816853dd5222c31fc2e
     - path: output/bwa/versions.yml
     - path: output/samtools/test.unaligned.bam
       md5sum: 029fb4355a96008d6b30c0dcc0f210cb
@@ -35,7 +31,6 @@
     - samtools
   files:
     - path: output/bwa/test.bam
-    - path: output/bwa/test.bam.bai
     - path: output/bwa/versions.yml
     - path: output/samtools/test.unaligned.bam
     - path: output/samtools/versions.yml
