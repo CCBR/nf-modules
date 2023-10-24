@@ -10,6 +10,7 @@
 - khmer/uniquekmers (#7)
 - picard/samtofastq (#21)
 - samtools/filteraligned (#13,#20)
+- samtools/sort (#24)
 
 ### New subworkflows
 
