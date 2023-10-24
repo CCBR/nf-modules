@@ -10,7 +10,7 @@
     - bwa
     - bwa/mem
   files:
-    - path: output/picard/test.fastq.gz
+    - path: output/picard/test_1.fastq.gz
 
 - name: filter_blacklist test_filter_blacklist_paired
   command: nextflow run ./tests/subworkflows/CCBR/filter_blacklist/main.nf -entry test_filter_blacklist_paired -c tests/config/nextflow.config -c tests/config/test_data_CCBR.config
@@ -40,4 +40,4 @@
     - bwa
     - bwa/mem
   files:
-    - path: output/picard/test.fastq.gz
+    - path: output/picard/test_1.fastq.gz
