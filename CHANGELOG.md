@@ -14,4 +14,4 @@
 
 ### New subworkflows
 
-- custom/filter_blacklist (#17)
+- custom/filter_blacklist (#17,#27)
