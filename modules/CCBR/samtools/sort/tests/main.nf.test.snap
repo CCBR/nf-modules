@@ -8,7 +8,7 @@
                             "id": "test",
                             "single_end": false
                         },
-                        "test.sorted.bam:md5,309fd06ed676e7851eda22505132f728"
+                        "test.sorted.bam:md5,2488c73846ea4d9cb67187af1c58c716"
                     ]
                 ],
                 "1": [
@@ -23,7 +23,7 @@
                             "id": "test",
                             "single_end": false
                         },
-                        "test.sorted.bam:md5,309fd06ed676e7851eda22505132f728"
+                        "test.sorted.bam:md5,2488c73846ea4d9cb67187af1c58c716"
                     ]
                 ],
                 "csi": [
