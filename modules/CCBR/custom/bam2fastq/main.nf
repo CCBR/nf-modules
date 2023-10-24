@@ -1,4 +1,4 @@
-process BAM2FASTQ {
+process CUSTOM_BAM2FASTQ {
     tag { meta.id }
     label 'process_single'
     container "${ meta.single_end ? 'nciccbr/ccbr_ubuntu_base_20.04:v5' : 'nciccbr/ccbr_picard_2.27.5:v1' }"
