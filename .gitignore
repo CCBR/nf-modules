@@ -17,6 +17,7 @@ work/
 
 /docs/modules/
 /docs/subworkflows/
+/_freeze/
 /_site/
 /.quarto/
 .Rproj.user
