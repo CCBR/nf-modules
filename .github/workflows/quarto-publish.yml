@@ -1,8 +1,12 @@
+name: Render and Publish
+
 on:
   push:
     branches: main
-
-name: Render and Publish
+    paths:
+      - "**.md"
+      - "**.qmd"
+      - "**.yml"
 
 permissions:
   contents: write
