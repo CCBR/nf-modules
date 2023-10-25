@@ -8,8 +8,12 @@ yaml = YAML(typ="rt")
 
 
 def main():
-    for dirpath in ("docs/modules", "docs/subworkflows"):
-        shutil.rmtree(dirpath)
+    for dirpath in (
+        os.path.join("docs", "modules"),
+        os.path.join("docs", "subworkflows"),
+    ):
+        if os.path.exists(dirpath):
+            shutil.rmtree(dirpath)
         os.mkdir(dirpath)
     write_listing_components("modules")
     write_listing_components("subworkflows")
