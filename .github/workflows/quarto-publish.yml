@@ -1,4 +1,4 @@
-name: Render and Publish
+name: docs
 
 on:
   workflow_dispatch:
