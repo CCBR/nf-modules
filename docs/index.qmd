@@ -1,0 +1,8 @@
+---
+title: CCBR/nf-modules
+title-block-banner: true
+aliases:
+  - /index.html
+---
+
+{{< include ../README.md >}}

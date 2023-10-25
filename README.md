@@ -3,6 +3,7 @@
 Reusable modules and subworkflows for Nextflow pipelines
 
 [![test](https://github.com/CCBR/nf-modules/actions/workflows/test.yml/badge.svg)](https://github.com/CCBR/nf-modules/actions/workflows/test.yml)
+[![docs](https://img.shields.io/badge/docs-📖-blue)](https://ccbr.github.io/nf-modules/)
 
 ## Usage
 
@@ -38,7 +39,7 @@ Come across a **bug**? Open an [issue](https://github.com/CCBR/nf-modules/issues
 
 Have a **question**? Ask it in [discussions](https://github.com/CCBR/nf-modules/discussions).
 
-Want to **contribute** to this project? Check out the [contributing guidelines](.github/CONTRIBUTING.md).
+Want to **contribute** to this project? Check out the [contributing guidelines](/.github/CONTRIBUTING.md).
 
 ## References
 

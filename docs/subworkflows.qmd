@@ -1,0 +1,13 @@
+---
+title: subworkflows
+title-block-banner: true
+page-layout: full
+listing:
+  - id: subworkflows
+    contents: subworkflows/subworkflows.yml
+    type: grid
+    fields: [title, subtitle, categories]
+    sort-ui: false
+    filter-ui: [title, categories]
+    categories: true
+---

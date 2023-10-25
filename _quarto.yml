@@ -1,0 +1,49 @@
+project:
+  type: website
+  render: # don't render docs/templates
+    - "docs/*.qmd"
+    - "docs/modules/*.qmd"
+    - "docs/subworkflows/*.qmd"
+    - "README.md"
+    - "CHANGELOG.md"
+    - ".github/CONTRIBUTING.md"
+
+website:
+  title: "nf-modules"
+  site-url: https://ccbr.github.io/nf-modules
+  repo-url: https://github.com/CCBR/nf-modules
+  repo-actions: [edit, issue]
+  search:
+    location: navbar
+    type: textbox
+  navbar:
+    title: false
+    left:
+      - text: home
+        file: docs/index.qmd
+      - text: modules
+        file: docs/modules.qmd
+      - text: subworkflows
+        file: docs/subworkflows.qmd
+    right:
+      - icon: list
+        menu:
+          - text: Contributing
+            file: .github/CONTRIBUTING.md
+          - text: Changelog
+            file: CHANGELOG.md
+      - icon: github
+        href: https://github.com/CCBR/nf-modules
+  page-footer:
+    left: |
+      Created by the
+      [CCR Collaborative Bioinformatics Resource](https://github.com/CCBR)
+
+execute:
+  freeze: auto
+format:
+  html:
+    theme:
+      dark: solar
+      light: yeti
+    embed-resources: true

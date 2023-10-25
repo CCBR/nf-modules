@@ -1,0 +1,83 @@
+---
+title: "{title}"
+subtitle: "{subtitle}"
+execute:
+    echo: false
+engine: knitr
+---
+
+<!-- This file is generated automatically from a template: docs/templates/modules.qmd-->
+
+```{{r deps}}
+#| message: false
+library(dplyr)
+library(glue)
+library(here)
+library(knitr)
+library(tidyr)
+library(yaml)
+meta <- yaml::read_yaml(here("{yaml_file}"))
+yaml_to_df <- function(y) {{
+  dat <- as.data.frame(y) %>% t() %>% as.data.frame()
+  dat['names'] <- rownames(dat)
+  dat <- as_tibble(dat)
+  dat %>%
+    separate_wider_delim(names, '.', names = c('name', 'value')) %>%
+    pivot_wider(names_from = value, values_from = V1)
+}}
+```
+
+```sh
+nf-core {module_type} \
+  --git-remote https://github.com/CCBR/nf-modules \
+  install {module_name}
+```
+
+[{{{{< fa brands github >}}}}  https://github.com/CCBR/nf-modules/tree/main/{module_path}](https://github.com/CCBR/nf-modules/tree/main/{module_path})
+
+
+## {{{{< fa arrow-right-to-bracket >}}}} Input
+
+```{{r input}}
+#| message: false
+meta$input %>% yaml_to_df() %>% kable()
+```
+
+## {{{{< fa arrow-right-from-bracket >}}}} Output
+
+```{{r output}}
+#| message: false
+meta$output %>% yaml_to_df() %>% kable()
+```
+
+```{{r tools-markdown}}
+#| output: asis
+home_symbol  <- '{{{{< fa solid globe >}}}}'
+book_symbol  <- '{{{{< fa solid book >}}}}'
+code_symbol <- '{{{{< fa regular file-code >}}}}'
+
+if ('tools' %in% names(meta)) {{
+    tools_df <- meta$tools %>% yaml_to_df()
+    for (colname in c('tool_dev_url', 'homepage', 'documentation')) {{
+        if (!(colname %in% colnames(tools_df))) {{
+            tools_df[colname] <- NA_character_
+        }}
+    }}
+    markdown <- tools_df %>%
+      mutate(name = glue("### {{ name }}"),
+             home = case_when(!is.na(homepage) ~ glue("[{{ home_symbol }} Home]({{ homepage }})"),
+                              TRUE ~ ""),
+             docs = case_when(!is.na(documentation) ~ glue("[{{ book_symbol }} Docs]({{ documentation }})"),
+                              TRUE ~ ""),
+             code = case_when(!is.na(tool_dev_url) ~ glue("[{{ code_symbol }} Code]({{ tool_dev_url }})"),
+                              TRUE ~ ""),
+             links = paste(home, docs, code, glue("`{{ licence }}`"),
+                           sep = " &ensp; "),
+             markdown = glue("{{ name }}", "{{ links }}", "{{ description }}",
+                             .sep = '\n\n')
+      ) %>%
+      pull(markdown)
+    cat('## {{{{< fa screwdriver-wrench >}}}} Tools \n\n')
+    cat(paste(markdown, collapse = "\n\n"))
+}}
+```
