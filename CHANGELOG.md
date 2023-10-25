@@ -1,5 +1,7 @@
 ## Development version
 
+Our documentation website is now live: <https://ccbr.github.io/nf-modules/>
+
 ### New modules
 
 - bwa/index
