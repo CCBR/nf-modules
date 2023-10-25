@@ -30,7 +30,7 @@ Pre-commit will run the hooks every time you commit.
 
 Keep the changelog up to date with all notable changes in `CHANGELOG.md`[^2].
 
-[^2]: changelog guidelines: https://keepachangelog.com/en/1.1.0/
+[^2]: changelog guidelines: <https://keepachangelog.com/en/1.1.0/>
 
 ## VS code extensions
 

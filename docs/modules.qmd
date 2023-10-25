@@ -1,0 +1,13 @@
+---
+title: modules
+title-block-banner: true
+page-layout: full
+listing:
+  - id: modules
+    contents: modules/modules.yml
+    type: grid
+    fields: [title, subtitle, categories]
+    sort-ui: false
+    filter-ui: [title, categories]
+    categories: true
+---

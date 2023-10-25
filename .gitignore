@@ -14,3 +14,11 @@ test.tap
 test_output/
 tests/data/
 work/
+
+/docs/modules/
+/docs/subworkflows/
+/_freeze/
+/_site/
+/.quarto/
+.Rproj.user
+*.Rproj
