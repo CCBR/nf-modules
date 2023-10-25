@@ -1,0 +1,373 @@
+[
+  {
+    "objectID": ".github/CONTRIBUTING.html",
+    "href": ".github/CONTRIBUTING.html",
+    "title": "Contributing to nf-modules",
+    "section": "",
+    "text": "Once you’ve written or updated a module under modules/CCBR/[module-name] and a test workflow under tests/modules/CCBR/[module-name], then use nf-core tools to automatically create a test YAML file with:\nnf-core modules create-test-yml [module-name] --run-tests --force --no-prompts\nAdd the module to tests/config/pytest_modules.yml\nRun the tests with:\nPROFILE=docker nf-core modules test [module-name] --no-prompts\n\n\n\nPre-commit can automatically format your code, check for spelling errors, etc. every time you commit.\nInstall pre-commit if you haven’t already, then run pre-commit install to install the hooks specified in .pre-commit-config.yaml. Pre-commit will run the hooks every time you commit.\n\n\n\nKeep the changelog up to date with all notable changes in CHANGELOG.md1.\n\n\n\nIf you use VS code, installing nf-core extension pack is recommended."
+  },
+  {
+    "objectID": ".github/CONTRIBUTING.html#unit-tests",
+    "href": ".github/CONTRIBUTING.html#unit-tests",
+    "title": "Contributing to nf-modules",
+    "section": "",
+    "text": "Once you’ve written or updated a module under modules/CCBR/[module-name] and a test workflow under tests/modules/CCBR/[module-name], then use nf-core tools to automatically create a test YAML file with:\nnf-core modules create-test-yml [module-name] --run-tests --force --no-prompts\nAdd the module to tests/config/pytest_modules.yml\nRun the tests with:\nPROFILE=docker nf-core modules test [module-name] --no-prompts"
+  },
+  {
+    "objectID": ".github/CONTRIBUTING.html#pre-commit-hooks",
+    "href": ".github/CONTRIBUTING.html#pre-commit-hooks",
+    "title": "Contributing to nf-modules",
+    "section": "",
+    "text": "Pre-commit can automatically format your code, check for spelling errors, etc. every time you commit.\nInstall pre-commit if you haven’t already, then run pre-commit install to install the hooks specified in .pre-commit-config.yaml. Pre-commit will run the hooks every time you commit."
+  },
+  {
+    "objectID": ".github/CONTRIBUTING.html#changelog",
+    "href": ".github/CONTRIBUTING.html#changelog",
+    "title": "Contributing to nf-modules",
+    "section": "",
+    "text": "Keep the changelog up to date with all notable changes in CHANGELOG.md1."
+  },
+  {
+    "objectID": ".github/CONTRIBUTING.html#vs-code-extensions",
+    "href": ".github/CONTRIBUTING.html#vs-code-extensions",
+    "title": "Contributing to nf-modules",
+    "section": "",
+    "text": "If you use VS code, installing nf-core extension pack is recommended."
+  },
+  {
+    "objectID": ".github/CONTRIBUTING.html#footnotes",
+    "href": ".github/CONTRIBUTING.html#footnotes",
+    "title": "Contributing to nf-modules",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nchangelog guidelines: https://keepachangelog.com/en/1.1.0/↩︎"
+  },
+  {
+    "objectID": "README.html",
+    "href": "README.html",
+    "title": "nf-modules",
+    "section": "",
+    "text": "Reusable modules and subworkflows for Nextflow pipelines\n \n\n\nTo re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]\n\n\n\nCome across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines.\n\n\n\nMany of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbwa adapts the nf-core bwa module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module"
+  },
+  {
+    "objectID": "README.html#usage",
+    "href": "README.html#usage",
+    "title": "nf-modules",
+    "section": "",
+    "text": "To re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]"
+  },
+  {
+    "objectID": "README.html#help-contributing",
+    "href": "README.html#help-contributing",
+    "title": "nf-modules",
+    "section": "",
+    "text": "Come across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines."
+  },
+  {
+    "objectID": "README.html#references",
+    "href": "README.html#references",
+    "title": "nf-modules",
+    "section": "",
+    "text": "Many of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbwa adapts the nf-core bwa module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module"
+  },
+  {
+    "objectID": "docs/modules/samtools_sort.html",
+    "href": "docs/modules/samtools_sort.html",
+    "title": "samtools_sort",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/sort\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/samtools/sort/"
+  },
+  {
+    "objectID": "docs/modules/samtools_sort.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/samtools_sort.html#fa-arrow-right-to-bracket-input",
+    "title": "samtools_sort",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM/CRAM/SAM file\n*.{bam,cram,sam}"
+  },
+  {
+    "objectID": "docs/modules/samtools_sort.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/samtools_sort.html#fa-arrow-right-from-bracket-output",
+    "title": "samtools_sort",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nSorted BAM/CRAM/SAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nSorted BAM Index file\n*.bai\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\ncsi\nfile\nBAM index file (optional)\n*.csi"
+  },
+  {
+    "objectID": "docs/modules/samtools_sort.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/samtools_sort.html#fa-screwdriver-wrench-tools",
+    "title": "samtools_sort",
+    "section": " Tools",
+    "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
+  },
+  {
+    "objectID": "docs/modules/picard_samtofastq.html",
+    "href": "docs/modules/picard_samtofastq.html",
+    "title": "picard_samtofastq",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install picard/samtofastq\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/picard/samtofastq/"
+  },
+  {
+    "objectID": "docs/modules/picard_samtofastq.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/picard_samtofastq.html#fa-arrow-right-to-bracket-input",
+    "title": "picard_samtofastq",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nSAM or BAM file"
+  },
+  {
+    "objectID": "docs/modules/picard_samtofastq.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/picard_samtofastq.html#fa-arrow-right-from-bracket-output",
+    "title": "picard_samtofastq",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\nfastq\nfile\nfastq files\n*.{fastq}"
+  },
+  {
+    "objectID": "docs/modules/picard_samtofastq.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/picard_samtofastq.html#fa-screwdriver-wrench-tools",
+    "title": "picard_samtofastq",
+    "section": " Tools",
+    "text": "Tools\n\npicard\n Home    Docs    Code   MIT\nA set of command line tools (in Java) for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF."
+  },
+  {
+    "objectID": "docs/modules/cutadapt.html",
+    "href": "docs/modules/cutadapt.html",
+    "title": "cutadapt",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install cutadapt\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/cutadapt/"
+  },
+  {
+    "objectID": "docs/modules/cutadapt.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/cutadapt.html#fa-arrow-right-to-bracket-input",
+    "title": "cutadapt",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\nrespectively."
+  },
+  {
+    "objectID": "docs/modules/cutadapt.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/cutadapt.html#fa-arrow-right-from-bracket-output",
+    "title": "cutadapt",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nThe trimmed/modified fastq reads\n*fastq.gz\n\n\nlog\nfile\ncuatadapt log file\n*cutadapt.log\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/cutadapt.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/cutadapt.html#fa-screwdriver-wrench-tools",
+    "title": "cutadapt",
+    "section": " Tools",
+    "text": "Tools\n\ncuatadapt\n   Docs     MIT\nCutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads."
+  },
+  {
+    "objectID": "docs/modules/bwa_mem.html",
+    "href": "docs/modules/bwa_mem.html",
+    "title": "bwa_mem",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/mem\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/bwa/mem/"
+  },
+  {
+    "objectID": "docs/modules/bwa_mem.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/bwa_mem.html#fa-arrow-right-to-bracket-input",
+    "title": "bwa_mem",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\n\nrespectively.\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\nDirectory containing BWA index *.{amb,ann,bwt,pac,sa}"
+  },
+  {
+    "objectID": "docs/modules/bwa_mem.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/bwa_mem.html#fa-arrow-right-from-bracket-output",
+    "title": "bwa_mem",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nbam\nfile\nOutput BAM file containing read alignments\n*.{bam}\n\n\nbai\nfile\nOutput BAI index file\n*.{bai}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/bwa_mem.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/bwa_mem.html#fa-screwdriver-wrench-tools",
+    "title": "bwa_mem",
+    "section": " Tools",
+    "text": "Tools\n\nbwa\n Home    Docs     GPL-3.0-or-later\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome."
+  },
+  {
+    "objectID": "docs/subworkflows.html",
+    "href": "docs/subworkflows.html",
+    "title": "subworkflows",
+    "section": "",
+    "text": "filter_blacklist\n\n\nFilter out reads that align to an index\n\n\n\nbwa\n\n\nsamtools\n\n\nfastq\n\n\nbam\n\n\nfilter\n\n\nblacklist\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "CCBR/nf-modules",
+    "section": "",
+    "text": "Reusable modules and subworkflows for Nextflow pipelines\n \n\n\nTo re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]\n\n\n\nCome across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines.\n\n\n\nMany of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbwa adapts the nf-core bwa module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module"
+  },
+  {
+    "objectID": "docs/index.html#usage",
+    "href": "docs/index.html#usage",
+    "title": "CCBR/nf-modules",
+    "section": "",
+    "text": "To re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]"
+  },
+  {
+    "objectID": "docs/index.html#help-contributing",
+    "href": "docs/index.html#help-contributing",
+    "title": "CCBR/nf-modules",
+    "section": "",
+    "text": "Come across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines."
+  },
+  {
+    "objectID": "docs/index.html#references",
+    "href": "docs/index.html#references",
+    "title": "CCBR/nf-modules",
+    "section": "",
+    "text": "Many of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbwa adapts the nf-core bwa module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module"
+  },
+  {
+    "objectID": "docs/modules.html",
+    "href": "docs/modules.html",
+    "title": "modules",
+    "section": "",
+    "text": "bwa_index\n\n\nCreate BWA index for reference genome. Adapted from the nf-core bwa index module.\n\n\n\nindex\n\n\nfasta\n\n\ngenome\n\n\nreference\n\n\n\n\n\n\n\n\n\n\n\nbwa_mem\n\n\nPerforms fastq alignment to a fasta reference using BWA. Adapted from the nf-core bwa-mem module.\n\n\n\nmem\n\n\nbwa\n\n\nalignment\n\n\nmap\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\ncustom_bam2fastq\n\n\nThe module converts a BAM file to FASTQ format. It uses samtools bam2fq if reads are single end, or picard SamToFastq if reads are paired.\n\n\n\nbam2fq\n\n\nsamtools\n\n\nfastq\n\n\npicard\n\n\n\n\n\n\n\n\n\n\n\ncutadapt\n\n\nPerform adapter/quality trimming on sequencing reads. Adapted from the nf-core cutadapt module.\n\n\n\ntrimming\n\n\nadapter trimming\n\n\nadapters\n\n\nquality trimming\n\n\n\n\n\n\n\n\n\n\n\nkhmer_uniquekmers\n\n\nIn-memory nucleotide sequence k-mer counting, filtering, graph traversal and more. Adapted from nf-core/modules khmer/uniquekhmers.\n\n\n\nkhmer\n\n\nk-mer\n\n\neffective genome size\n\n\n\n\n\n\n\n\n\n\n\npicard_samtofastq\n\n\nConverts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq module.\n\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\nsamtools_filteraligned\n\n\nFilter out aligned reads from a BAM file.\n\n\n\nbam\n\n\nfilter\n\n\nsamtools\n\n\n\n\n\n\n\n\n\n\n\nsamtools_sort\n\n\nSort a SAM/BAM/CRAM file. Adapted from the nf-core samtools sort module.\n\n\n\nsort\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html",
+    "href": "docs/modules/bwa_index.html",
+    "title": "bwa_index",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/index\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/bwa/index/"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/bwa_index.html#fa-arrow-right-to-bracket-input",
+    "title": "bwa_index",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nfasta\nfile\nInput genome fasta file"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/bwa_index.html#fa-arrow-right-from-bracket-output",
+    "title": "bwa_index",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\n*.{amb,ann,bwt,pac,sa}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/bwa_index.html#fa-screwdriver-wrench-tools",
+    "title": "bwa_index",
+    "section": " Tools",
+    "text": "Tools\n\nbwa\n Home    Docs     GPL-3.0-or-later\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome."
+  },
+  {
+    "objectID": "docs/modules/custom_bam2fastq.html",
+    "href": "docs/modules/custom_bam2fastq.html",
+    "title": "custom_bam2fastq",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/bam2fastq\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/custom/bam2fastq/"
+  },
+  {
+    "objectID": "docs/modules/custom_bam2fastq.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/custom_bam2fastq.html#fa-arrow-right-to-bracket-input",
+    "title": "custom_bam2fastq",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nBAI (bam index) file\n*.{bai}"
+  },
+  {
+    "objectID": "docs/modules/custom_bam2fastq.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/custom_bam2fastq.html#fa-arrow-right-from-bracket-output",
+    "title": "custom_bam2fastq",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\nreads\nfile\n1 fastq file if single end, or 2 fastq files if paired-end.\n*.fastq.gz\n\n\nunpaired\nfile\nunpaired reads\n*.fastq.gz"
+  },
+  {
+    "objectID": "docs/modules/custom_bam2fastq.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/custom_bam2fastq.html#fa-screwdriver-wrench-tools",
+    "title": "custom_bam2fastq",
+    "section": " Tools",
+    "text": "Tools\n\nsamtools\n   Docs     MIT\nTools for dealing with SAM, BAM and CRAM files\n\n\npicard\n Home    Docs    Code   MIT\nA set of command line tools (in Java) for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF."
+  },
+  {
+    "objectID": "docs/modules/khmer_uniquekmers.html",
+    "href": "docs/modules/khmer_uniquekmers.html",
+    "title": "khmer_uniquekmers",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install khmer/uniquekmers\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/khmer/uniquekmers/"
+  },
+  {
+    "objectID": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-to-bracket-input",
+    "title": "khmer_uniquekmers",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nfasta\nfile\nfasta file\n*.{fa,fasta}\n\n\nkmer_size\ninteger\nk-mer size to use\n[0-9]+"
+  },
+  {
+    "objectID": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-from-bracket-output",
+    "title": "khmer_uniquekmers",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nreport\nfile\nText file containing unique-kmers.py execution report\nreport.txt\n\n\nkmers\nfile\nText file containing number of kmers\nkmers.txt\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/khmer_uniquekmers.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/khmer_uniquekmers.html#fa-screwdriver-wrench-tools",
+    "title": "khmer_uniquekmers",
+    "section": " Tools",
+    "text": "Tools\n\nkhmer\n Home    Docs    Code   BSD License\nkhmer k-mer counting library"
+  },
+  {
+    "objectID": "docs/modules/samtools_filteraligned.html",
+    "href": "docs/modules/samtools_filteraligned.html",
+    "title": "samtools_filteraligned",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/filteraligned\nhttps://github.com/CCBR/nf-modules/tree/main/modules/CCBR/samtools/filteraligned/"
+  },
+  {
+    "objectID": "docs/modules/samtools_filteraligned.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/samtools_filteraligned.html#fa-arrow-right-to-bracket-input",
+    "title": "samtools_filteraligned",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nInput BAM file"
+  },
+  {
+    "objectID": "docs/modules/samtools_filteraligned.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/samtools_filteraligned.html#fa-arrow-right-from-bracket-output",
+    "title": "samtools_filteraligned",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nOutput BAM file with only reads that were not aligned\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/samtools_filteraligned.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/samtools_filteraligned.html#fa-screwdriver-wrench-tools",
+    "title": "samtools_filteraligned",
+    "section": " Tools",
+    "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
+  },
+  {
+    "objectID": "docs/subworkflows/filter_blacklist.html",
+    "href": "docs/subworkflows/filter_blacklist.html",
+    "title": "filter_blacklist",
+    "section": "",
+    "text": "nf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install filter/blacklist\nhttps://github.com/CCBR/nf-modules/tree/main/subworkflows/CCBR/filter_blacklist/"
+  },
+  {
+    "objectID": "docs/subworkflows/filter_blacklist.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/subworkflows/filter_blacklist.html#fa-arrow-right-to-bracket-input",
+    "title": "filter_blacklist",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nch_fastq_input\nmap\nA channel containing fastq files\n\n\nch_blacklist_index\nfile\nA BWA index created by running BWA/INDEX on a fasta file of blacklisted regions/"
+  },
+  {
+    "objectID": "docs/subworkflows/filter_blacklist.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/subworkflows/filter_blacklist.html#fa-arrow-right-from-bracket-output",
+    "title": "filter_blacklist",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nreads\nmap\nReads from the fastq files that do not align to the blacklist\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "nf-modules",
+    "section": "",
+    "text": "bwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
+  },
+  {
+    "objectID": "CHANGELOG.html#development-version",
+    "href": "CHANGELOG.html#development-version",
+    "title": "nf-modules",
+    "section": "",
+    "text": "bwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
+  }
+]
