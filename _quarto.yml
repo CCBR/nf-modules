@@ -1,12 +1,10 @@
 project:
   type: website
-  render: # don't render docs/templates
-    - "docs/*.qmd"
-    - "docs/modules/*.qmd"
-    - "docs/subworkflows/*.qmd"
-    - "README.md"
-    - "CHANGELOG.md"
+  render:
+    - "**.qmd"
+    - "**.md"
     - ".github/CONTRIBUTING.md"
+    - "!docs/templates/"
 
 website:
   title: "nf-modules"

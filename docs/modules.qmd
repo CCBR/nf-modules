@@ -4,7 +4,7 @@ title-block-banner: true
 page-layout: full
 listing:
   - id: modules
-    contents: modules/modules.yml
+    contents: modules/
     type: grid
     fields: [title, subtitle, categories]
     sort-ui: false

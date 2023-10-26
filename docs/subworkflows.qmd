@@ -4,7 +4,7 @@ title-block-banner: true
 page-layout: full
 listing:
   - id: subworkflows
-    contents: subworkflows/subworkflows.yml
+    contents: subworkflows/
     type: grid
     fields: [title, subtitle, categories]
     sort-ui: false
