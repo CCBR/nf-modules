@@ -36,7 +36,7 @@ jobs:
       - name: Install R packages
         shell: Rscript {0}
         run: |
-          install.packages(c('dplyr', 'glue', 'here', 'knitr', 'tidyr', 'yaml'))
+          install.packages(c('dplyr', 'glue', 'here', 'knitr', 'rmarkdown', 'tidyr', 'yaml'))
 
       - name: prerender
         run: |
