@@ -16,7 +16,7 @@ workflow FILTER_BLACKLIST {
         BWA_MEM ( ch_fastq_input, ch_blacklist_index )
         SAMTOOLS_FILTERALIGNED( BWA_MEM.out.bam )
         PICARD_SAMTOFASTQ( SAMTOOLS_FILTERALIGNED.out.bam )
-        COUNT_READS_FASTQ( PICARD_SAMTOFASTQ.out.paired )
+        CUSTOM_COUNTFASTQ( PICARD_SAMTOFASTQ.out.paired )
 
         ch_versions = ch_versions.mix(
             BWA_MEM.out.versions,
@@ -26,6 +26,6 @@ workflow FILTER_BLACKLIST {
 
     emit:
         reads =  PICARD_SAMTOFASTQ.out.paired  // channel: [ val(meta), path(fastq) ]
-        n_surviving_reads = COUNT_READS_FASTQ.out.count
+        n_surviving_reads = CUSTOM_COUNTFASTQ.out.count
         versions = ch_versions           // channel: [ path(versions.yml) ]
 }
