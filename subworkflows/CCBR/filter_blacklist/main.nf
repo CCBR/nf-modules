@@ -3,7 +3,7 @@
 include { BWA_MEM                } from '../../../modules/CCBR/bwa/mem'
 include { SAMTOOLS_FILTERALIGNED } from '../../../modules/CCBR/samtools/filteraligned'
 include { PICARD_SAMTOFASTQ      } from '../../../modules/CCBR/picard/samtofastq'
-include { CUSTOM_COUNTFASTQ      } from '../../../nf-modules/modules/CCBR/custom/countfastq'
+include { CUSTOM_COUNTFASTQ      } from '../../../modules/CCBR/custom/countfastq'
 
 workflow FILTER_BLACKLIST {
     take:
