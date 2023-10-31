@@ -25,7 +25,7 @@ workflow FILTER_BLACKLIST {
         )
 
     emit:
-        reads =  PICARD_SAMTOFASTQ.out.paired  // channel: [ val(meta), path(fastq) ]
+        reads             = PICARD_SAMTOFASTQ.out.paired  // channel: [ val(meta), path(fastq) ]
         n_surviving_reads = CUSTOM_COUNTFASTQ.out.count
-        versions = ch_versions           // channel: [ path(versions.yml) ]
+        versions          = ch_versions           // channel: [ path(versions.yml) ]
 }
