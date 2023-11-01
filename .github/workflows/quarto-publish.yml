@@ -8,7 +8,7 @@ on:
       - "docs/**"
       - "**.md"
       - "**.qmd"
-      - "**.yml"
+      - "**/meta.yml"
       - ".github/workflows/quarto-publish.yml"
 
 permissions:

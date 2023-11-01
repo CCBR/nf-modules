@@ -301,7 +301,7 @@ jobs:
               - "docs/**"
               - "**.md"
               - "**.qmd"
-              - "**.yml"
+              - "**/meta.yml"
 
   check-docs-render:
     needs: docs-changes
