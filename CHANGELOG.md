@@ -8,6 +8,7 @@ Our documentation website is now live: <https://ccbr.github.io/nf-modules/> (#16
 - bwa/mem
   - also runs samtools sort & outputs index in bai format. (#12)
 - custom/bam2fastq (#14,#22)
+- custom/countfastq (#32)
 - cutadapt (#11)
 - khmer/uniquekmers (#7)
 - picard/samtofastq (#21)
