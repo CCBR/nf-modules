@@ -15,9 +15,13 @@ def main():
     return count
 
 
-if __name__ == "__main__":
-    print(main())
+def write_versions():
     with open("versions.yml", "w") as outfile:
         outfile.write('"${task.process}":\\n')
         outfile.write(f'  Python: "{platform.python_version()}"\\n')
         outfile.write(f'  Biopython: "{Bio.__version__}"\\n')
+
+
+if __name__ == "__main__":
+    write_versions()
+    main()
