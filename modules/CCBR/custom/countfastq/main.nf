@@ -15,12 +15,11 @@ process CUSTOM_COUNTFASTQ {
         task.ext.when == null || task.ext.when
 
     script:
-    def txt_filename = "${meta.baseName}.txt"
     template 'count-fastq.py'
 
     stub:
     """
     count=-1
-    echo \$count
+    echo \$count > ${meta.id}.count.txt
     """
 }
