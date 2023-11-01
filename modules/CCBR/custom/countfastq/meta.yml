@@ -5,15 +5,12 @@ description: |
 keywords:
   - fastq
 tools:
-  - grep:
+  - Biopython:
     description: |
-      a command-line utility for searching plain-text data sets for lines that match a regular expression
-  - wc:
-    description: |
-      a command-line utility for counting newlines, words, and bytes in plain-text data
-  - zcat:
-    description: |
-      a command-line utility for viewing compressed file content as plain text
+      Python tools for computational molecular biology
+    homepage: https://biopython.org/
+    tool_dev_url: https://github.com/biopython/biopython
+    doi: 10.1093/bioinformatics/btp163
 input:
   - meta:
       type: map
@@ -31,8 +28,8 @@ output:
         Groovy Map containing sample information
         e.g. [ id:'test', single_end:false ]
   - count:
-      type: env
-      description: Number of reads in the fastq files
+      type: file
+      description: Plain text file containing the number of reads in the fastq files
 authors:
   - "@kelly-sovacool"
 maintainers:
