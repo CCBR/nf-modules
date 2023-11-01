@@ -22,5 +22,6 @@ process CUSTOM_COUNTFASTQ {
     """
     count=-1
     echo \$count > ${meta.id}.count.txt
+    touch versions.yml
     """
 }
