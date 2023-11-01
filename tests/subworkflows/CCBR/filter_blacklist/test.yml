@@ -3,12 +3,14 @@
   tags:
     - subworkflows
     - subworkflows/filter_blacklist
+    - bwa
+    - bwa/mem
+    - custom
+    - custom/countfastq
     - picard
     - picard/samtofastq
     - samtools
     - samtools/filteraligned
-    - bwa
-    - bwa/mem
   files:
     - path: output/picard/test_1.fastq.gz
 
@@ -17,12 +19,14 @@
   tags:
     - subworkflows
     - subworkflows/filter_blacklist
+    - bwa
+    - bwa/mem
+    - custom
+    - custom/countfastq
     - picard
     - picard/samtofastq
     - samtools
     - samtools/filteraligned
-    - bwa
-    - bwa/mem
   files:
     - path: output/picard/test_1.fastq.gz
     - path: output/picard/test_2.fastq.gz
@@ -33,11 +37,13 @@
   tags:
     - subworkflows
     - subworkflows/filter_blacklist
+    - bwa
+    - bwa/mem
+    - custom
+    - custom/countfastq
     - picard
     - picard/samtofastq
     - samtools
     - samtools/filteraligned
-    - bwa
-    - bwa/mem
   files:
     - path: output/picard/test_1.fastq.gz
