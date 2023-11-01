@@ -21,7 +21,8 @@ workflow FILTER_BLACKLIST {
         ch_versions = ch_versions.mix(
             BWA_MEM.out.versions,
             SAMTOOLS_FILTERALIGNED.out.versions,
-            PICARD_SAMTOFASTQ.out.versions
+            PICARD_SAMTOFASTQ.out.versions,
+            CUSTOM_COUNTFASTQ.out.versions
         )
 
     emit:
