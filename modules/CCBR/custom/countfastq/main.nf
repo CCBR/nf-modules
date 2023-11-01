@@ -11,6 +11,9 @@ process CUSTOM_COUNTFASTQ {
     output:
         tuple val(meta), path("*.txt"), emit: count
 
+    when:
+        task.ext.when == null || task.ext.when
+
     script:
     def txt_filename = "${meta.baseName}.txt"
     template 'count-fastq.py'
