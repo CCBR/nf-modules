@@ -20,7 +20,7 @@ input:
       description: fasta file
       pattern: "*.{fa,fasta}"
   - kmer_size:
-      type: integer
+      type: value
       description: k-mer size to use
       pattern: "[0-9]+"
 
