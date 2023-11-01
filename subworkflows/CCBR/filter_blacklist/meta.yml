@@ -11,6 +11,7 @@ components:
   - bwa/mem
   - samtools/filteraligned
   - picard/samtofastq
+  - custom/countfastq
 input:
   - ch_fastq_input:
       type: map

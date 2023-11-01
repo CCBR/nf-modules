@@ -1,0 +1,44 @@
+- name: custom countfastq test_countfastq_single
+  command: nextflow run ./tests/modules/CCBR/custom/countfastq -entry test_countfastq_single -c ./tests/config/nextflow.config
+  tags:
+    - custom
+    - custom/countfastq
+  files:
+    - path: output/custom/test.count.txt
+      md5sum: f899139df5e1059396431415e770c6dd
+      contains:
+        - "100"
+    - path: output/custom/versions.yml
+
+- name: custom countfastq test_countfastq_paired
+  command: nextflow run ./tests/modules/CCBR/custom/countfastq -entry test_countfastq_paired -c ./tests/config/nextflow.config
+  tags:
+    - custom
+    - custom/countfastq
+  files:
+    - path: output/custom/test.count.txt
+      md5sum: 3644a684f98ea8fe223c713b77189a77
+      contains:
+        - "200"
+    - path: output/custom/versions.yml
+
+- name: custom countfastq test_countfastq_blank
+  command: nextflow run ./tests/modules/CCBR/custom/countfastq -entry test_countfastq_blank -c ./tests/config/nextflow.config
+  tags:
+    - custom
+    - custom/countfastq
+  files:
+    - path: output/custom/test.count.txt
+      md5sum: cfcd208495d565ef66e7dff9f98764da
+      contains:
+        - "0"
+    - path: output/custom/versions.yml
+
+- name: custom countfastq test_countfastq_single stub
+  command: nextflow run ./tests/modules/CCBR/custom/countfastq -entry test_countfastq_single -c ./tests/config/nextflow.config -stub
+  tags:
+    - custom
+    - custom/countfastq
+  files:
+    - path: output/custom/test.count.txt
+    - path: output/custom/versions.yml
