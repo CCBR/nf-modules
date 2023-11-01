@@ -4,6 +4,7 @@ description: |
 
 keywords:
   - fastq
+  - biopython
 tools:
   - Biopython:
     description: |
