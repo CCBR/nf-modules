@@ -70,7 +70,7 @@ if ('tools' %in% names(meta)) {
              code = case_when(!is.na(tool_dev_url) ~ glue("[{ code_symbol } Code]({ tool_dev_url })"),
                               TRUE ~ ""),
              license = case_when(!is.na(licence) ~ glue("`{ licence }`"),
-                                 TRUE ~ "")
+                                 TRUE ~ ""),
              links = paste(home, docs, code, license,
                            sep = " &ensp; "),
              markdown = glue("{ name }", "{ links }", "{ description }",
