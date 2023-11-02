@@ -12,6 +12,7 @@ tools:
       homepage: https://biopython.org/
       tool_dev_url: https://github.com/biopython/biopython
       doi: 10.1093/bioinformatics/btp163
+      licence: ["BSD 3-Clause"]
 input:
   - meta:
       type: map

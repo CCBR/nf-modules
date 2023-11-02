@@ -56,7 +56,7 @@ code_symbol <- '{{< fa regular file-code >}}'
 
 if ('tools' %in% names(meta)) {
     tools_df <- meta$tools %>% yaml_to_df()
-    for (colname in c('tool_dev_url', 'homepage', 'documentation')) {
+    for (colname in c('tool_dev_url', 'homepage', 'documentation', 'licence')) {
         if (!(colname %in% colnames(tools_df))) {
             tools_df[colname] <- NA_character_
         }
@@ -69,7 +69,9 @@ if ('tools' %in% names(meta)) {
                               TRUE ~ ""),
              code = case_when(!is.na(tool_dev_url) ~ glue("[{ code_symbol } Code]({ tool_dev_url })"),
                               TRUE ~ ""),
-             links = paste(home, docs, code, glue("`{ licence }`"),
+             license = case_when(!is.na(licence) ~ glue("`{ licence }`"),
+                                 TRUE ~ ""),
+             links = paste(home, docs, code, license,
                            sep = " &ensp; "),
              markdown = glue("{ name }", "{ links }", "{ description }",
                              .sep = '\n\n')
