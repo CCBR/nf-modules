@@ -5,9 +5,11 @@ on:
   push:
     branches: main
     paths:
+      - "docs/**"
       - "**.md"
       - "**.qmd"
-      - "**.yml"
+      - "**/meta.yml"
+      - ".github/workflows/quarto-publish.yml"
 
 permissions:
   contents: write

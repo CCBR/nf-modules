@@ -39,3 +39,5 @@ output:
       pattern: "versions.yml"
 authors:
   - "@kelly-sovacool"
+maintainers:
+  - "@kelly-sovacool"

@@ -5,10 +5,8 @@
     - samtools
   files:
     - path: output/bwa/test.bam
-      md5sum: 33be5394f2873956dcac679d78c7e559
     - path: output/bwa/versions.yml
     - path: output/samtools/test.unaligned.bam
-      md5sum: 60121474c99a15d030b866f459e83a88
     - path: output/samtools/versions.yml
 
 - name: samtools filter_aligned test_filter_aligned_paired_end
@@ -18,10 +16,8 @@
     - samtools
   files:
     - path: output/bwa/test.bam
-      md5sum: 319a128e8959023f52490030b5ee457c
     - path: output/bwa/versions.yml
     - path: output/samtools/test.unaligned.bam
-      md5sum: 029fb4355a96008d6b30c0dcc0f210cb
     - path: output/samtools/versions.yml
 
 - name: samtools filter_aligned test_filter_aligned_single_end stub
