@@ -1,0 +1,28 @@
+name: convert_sicer
+description: |
+  Convert SICER output to BED and broadPeak format
+keywords:
+  - sicer
+  - peaks
+  - chipseq
+  - bed
+  - broadPeak
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - sicer_peaks:
+      type: file
+      description: |
+        SICER peak file
+output:
+  - bed:
+      type: file
+      description: BED file
+      pattern: "*.bed"
+  - peak:
+      type: file
+      description: broadPeak file
+      pattern: "*.broadPeak"
