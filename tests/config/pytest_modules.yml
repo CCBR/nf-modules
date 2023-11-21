@@ -10,6 +10,10 @@ custom/bam2fastq:
   - modules/CCBR/custom/bam2fastq/**
   - tests/modules/CCBR/custom/bam2fastq/**
 
+custom/consensuspeaks:
+  - modules/CCBR/custom/consensuspeaks/**
+  - tests/modules/CCBR/custom/consensuspeaks/**
+
 custom/countfastq:
   - modules/CCBR/custom/countfastq/**
   - tests/modules/CCBR/custom/countfastq/**
