@@ -50,4 +50,6 @@ output:
       description: File containing software versions
       pattern: "versions.yml"
 authors:
-  - "@ekushele"
+  - "@kelly-sovacool"
+maintainers:
+  - "@kelly-sovacool"

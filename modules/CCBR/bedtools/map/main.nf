@@ -1,11 +1,9 @@
 process BEDTOOLS_MAP {
-    tag "$meta.id"
+    tag { meta.id }
     label 'process_single'
 
     conda "bioconda::bedtools=2.31.0"
-    container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/bedtools:2.31.0--hf5e1c6e_2' :
-        'biocontainers/bedtools:2.31.0--hf5e1c6e_2' }"
+    container 'biocontainers/bedtools:2.31.0--hf5e1c6e_2'
 
     input:
     tuple val(meta), path(intervals1), path(intervals2)
@@ -29,10 +27,10 @@ process BEDTOOLS_MAP {
     """
     bedtools \\
         map \\
-        -a $intervals1 \\
-        -b $intervals2 \\
-        $args \\
-        $sizes \\
+        -a ${intervals1} \\
+        -b ${intervals2} \\
+        ${args} \\
+        ${sizes} \\
         > ${prefix}.${extension}
 
     cat <<-END_VERSIONS > versions.yml
@@ -44,8 +42,8 @@ process BEDTOOLS_MAP {
     stub:
     def prefix = task.ext.prefix ?: "${meta.id}"
     extension = intervals1.getExtension()
-    if ("$intervals1" == "${prefix}.${extension}" ||
-        "$intervals2" == "${prefix}.${extension}")
+    if ("${intervals1}" == "${prefix}.${extension}" ||
+        "${intervals2}" == "${prefix}.${extension}")
         error "Input and output names are the same, use \"task.ext.prefix\" to disambiguate!"
     """
     touch ${prefix}.${extension}
