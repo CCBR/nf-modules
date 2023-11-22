@@ -99,6 +99,13 @@ def main(peakfiles, outbed, filter, nofilter):
         os.remove(f)
 
 
+def write_versions():
+    with open("versions.yml", "w") as outfile:
+        outfile.write('"${task.process}":\\n')
+        outfile.write(f'  Python: "{platform.python_version()}"\\n')
+
+
 if __name__ == "__main__":
+    write_versions()
     # arguments filled in via nextflow template
     main("${peakfiles}".split(), "${outbed}", float("${filter}"), bool("${nofilter}"))
