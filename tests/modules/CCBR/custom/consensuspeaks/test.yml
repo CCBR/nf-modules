@@ -6,7 +6,6 @@
     - "custom"
     - "custom/consensuspeaks"
   files:
-    - path: "output/custom/test.bam"
-      md5sum: e667c7caad0bc4b7ac383fd023c654fc
+    - path: "output/custom/test.macs_broad.consensus_peaks.bed"
+      md5sum: 4d684a948335bbed948704e4be9f1abe
     - path: "output/custom/versions.yml"
-      md5sum: a01fe51bc4c6a3a6226fbf77b2c7cf3b
