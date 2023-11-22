@@ -7,6 +7,12 @@ keywords:
   - chipseq
   - bed
   - broadPeak
+tools:
+  - Python:
+      description: |
+        The Python Programming Language
+      homepage: https://www.python.org/
+      licence: ["Python License 2.0"]
 input:
   - meta:
       type: map
