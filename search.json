@@ -175,39 +175,60 @@
     "text": "Tools\n\nBiopython\n Home      Code   BSD 3-Clause\nPython tools for computational molecular biology"
   },
   {
-    "objectID": "docs/modules/bwa_mem.html",
-    "href": "docs/modules/bwa_mem.html",
-    "title": "bwa_mem",
+    "objectID": "docs/modules/convert_sicer.html",
+    "href": "docs/modules/convert_sicer.html",
+    "title": "convert_sicer",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/mem\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bwa/mem/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install convert/sicer\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/convertsicer/"
   },
   {
-    "objectID": "docs/modules/bwa_mem.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/bwa_mem.html#fa-arrow-right-to-bracket-input",
-    "title": "bwa_mem",
+    "objectID": "docs/modules/convert_sicer.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/convert_sicer.html#fa-arrow-right-to-bracket-input",
+    "title": "convert_sicer",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\n\nrespectively.\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\nDirectory containing BWA index *.{amb,ann,bwt,pac,sa}"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nsicer_peaks\nfile\nSICER peak file"
   },
   {
-    "objectID": "docs/modules/bwa_mem.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/bwa_mem.html#fa-arrow-right-from-bracket-output",
-    "title": "bwa_mem",
+    "objectID": "docs/modules/convert_sicer.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/convert_sicer.html#fa-arrow-right-from-bracket-output",
+    "title": "convert_sicer",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nbam\nfile\nOutput BAM file containing read alignments\n*.{bam}\n\n\nbai\nfile\nOutput BAI index file\n*.{bai}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+    "text": "Output\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nbed\nfile\nBED file\n*.bed\n\n\npeak\nfile\nbroadPeak file\n*.broadPeak\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bwa_mem.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/bwa_mem.html#fa-screwdriver-wrench-tools",
-    "title": "bwa_mem",
+    "objectID": "docs/modules/convert_sicer.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/convert_sicer.html#fa-screwdriver-wrench-tools",
+    "title": "convert_sicer",
+    "section": " Tools",
+    "text": "Tools\n\nPython\n Home       Python License 2.0\nThe Python Programming Language"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html",
+    "href": "docs/modules/bwa_index.html",
+    "title": "bwa_index",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/index\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bwa/index/"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/bwa_index.html#fa-arrow-right-to-bracket-input",
+    "title": "bwa_index",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nfasta\nfile\nInput genome fasta file"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/bwa_index.html#fa-arrow-right-from-bracket-output",
+    "title": "bwa_index",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\n*.{amb,ann,bwt,pac,sa}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/bwa_index.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/bwa_index.html#fa-screwdriver-wrench-tools",
+    "title": "bwa_index",
     "section": " Tools",
     "text": "Tools\n\nbwa\n Home    Docs     GPL-3.0-or-later\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome."
-  },
-  {
-    "objectID": "docs/modules.html",
-    "href": "docs/modules.html",
-    "title": "modules",
-    "section": "",
-    "text": "bwa_index\n\n\nCreate BWA index for reference genome. Adapted from the nf-core bwa index module.\n\n\n\nindex\n\n\nfasta\n\n\ngenome\n\n\nreference\n\n\n\n\n\n\n\n\n\n\n\nbwa_mem\n\n\nPerforms fastq alignment to a fasta reference using BWA. Adapted from the nf-core bwa-mem module.\n\n\n\nmem\n\n\nbwa\n\n\nalignment\n\n\nmap\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\ncustom_bam2fastq\n\n\nThe module converts a BAM file to FASTQ format. It uses samtools bam2fq if reads are single end, or picard SamToFastq if reads are paired.\n\n\n\nbam2fq\n\n\nsamtools\n\n\nfastq\n\n\npicard\n\n\n\n\n\n\n\n\n\n\n\ncustom_countfastq\n\n\nCount reads in a fastq file\n\n\n\nfastq\n\n\nbiopython\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\ncutadapt\n\n\nPerform adapter/quality trimming on sequencing reads. Adapted from the nf-core cutadapt module.\n\n\n\ntrimming\n\n\nadapter trimming\n\n\nadapters\n\n\nquality trimming\n\n\n\n\n\n\n\n\n\n\n\nkhmer_uniquekmers\n\n\nIn-memory nucleotide sequence k-mer counting, filtering, graph traversal and more. Adapted from nf-core/modules khmer/uniquekhmers.\n\n\n\nkhmer\n\n\nk-mer\n\n\neffective genome size\n\n\n\n\n\n\n\n\n\n\n\npicard_samtofastq\n\n\nConverts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq module.\n\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\nsamtools_filteraligned\n\n\nFilter out aligned reads from a BAM file.\n\n\n\nbam\n\n\nfilter\n\n\nsamtools\n\n\n\n\n\n\n\n\n\n\n\nsamtools_flagstat\n\n\nCounts the number of alignments in a BAM/CRAM/SAM file for each FLAG type\n\n\n\nstats\n\n\nmapping\n\n\ncounts\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\n\n\n\nsamtools_sort\n\n\nSort a SAM/BAM/CRAM file. Adapted from the nf-core samtools sort module.\n\n\n\nsort\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "docs/index.html",
@@ -238,30 +259,37 @@
     "text": "Many of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbwa adapts the nf-core bwa module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module"
   },
   {
-    "objectID": "docs/modules/bwa_index.html",
-    "href": "docs/modules/bwa_index.html",
-    "title": "bwa_index",
+    "objectID": "docs/modules.html",
+    "href": "docs/modules.html",
+    "title": "modules",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/index\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bwa/index/"
+    "text": "bwa_index\n\n\nCreate BWA index for reference genome. Adapted from the nf-core bwa index module.\n\n\n\nindex\n\n\nfasta\n\n\ngenome\n\n\nreference\n\n\n\n\n\n\n\n\n\n\n\nbwa_mem\n\n\nPerforms fastq alignment to a fasta reference using BWA. Adapted from the nf-core bwa-mem module.\n\n\n\nmem\n\n\nbwa\n\n\nalignment\n\n\nmap\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\nconvert_sicer\n\n\nConvert SICER output to BED and broadPeak format\n\n\n\nsicer\n\n\npeaks\n\n\nchipseq\n\n\nbed\n\n\nbroadPeak\n\n\n\n\n\n\n\n\n\n\n\ncustom_bam2fastq\n\n\nThe module converts a BAM file to FASTQ format. It uses samtools bam2fq if reads are single end, or picard SamToFastq if reads are paired.\n\n\n\nbam2fq\n\n\nsamtools\n\n\nfastq\n\n\npicard\n\n\n\n\n\n\n\n\n\n\n\ncustom_countfastq\n\n\nCount reads in a fastq file\n\n\n\nfastq\n\n\nbiopython\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\ncutadapt\n\n\nPerform adapter/quality trimming on sequencing reads. Adapted from the nf-core cutadapt module.\n\n\n\ntrimming\n\n\nadapter trimming\n\n\nadapters\n\n\nquality trimming\n\n\n\n\n\n\n\n\n\n\n\nkhmer_uniquekmers\n\n\nIn-memory nucleotide sequence k-mer counting, filtering, graph traversal and more. Adapted from nf-core/modules khmer/uniquekhmers.\n\n\n\nkhmer\n\n\nk-mer\n\n\neffective genome size\n\n\n\n\n\n\n\n\n\n\n\npicard_samtofastq\n\n\nConverts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq module.\n\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\nsamtools_filteraligned\n\n\nFilter out aligned reads from a BAM file.\n\n\n\nbam\n\n\nfilter\n\n\nsamtools\n\n\n\n\n\n\n\n\n\n\n\nsamtools_flagstat\n\n\nCounts the number of alignments in a BAM/CRAM/SAM file for each FLAG type\n\n\n\nstats\n\n\nmapping\n\n\ncounts\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\n\n\n\nsamtools_sort\n\n\nSort a SAM/BAM/CRAM file. Adapted from the nf-core samtools sort module.\n\n\n\nsort\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "docs/modules/bwa_index.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/bwa_index.html#fa-arrow-right-to-bracket-input",
-    "title": "bwa_index",
+    "objectID": "docs/modules/bwa_mem.html",
+    "href": "docs/modules/bwa_mem.html",
+    "title": "bwa_mem",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/mem\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bwa/mem/"
+  },
+  {
+    "objectID": "docs/modules/bwa_mem.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/bwa_mem.html#fa-arrow-right-to-bracket-input",
+    "title": "bwa_mem",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nfasta\nfile\nInput genome fasta file"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\n\nrespectively.\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\nDirectory containing BWA index *.{amb,ann,bwt,pac,sa}"
   },
   {
-    "objectID": "docs/modules/bwa_index.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/bwa_index.html#fa-arrow-right-from-bracket-output",
-    "title": "bwa_index",
+    "objectID": "docs/modules/bwa_mem.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/bwa_mem.html#fa-arrow-right-from-bracket-output",
+    "title": "bwa_mem",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\n*.{amb,ann,bwt,pac,sa}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nbam\nfile\nOutput BAM file containing read alignments\n*.{bam}\n\n\nbai\nfile\nOutput BAI index file\n*.{bai}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bwa_index.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/bwa_index.html#fa-screwdriver-wrench-tools",
-    "title": "bwa_index",
+    "objectID": "docs/modules/bwa_mem.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/bwa_mem.html#fa-screwdriver-wrench-tools",
+    "title": "bwa_mem",
     "section": " Tools",
     "text": "Tools\n\nbwa\n Home    Docs     GPL-3.0-or-later\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome."
   },
@@ -389,13 +417,13 @@
     "href": "CHANGELOG.html",
     "title": "nf-modules",
     "section": "",
-    "text": "Our documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\n\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
+    "text": "Our documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\n\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/convertsicer (#36)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
   },
   {
     "objectID": "CHANGELOG.html#development-version",
     "href": "CHANGELOG.html#development-version",
     "title": "nf-modules",
     "section": "",
-    "text": "Our documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\n\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
+    "text": "Our documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\n\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/convertsicer (#36)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
   }
 ]
