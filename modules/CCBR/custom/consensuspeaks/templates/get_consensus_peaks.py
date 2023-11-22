@@ -66,7 +66,7 @@ def main(peakfiles, outbed, filter, nofilter):
             + rand_name
             + ".merged.bed "
             + sortedfile
-            + "|awk -F'\\t' -v OFS='\\t' '{if ($2>1){$2=1}{print}}' > "
+            + "|awk -F'\\t' -v OFS='\\t' '{if (\$2>1){\$2=1}{print}}' > "
             + countfile
         )
         print(cmd)
