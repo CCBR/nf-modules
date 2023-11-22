@@ -1,55 +1,62 @@
 ---
 name: "custom_consensuspeaks"
-## TODO nf-core: Add a description of the module and list keywords
-description: write your description here
+description: Find consensus peaks from two or more peak files.
 keywords:
   - peaks
   - chipseq
   - normalization
   - consensus
 tools:
-  - "custom":
-      ## TODO nf-core: Add a description and other details for the software below
-      description: ""
-      homepage: ""
-      documentation: ""
-      tool_dev_url: ""
-      doi: ""
-      licence: ""
+  - Python:
+      description: |
+        The Python Programming Language
+      homepage: https://www.python.org/
+      licence: ["Python License 2.0"]
+  - bedtools:
+      description: |
+        A set of tools for genomic analysis tasks, specifically enabling genome arithmetic (merge, count, complement) on various file types.
+      documentation: https://bedtools.readthedocs.io/
+      licence: ["MIT"]
+  - bedops:
+      description: |
+        fast, highly scalable and easily-parallelizable genome analysis toolkit
+      documentation: https://bedops.readthedocs.io/
+      tool_dev_url: https://github.com/bedops/bedops
+      licence: ["GPLv2"]
+      doi: 10.1093/bioinformatics/bts277
+  - bedSort:
+    description: |
+      UCSC Genome Browser tool for sorting .bed files by chrom,chromStart.
+    documentation: https://www.encodeproject.org/software/bedsort/
 
-## TODO nf-core: Add a description of all of the variables used as input
 input:
-  # Only when we have meta
   - meta:
       type: map
       description: |
         Groovy Map containing sample information
         e.g. `[ id:'test', single_end:false ]`
 
-  ## TODO nf-core: Delete / customise this example input
-  - bam:
+  - peaks:
       type: file
-      description: Sorted BAM/CRAM/SAM file
-      pattern: "*.{bam,cram,sam}"
+      description: Peak files
+      pattern: "*.{broadPeak,narrowPeak,bed}"
 
-## TODO nf-core: Add a description of all of the variables used as output
 output:
-  #Only when we have meta
   - meta:
       type: map
       description: |
         Groovy Map containing sample information
         e.g. `[ id:'test', single_end:false ]`
-
+  - peaks:
+      type: file
+      description: A single consensus peak file
+      pattern: "*.{broadPeak,narrowPeak,bed}"
   - versions:
       type: file
       description: File containing software versions
       pattern: "versions.yml"
-  ## TODO nf-core: Delete / customise this example output
-  - bam:
-      type: file
-      description: Sorted BAM/CRAM/SAM file
-      pattern: "*.{bam,cram,sam}"
 
 authors:
+  - "@kelly-sovacool"
+maintainers:
   - "@kelly-sovacool"

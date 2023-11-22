@@ -8,7 +8,6 @@ process CUSTOM_CONSENSUSPEAKS {
     tuple val(meta), path(peaks)
 
     output:
-    // TODO nf-core: Named file extensions MUST be emitted for ALL output channels
     tuple val(meta), path("*.consensus_peaks.bed"), emit: peaks
     path "versions.yml"                           , emit: versions
 
@@ -25,6 +24,7 @@ process CUSTOM_CONSENSUSPEAKS {
     } else { // just copy the input if there's only one peak file
         """
         cp ${peakfiles} ${outbed}
+        touch versions.yml
         """
     }
 
