@@ -14,6 +14,7 @@ process CONVERT_SICER {
     output:
         tuple val(meta), path("${sicer_peaks.baseName}.converted.bed"),        emit: bed
         tuple val(meta), path("${sicer_peaks.baseName}.converted.broadPeak"),  emit: peak, optional: true
+        path("versions.yml"),                                                  emit: versions
 
     when:
         task.ext.when == null || task.ext.when
@@ -22,6 +23,7 @@ process CONVERT_SICER {
     $/
     #!/usr/bin/env python
     import math
+    import platform
     with open("${sicer_peaks}",'r') as f:
         intxt = f.readlines()
     # input columns if input-normalized: chrom, start, end, ChIP tag count, control tag count, p-value, fold-enrichment, q-value
@@ -53,5 +55,8 @@ process CONVERT_SICER {
     if outBroadPeak[0] != None:
         with open("${sicer_peaks.baseName}.converted.broadPeak", 'w') as h:
             h.write( "\n".join(outBroadPeak) )
+    with open("versions.yml", "w") as outfile:
+        outfile.write('"${task.process}":\\n')
+        outfile.write(f'  Python: "{platform.python_version()}"\\n')
     /$
 }

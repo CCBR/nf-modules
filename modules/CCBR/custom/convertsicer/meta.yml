@@ -26,6 +26,10 @@ output:
       type: file
       description: broadPeak file
       pattern: "*.broadPeak"
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
 authors:
   - "@kelly-sovacool"
 maintainers:
