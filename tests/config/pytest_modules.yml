@@ -1,3 +1,15 @@
+bedtools/map:
+  - modules/CCBR/bedtools/map/**
+  - tests/modules/CCBR/bedtools/map/**
+
+bedtools/merge:
+  - modules/CCBR/bedtools/merge/**
+  - tests/modules/CCBR/bedtools/merge/**
+
+bedtools/sort:
+  - modules/CCBR/bedtools/sort/**
+  - tests/modules/CCBR/bedtools/sort/**
+
 bwa/index:
   - modules/CCBR/bwa/index/**
   - tests/modules/CCBR/bwa/index/**
