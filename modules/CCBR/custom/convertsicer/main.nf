@@ -15,6 +15,9 @@ process CONVERT_SICER {
         tuple val(meta), path("${sicer_peaks.baseName}.converted.bed"),        emit: bed
         tuple val(meta), path("${sicer_peaks.baseName}.converted.broadPeak"),  emit: peak, optional: true
 
+    when:
+        task.ext.when == null || task.ext.when
+
     script:
     $/
     #!/usr/bin/env python
