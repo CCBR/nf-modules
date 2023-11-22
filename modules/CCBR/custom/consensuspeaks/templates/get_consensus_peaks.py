@@ -62,11 +62,11 @@ def main(peakfiles, outbed, filter, nofilter):
         print(cmd)
         os.system(cmd)
         cmd = (
-            "bedmap --delim '\t' --echo-ref-name --count "
+            "bedmap --delim '\\t' --echo-ref-name --count "
             + rand_name
             + ".merged.bed "
             + sortedfile
-            + "|awk -F'\t' -v OFS='\t' '{if ($2>1){$2=1}{print}}' > "
+            + "|awk -F'\\t' -v OFS='\\t' '{if ($2>1){$2=1}{print}}' > "
             + countfile
         )
         print(cmd)
@@ -74,10 +74,10 @@ def main(peakfiles, outbed, filter, nofilter):
         deleteFiles.append(countfile)
         deleteFiles.append(sortedfile)
         if count == 1:
-            df = pandas.read_csv(countfile, delimiter="\t")
+            df = pandas.read_csv(countfile, delimiter="\\t")
             df.columns = ["peakid", countfile]
         else:
-            dfx = pandas.read_csv(countfile, delimiter="\t")
+            dfx = pandas.read_csv(countfile, delimiter="\\t")
             dfx.columns = ["peakid", countfile]
             df = df.merge(dfx, on="peakid")
 
@@ -91,7 +91,7 @@ def main(peakfiles, outbed, filter, nofilter):
             start, end = coords.split("-")
             if nofilter or float(row["score"]) > filter:
                 out.write(
-                    "%s\t%s\t%s\t%s\t%.3f\t.\tNA\tNA\tNA\n"
+                    "%s\\t%s\\t%s\\t%s\\t%.3f\\t.\\tNA\\tNA\\tNA\\n"
                     % (chrom, start, end, row["peakid"], float(row["score"]))
                 )
 
