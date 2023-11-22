@@ -1,3 +1,5 @@
+Package: nfmodules
+Description: "This is not a real R package. This DESCRIPTION file exists to specify dependencies for github actions workflows in this repository."
 Depends:
   - R (>= 4.0.0)
 Imports:
