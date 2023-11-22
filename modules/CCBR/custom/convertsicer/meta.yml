@@ -1,0 +1,42 @@
+name: convert_sicer
+description: |
+  Convert SICER output to BED and broadPeak format
+keywords:
+  - sicer
+  - peaks
+  - chipseq
+  - bed
+  - broadPeak
+tools:
+  - Python:
+      description: |
+        The Python Programming Language
+      homepage: https://www.python.org/
+      licence: ["Python License 2.0"]
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - sicer_peaks:
+      type: file
+      description: |
+        SICER peak file
+output:
+  - bed:
+      type: file
+      description: BED file
+      pattern: "*.bed"
+  - peak:
+      type: file
+      description: broadPeak file
+      pattern: "*.broadPeak"
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+authors:
+  - "@kelly-sovacool"
+maintainers:
+  - "@kelly-sovacool"
