@@ -7,8 +7,10 @@ include { CUSTOM_CONSENSUSPEAKS } from '../../../../../modules/CCBR/custom/conse
 workflow test_custom_consensuspeaks {
 
     input = [
-        [ id:'test', single_end:false ], // meta map
-        file(params.test_data['sarscov2']['illumina']['test_paired_end_bam'], checkIfExists: true)
+        [ id: 'test', group: 'macs_broad' ], // meta map
+        [ file(params.test_data['macs_peaks_1'], checkIfExists: true),
+          file(params.test_data['macs_peaks_2'], checkIfExists: true),
+        ]
     ]
 
     CUSTOM_CONSENSUSPEAKS ( input )
