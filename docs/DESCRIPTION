@@ -1,0 +1,10 @@
+Depends:
+  - R (>= 4.0.0)
+Imports:
+  - dplyr
+  - glue
+  - here
+  - knitr
+  - rmarkdown
+  - tidyr
+  - yaml

@@ -30,15 +30,13 @@ jobs:
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          working-direcotry: docs/
 
       - name: Install Python packages
         run: |
           pip install --upgrade pip -r docs/requirements.txt
-
-      - name: Install R packages
-        shell: Rscript {0}
-        run: |
-          install.packages(c('dplyr', 'glue', 'here', 'knitr', 'rmarkdown', 'tidyr', 'yaml'))
 
       - name: prerender
         run: |
