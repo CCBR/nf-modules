@@ -41,8 +41,8 @@ def main(infile, outbed, outpeak):
 
 def write_versions():
     with open("versions.yml", "w") as outfile:
-        outfile.write('"${task.process}":\\\\n')
-        outfile.write(f'  Python: "{platform.python_version()}"\\\\n')
+        outfile.write('"${task.process}":\\n')
+        outfile.write(f'  Python: "{platform.python_version()}"\\n')
 
 
 if __name__ == "__main__":
