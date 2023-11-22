@@ -1,0 +1,19 @@
+- name: custom convertsicer test_convert_sicer
+  command: nextflow run ./tests/modules/CCBR/custom/convertsicer -entry test_convert_sicer -c ./tests/config/nextflow.config
+  tags:
+    - custom/convertsicer
+    - custom
+  files:
+    - path: output/convert/sicer_islands-summary.converted.bed
+      md5sum: 5b6553f5e9c04deecfcdbbb8abb1064e
+    - path: output/convert/sicer_islands-summary.converted.broadPeak
+      md5sum: 1801d8a78671e29bb4ab4d0fcede9e2e
+
+- name: custom convertsicer test_convert_sicer stub
+  command: nextflow run ./tests/modules/CCBR/custom/convertsicer -entry test_convert_sicer -c ./tests/config/nextflow.config -stub
+  tags:
+    - custom/convertsicer
+    - custom
+  files:
+    - path: output/convert/sicer_islands-summary.converted.bed
+    - path: output/convert/sicer_islands-summary.converted.broadPeak

@@ -14,6 +14,10 @@ custom/consensuspeaks:
   - modules/CCBR/custom/consensuspeaks/**
   - tests/modules/CCBR/custom/consensuspeaks/**
 
+custom/convertsicer:
+  - modules/CCBR/custom/convertsicer/**
+  - tests/modules/CCBR/custom/convertsicer/**
+
 custom/countfastq:
   - modules/CCBR/custom/countfastq/**
   - tests/modules/CCBR/custom/countfastq/**
