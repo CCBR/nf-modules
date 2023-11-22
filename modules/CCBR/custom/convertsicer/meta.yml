@@ -26,3 +26,7 @@ output:
       type: file
       description: broadPeak file
       pattern: "*.broadPeak"
+authors:
+  - "@kelly-sovacool"
+maintainers:
+  - "@kelly-sovacool"
