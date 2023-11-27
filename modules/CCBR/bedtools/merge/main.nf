@@ -2,8 +2,7 @@ process BEDTOOLS_MERGE {
     tag { meta.id }
     label 'process_single'
 
-    conda "bioconda::bedtools=2.31.0"
-    container 'biocontainers/bedtools:2.31.0--hf5e1c6e_2'
+    container 'nciccbr/ccbr_ubuntu_base_20.04:v6.1'
 
     input:
     tuple val(meta), path(bed)
