@@ -30,8 +30,7 @@ process CUSTOM_CONSENSUSPEAKS {
 
 
     stub:
-    def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    touch ${prefix}.bed versions.yml
+    touch ${meta.id}.${meta.group}.consensus_peaks.bed versions.yml
     """
 }
