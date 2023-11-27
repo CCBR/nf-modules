@@ -1,5 +1,5 @@
 - name: bedtools sort test_bedtools_sort
-  command: nextflow run ./tests/modules/nf-core/bedtools/sort -entry test_bedtools_sort -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/bedtools/sort/nextflow.config
+  command: nextflow run ./tests/modules/CCBR/bedtools/sort -entry test_bedtools_sort -c ./tests/config/nextflow.config -c ./tests/modules/CCBR/bedtools/sort/nextflow.config
   tags:
     - bedtools
     - bedtools/sort
@@ -9,7 +9,7 @@
     - path: output/bedtools/versions.yml
 
 - name: bedtools sort test_bedtools_sort_with_genome
-  command: nextflow run ./tests/modules/nf-core/bedtools/sort -entry test_bedtools_sort_with_genome -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/bedtools/sort/nextflow.config
+  command: nextflow run ./tests/modules/CCBR/bedtools/sort -entry test_bedtools_sort_with_genome -c ./tests/config/nextflow.config -c ./tests/modules/CCBR/bedtools/sort/nextflow.config
   tags:
     - bedtools
     - bedtools/sort

@@ -1,5 +1,5 @@
 - name: bedtools map test_bedtools_map
-  command: nextflow run ./tests/modules/nf-core/bedtools/map -entry test_bedtools_map -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/bedtools/map/nextflow.config
+  command: nextflow run ./tests/modules/CCBR/bedtools/map -entry test_bedtools_map -c ./tests/config/nextflow.config -c ./tests/modules/CCBR/bedtools/map/nextflow.config
   tags:
     - bedtools
     - bedtools/map
@@ -10,7 +10,7 @@
       md5sum: 6c219404bf848cd4bd672a934dd4ed56
 
 - name: bedtools map test_bedtools_map_vcf
-  command: nextflow run ./tests/modules/nf-core/bedtools/map -entry test_bedtools_map_vcf -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/bedtools/map/nextflow.config
+  command: nextflow run ./tests/modules/CCBR/bedtools/map -entry test_bedtools_map_vcf -c ./tests/config/nextflow.config -c ./tests/modules/CCBR/bedtools/map/nextflow.config
   tags:
     - bedtools
     - bedtools/map

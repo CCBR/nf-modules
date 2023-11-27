@@ -2,8 +2,8 @@
 
 nextflow.enable.dsl = 2
 
-include { BEDTOOLS_MAP                           } from '../../../../../modules/nf-core/bedtools/map/main.nf'
-include { BEDTOOLS_MAP as BEDTOOLS_MAP_VCF } from '../../../../../modules/nf-core/bedtools/map/main.nf'
+include { BEDTOOLS_MAP                           } from '../../../../../modules/CCBR/bedtools/map/main.nf'
+include { BEDTOOLS_MAP as BEDTOOLS_MAP_VCF } from '../../../../../modules/CCBR/bedtools/map/main.nf'
 
 workflow test_bedtools_map {
     input = [
