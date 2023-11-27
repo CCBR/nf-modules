@@ -18,6 +18,14 @@ bwa/mem:
   - modules/CCBR/bwa/mem/**
   - tests/modules/CCBR/bwa/mem/**
 
+cat/cat:
+  - modules/CCBR/cat/cat/**
+  - tests/modules/CCBR/cat/cat/**
+
+cat/fastq:
+  - modules/CCBR/cat/fastq/**
+  - tests/modules/CCBR/cat/fastq/**
+
 custom/bam2fastq:
   - modules/CCBR/custom/bam2fastq/**
   - tests/modules/CCBR/custom/bam2fastq/**

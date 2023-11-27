@@ -10,6 +10,8 @@ Our documentation website is now live: <https://ccbr.github.io/nf-modules/> (#16
 - bwa/index
 - bwa/mem
   - also runs samtools sort & outputs index in bai format. (#12)
+- cat/cat (#37)
+- cat/fastq (#37)
 - custom/bam2fastq (#14,#22)
 - custom/consensuspeaks (#37)
 - custom/convertsicer (#36)
