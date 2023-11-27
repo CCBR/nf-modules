@@ -5,6 +5,7 @@ adapted from https://github.com/CCBR/ASPEN/blob/55f909d76500c3502c1c397ef3000908
 import os
 import uuid
 import pandas
+import platform
 
 
 def main(peakfiles, outbed, filter, nofilter):
