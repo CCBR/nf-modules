@@ -4,6 +4,9 @@ Our documentation website is now live: <https://ccbr.github.io/nf-modules/> (#16
 
 ### New modules
 
+- bedtools/map (#37)
+- bedtools/merge (#37)
+- bedtools/sort (#37)
 - bwa/index
 - bwa/mem
   - also runs samtools sort & outputs index in bai format. (#12)
