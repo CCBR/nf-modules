@@ -1,3 +1,7 @@
+bedops/bedmap:
+  - modules/CCBR/bedops/bedmap/**
+  - tests/modules/CCBR/bedops/bedmap/**
+
 bedtools/map:
   - modules/CCBR/bedtools/map/**
   - tests/modules/CCBR/bedtools/map/**

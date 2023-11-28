@@ -1,0 +1,12 @@
+## TODO nf-core: Please run the following command to build this file:
+#                nf-core modules create-test-yml /bedmap
+- name: "bedops bedmap"
+  command: nextflow run ./tests/modules/CCBR/bedops/bedmap -entry test_bedops_bedmap -c ./tests/config/nextflow.config
+  tags:
+    - "bedops"
+    - "bedops/bedmap"
+  files:
+    - path: "output/bedops/test.bam"
+      md5sum: e667c7caad0bc4b7ac383fd023c654fc
+    - path: "output/bedops/versions.yml"
+      md5sum: a01fe51bc4c6a3a6226fbf77b2c7cf3b

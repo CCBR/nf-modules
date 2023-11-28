@@ -4,6 +4,7 @@ Our documentation website is now live: <https://ccbr.github.io/nf-modules/> (#16
 
 ### New modules
 
+- bedops/bedmap (#37)
 - bedtools/map (#37)
 - bedtools/merge (#37)
 - bedtools/sort (#37)
