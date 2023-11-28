@@ -1,5 +1,5 @@
 process BEDOPS_BEDMAP {
-    tag { meta.id }
+    tag { meta2.id }
     label 'process_single'
     container 'nciccbr/ccbr_ubuntu_base_20.04:v6.1'
 
