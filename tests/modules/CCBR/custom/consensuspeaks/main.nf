@@ -8,8 +8,8 @@ workflow test_custom_consensuspeaks {
 
     input = [
         [ id: 'test', group: 'macs_broad' ], // meta map
-        [ file(params.test_data['macs_peaks_1'], checkIfExists: true),
-          file(params.test_data['macs_peaks_2'], checkIfExists: true),
+        [ file(params.test_data.macs.broad.peaks_T0_1, checkIfExists: true),
+          file(params.test_data.macs.broad.peaks_T0_2, checkIfExists: true),
         ]
     ]
 

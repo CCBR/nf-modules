@@ -10,8 +10,8 @@ include { BEDTOOLS_MERGE             } from '../../../../../modules/CCBR/bedtool
 
 workflow test_bedops_bedmap {
 
-    ch_peaks = Channel.fromPath([file(params.test_data['macs_peaks_1'], checkIfExists: true),
-                                 file(params.test_data['macs_peaks_2'], checkIfExists: true)])
+    ch_peaks = Channel.fromPath([file(params.test_data.macs.broad.peaks_T0_1, checkIfExists: true),
+                                 file(params.test_data.macs.broad.peaks_T0_2, checkIfExists: true)])
         .map { peak ->
             [ [id: peak.baseName, group: 'macs_broad'], peak ]
         }
