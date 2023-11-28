@@ -11,7 +11,7 @@ import platform
 def main(peakfiles, outbed, filter, nofilter):
     deleteFiles = []
 
-    rand_name = str(uuid.uuid4())
+    rand_name = ""  # str(uuid.uuid4())
 
     # concat
     cmd = "cat"
@@ -96,8 +96,8 @@ def main(peakfiles, outbed, filter, nofilter):
                     % (chrom, start, end, row["peakid"], float(row["score"]))
                 )
 
-    for f in deleteFiles:
-        os.remove(f)
+    # for f in deleteFiles:
+    #    os.remove(f)
 
 
 def write_versions():
