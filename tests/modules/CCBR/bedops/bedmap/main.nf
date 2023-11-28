@@ -13,14 +13,20 @@ workflow test_bedops_bedmap {
     ch_peaks = Channel.fromPath([file(params.test_data['macs_peaks_1'], checkIfExists: true),
                                  file(params.test_data['macs_peaks_2'], checkIfExists: true)])
         .map { peak ->
-            [ [ id: 'test', group: 'macs_broad' ], peak ]
+            [ [id: peak.baseName, group: 'macs_broad'], peak ]
         }
     // prepare reference
-    CAT_CAT(ch_peaks.groupTuple())
+    ch_peaks
+        .map{ meta, peak ->
+            [ [id: 'test', group: 'macs_broad'], peak ]
+        }
+        .groupTuple() | CAT_CAT
     SORT_CAT(CAT_CAT.out.file_out, [])
     SORT_CAT.out.sorted | BEDTOOLS_MERGE
+    map_bed = BEDTOOLS_MERGE.out.bed.map{ meta, bed -> bed }
 
     // map peaks to reference
     SORT_PEAK(ch_peaks, [])
-    BEDOPS_BEDMAP( BEDTOOLS_MERGE.out.bed, SORT_PEAK.out.sorted )
+    SORT_PEAK.out.sorted | view
+    BEDOPS_BEDMAP( SORT_PEAK.out.sorted.combine(map_bed) )
 }
