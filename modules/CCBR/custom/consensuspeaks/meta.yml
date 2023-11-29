@@ -1,6 +1,9 @@
 ---
 name: "custom_consensuspeaks"
-description: Find consensus peaks from two or more peak files.
+description: |
+  Find consensus peaks from two or more peak files.
+  The consensus_peaks subworkflow is a re-implementation of this module;
+  new pipelines should use the subworkflow instead.
 keywords:
   - peaks
   - chipseq
