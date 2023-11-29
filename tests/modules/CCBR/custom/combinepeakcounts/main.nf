@@ -9,7 +9,7 @@ include { BEDTOOLS_SORT as SORT_CAT
 include { BEDTOOLS_MERGE             } from '../../../../../modules/CCBR/bedtools/merge/main.nf'
 include { CUSTOM_COMBINEPEAKCOUNTS        } from '../../../../../modules/CCBR/custom/combinepeakcounts/main.nf'
 
-workflow test_custom_combinepeaks {
+workflow test_custom_combinepeakcounts {
 
     ch_peaks = Channel.fromPath([file(params.test_data.macs.broad.peaks_T0_1, checkIfExists: true),
                                  file(params.test_data.macs.broad.peaks_T0_2, checkIfExists: true)])
