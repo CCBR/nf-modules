@@ -7,7 +7,7 @@ include { BEDOPS_BEDMAP              } from '../../../../../modules/CCBR/bedops/
 include { BEDTOOLS_SORT as SORT_CAT
           BEDTOOLS_SORT as SORT_PEAK } from '../../../../../modules/CCBR/bedtools/sort/main.nf'
 include { BEDTOOLS_MERGE             } from '../../../../../modules/CCBR/bedtools/merge/main.nf'
-include { CUSTOM_COMBINEPEAKS        } from '../../../../../modules/CCBR/custom/combinepeaks/main.nf'
+include { CUSTOM_COMBINEPEAKCOUNTS        } from '../../../../../modules/CCBR/custom/combinepeakcounts/main.nf'
 
 workflow test_custom_combinepeaks {
 
@@ -34,5 +34,5 @@ workflow test_custom_combinepeaks {
             [ [id: meta.group], bed ]
         }
         .groupTuple() |
-        CUSTOM_COMBINEPEAKS
+        CUSTOM_COMBINEPEAKCOUNTS
 }

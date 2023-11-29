@@ -14,6 +14,7 @@ Our documentation website is now live: <https://ccbr.github.io/nf-modules/> (#16
 - cat/cat (#37)
 - cat/fastq (#37)
 - custom/bam2fastq (#14,#22)
+- custom/combinepeakcounts (#37)
 - custom/consensuspeaks (#37)
 - custom/convertsicer (#36)
 - custom/countfastq (#32)

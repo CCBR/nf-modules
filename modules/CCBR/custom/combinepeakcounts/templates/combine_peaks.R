@@ -7,7 +7,6 @@ library(tidyr)
 
 main <- function() {
   write_lines(get_version(), "versions.yml")
-  print("${peakcounts}")
   dat <- combine_peaks(unlist(str_split("${count_files}", ",")))
   write_tsv(dat, "${outfile}", col_names = FALSE)
 }
@@ -34,6 +33,14 @@ combine_peaks <- function(count_files) {
     ) %>%
     arrange(chrom, start, end)
   return(count_dat)
+}
+
+join_peaks <- function(peakfiles) {
+  return()
+}
+
+normalize_scores <- function(dat) {
+  return()
 }
 
 main()

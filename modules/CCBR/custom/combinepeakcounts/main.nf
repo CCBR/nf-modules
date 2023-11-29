@@ -1,4 +1,4 @@
-process CUSTOM_COMBINEPEAKS {
+process CUSTOM_COMBINEPEAKCOUNTS {
     """
     A helper script for the consensus_peaks subworkflow
     """
@@ -8,7 +8,7 @@ process CUSTOM_COMBINEPEAKS {
     container 'nciccbr/spacesavers2:0.1.1'
 
     input:
-    tuple val(meta), path(peakcounts)
+    tuple val(meta), path(counts)
 
     output:
     tuple val(meta), path("*.consensus.bed"), emit: bed
@@ -20,7 +20,7 @@ process CUSTOM_COMBINEPEAKS {
     script:
     prefix = task.ext.prefix ?: "${meta.id}"
     outfile = "${prefix}.consensus.bed"
-    count_files = "${peakcounts.join(',')}"
+    count_files = "${counts.join(',')}"
     template 'combine_peaks.R'
 
     stub:
