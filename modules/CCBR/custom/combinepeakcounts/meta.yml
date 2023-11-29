@@ -21,7 +21,7 @@ input:
 
   - counts:
       type: file
-      description: peak file from bedtools/bedmap
+      description: peak file from bedops/bedmap
       pattern: "*.bed"
 
 output:
