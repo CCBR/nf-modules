@@ -1,23 +1,16 @@
 ---
-# yaml-language-server: $schema=https://raw.githubusercontent.com/nf-core/modules/master/modules/yaml-schema.json
 name: "custom_combinepeakcounts"
-## TODO nf-core: Add a description of the module and list keywords
-description: write your description here
+description: combine counts into consensus peaks
 keywords:
-  - sort
-  - example
-  - genomics
+  - chipseq
+  - peaks
+  - consensus
 tools:
-  - "custom":
-      ## TODO nf-core: Add a description and other details for the software below
-      description: ""
-      homepage: ""
-      documentation: ""
-      tool_dev_url: ""
-      doi: ""
-      licence: ""
+  - "R":
+      description: "R is a free software environment for statistical computing and graphics"
+      homepage: "https://www.r-project.org/"
+      licence: "GPL-3"
 
-## TODO nf-core: Add a description of all of the variables used as input
 input:
   # Only when we have meta
   - meta:
@@ -26,30 +19,29 @@ input:
         Groovy Map containing sample information
         e.g. `[ id:'test', single_end:false ]`
 
-  ## TODO nf-core: Delete / customise this example input
-  - bam:
+  - counts:
       type: file
-      description: Sorted BAM/CRAM/SAM file
-      pattern: "*.{bam,cram,sam}"
+      description: peak file from bedtools/bedmap
+      pattern: "*.bed"
 
-## TODO nf-core: Add a description of all of the variables used as output
 output:
-  #Only when we have meta
   - meta:
       type: map
       description: |
         Groovy Map containing sample information
         e.g. `[ id:'test', single_end:false ]`
 
+  - bed:
+      type: file
+      description: |
+        consensus peak file
+
   - versions:
       type: file
       description: File containing software versions
       pattern: "versions.yml"
-  ## TODO nf-core: Delete / customise this example output
-  - bam:
-      type: file
-      description: Sorted BAM/CRAM/SAM file
-      pattern: "*.{bam,cram,sam}"
 
 authors:
+  - "@kelly-sovacool"
+maintainers:
   - "@kelly-sovacool"
