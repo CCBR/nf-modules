@@ -50,7 +50,16 @@ workflow CONSENSUS_PEAKS {
                 }
             ch_count_peak | CUSTOM_NORMALIZEPEAKS
             consensus_peaks = CUSTOM_NORMALIZEPEAKS.out.bed
+            ch_versions = ch_versions.mix(CUSTOM_NORMALIZEPEAKS.out.versions)
         }
+
+        ch_versions = ch_versions.mix(
+            CAT_CAT.out.versions,
+            BEDTOOLS_SORT.out.versions,
+            BEDTOOLS_MERGE.out.versions,
+            BEDOPS_BEDMAP.out.versions,
+            CUSTOM_COMBINEPEAKCOUNTS.out.versions
+        )
 
     emit:
         peaks    = consensus_peaks
