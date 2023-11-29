@@ -413,17 +413,10 @@
     "text": "filter_blacklist\n\n\nFilter out reads that align to an index\n\n\n\nbwa\n\n\nsamtools\n\n\nfastq\n\n\nbam\n\n\nfilter\n\n\nblacklist\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "CHANGELOG.html",
-    "href": "CHANGELOG.html",
+    "objectID": "CHANGELOG.html#nf-modules-0.1.0",
+    "href": "CHANGELOG.html#nf-modules-0.1.0",
     "title": "nf-modules",
-    "section": "",
-    "text": "Our documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\n\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/convertsicer (#36)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
-  },
-  {
-    "objectID": "CHANGELOG.html#development-version",
-    "href": "CHANGELOG.html#development-version",
-    "title": "nf-modules",
-    "section": "",
-    "text": "Our documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\n\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/convertsicer (#36)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\n\n\ncustom/filter_blacklist (#17,#27)"
+    "section": "nf-modules 0.1.0",
+    "text": "nf-modules 0.1.0\nOur documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\nNew modules\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/convertsicer (#36)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\nNew subworkflows\n\ncustom/filter_blacklist (#17,#27)"
   }
 ]

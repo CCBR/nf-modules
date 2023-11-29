@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ccbr.github.io/nf-modules/.github/CONTRIBUTING.html</loc>
-    <lastmod>2023-11-22T15:34:42.505Z</lastmod>
+    <lastmod>2023-11-29T20:05:09.394Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/subworkflows/filter_blacklist.html</loc>
-    <lastmod>2023-11-22T15:34:38.205Z</lastmod>
+    <lastmod>2023-11-29T20:05:05.138Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/samtools_sort.html</loc>
-    <lastmod>2023-11-22T15:34:32.565Z</lastmod>
+    <lastmod>2023-11-29T20:04:59.538Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/samtools_filteraligned.html</loc>
-    <lastmod>2023-11-22T15:34:25.577Z</lastmod>
+    <lastmod>2023-11-29T20:04:52.666Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/khmer_uniquekmers.html</loc>
-    <lastmod>2023-11-22T15:34:18.533Z</lastmod>
+    <lastmod>2023-11-29T20:04:45.842Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_countfastq.html</loc>
-    <lastmod>2023-11-22T15:34:11.469Z</lastmod>
+    <lastmod>2023-11-29T20:04:38.902Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/convert_sicer.html</loc>
-    <lastmod>2023-11-22T15:34:04.405Z</lastmod>
+    <lastmod>2023-11-29T20:04:31.962Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bwa_index.html</loc>
-    <lastmod>2023-11-22T15:33:57.413Z</lastmod>
+    <lastmod>2023-11-29T20:04:24.922Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/index.html</loc>
-    <lastmod>2023-11-22T15:33:50.097Z</lastmod>
+    <lastmod>2023-11-29T20:04:17.806Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules.html</loc>
-    <lastmod>2023-11-22T15:33:53.793Z</lastmod>
+    <lastmod>2023-11-29T20:04:21.474Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bwa_mem.html</loc>
-    <lastmod>2023-11-22T15:34:00.917Z</lastmod>
+    <lastmod>2023-11-29T20:04:28.502Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_bam2fastq.html</loc>
-    <lastmod>2023-11-22T15:34:07.985Z</lastmod>
+    <lastmod>2023-11-29T20:04:35.370Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/cutadapt.html</loc>
-    <lastmod>2023-11-22T15:34:14.981Z</lastmod>
+    <lastmod>2023-11-29T20:04:42.390Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/picard_samtofastq.html</loc>
-    <lastmod>2023-11-22T15:34:22.045Z</lastmod>
+    <lastmod>2023-11-29T20:04:49.254Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/samtools_flagstat.html</loc>
-    <lastmod>2023-11-22T15:34:29.105Z</lastmod>
+    <lastmod>2023-11-29T20:04:56.082Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/subworkflows.html</loc>
-    <lastmod>2023-11-22T15:34:34.789Z</lastmod>
+    <lastmod>2023-11-29T20:05:01.730Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/CHANGELOG.html</loc>
-    <lastmod>2023-11-22T15:34:40.281Z</lastmod>
+    <lastmod>2023-11-29T20:05:07.150Z</lastmod>
   </url>
 </urlset>
