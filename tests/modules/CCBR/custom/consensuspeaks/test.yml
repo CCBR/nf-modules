@@ -1,0 +1,19 @@
+## TODO nf-core: Please run the following command to build this file:
+#                nf-core modules create-test-yml /consensuspeaks
+- name: "custom consensuspeaks"
+  command: nextflow run ./tests/modules/CCBR/custom/consensuspeaks -entry test_custom_consensuspeaks -c ./tests/config/nextflow.config
+  tags:
+    - "custom"
+    - "custom/consensuspeaks"
+  files:
+    - path: "output/custom/test.macs_broad.consensus_peaks.bed"
+      md5sum: 417447a3080df9d4ffa294b876dde640
+    - path: "output/custom/versions.yml"
+- name: "custom consensuspeaks stub"
+  command: nextflow run ./tests/modules/CCBR/custom/consensuspeaks -entry test_custom_consensuspeaks -c ./tests/config/nextflow.config -stub
+  tags:
+    - "custom"
+    - "custom/consensuspeaks"
+  files:
+    - path: "output/custom/test.macs_broad.consensus_peaks.bed"
+    - path: "output/custom/versions.yml"

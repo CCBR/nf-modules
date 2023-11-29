@@ -1,0 +1,44 @@
+- name: bedops bedmap test_bedops_bedmap
+  command: nextflow run ./tests/modules/CCBR/bedops/bedmap -entry test_bedops_bedmap -c ./tests/config/nextflow.config
+  tags:
+    - bedops
+    - bedops/bedmap
+  files:
+    - path: output/bedops_bedmap/SPT5_T0_1_peaks.test.mapped.bed
+      md5sum: a46e2f78e8534ecdc882fff22f0baa87
+    - path: output/bedops_bedmap/SPT5_T0_2_peaks.test.mapped.bed
+      md5sum: c58be7ebe1f63c1cdf9eef66a41e23c1
+    - path: output/bedops_bedmap/versions.yml
+    - path: output/bedtools_merge/test.merged.bed
+      md5sum: d67c8c15b99b310ec5aa0ec363dcd147
+    - path: output/bedtools_merge/versions.yml
+    - path: output/cat_cat/test.broadPeak
+      md5sum: c5d73e727a10d2a32b139efcdd369f59
+    - path: output/cat_cat/versions.yml
+    - path: output/sort_cat/test.sorted.broadPeak
+      md5sum: b412285368f1698634177087e7ea4103
+    - path: output/sort_cat/versions.yml
+    - path: output/sort_peak/SPT5_T0_1_peaks.sorted.broadPeak
+      md5sum: 03b87e9021f85db1c8e07f5c0b4d7347
+    - path: output/sort_peak/SPT5_T0_2_peaks.sorted.broadPeak
+      md5sum: d3216918f24ced4b76b8eed6e38aa5c6
+    - path: output/sort_peak/versions.yml
+
+- name: bedops bedmap test_bedops_bedmap stub
+  command: nextflow run ./tests/modules/CCBR/bedops/bedmap -entry test_bedops_bedmap -c ./tests/config/nextflow.config -stub
+  tags:
+    - bedops
+    - bedops/bedmap
+  files:
+    - path: output/bedops_bedmap/SPT5_T0_1_peaks.test.mapped.bed
+    - path: output/bedops_bedmap/SPT5_T0_2_peaks.test.mapped.bed
+    - path: output/bedops_bedmap/versions.yml
+    - path: output/bedtools_merge/test.merged.bed
+    - path: output/bedtools_merge/versions.yml
+    - path: output/cat_cat/test.broadPeak
+    - path: output/cat_cat/versions.yml
+    - path: output/sort_cat/test.sorted.broadPeak
+    - path: output/sort_cat/versions.yml
+    - path: output/sort_peak/SPT5_T0_1_peaks.sorted.broadPeak
+    - path: output/sort_peak/SPT5_T0_2_peaks.sorted.broadPeak
+    - path: output/sort_peak/versions.yml

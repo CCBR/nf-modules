@@ -1,3 +1,19 @@
+bedops/bedmap:
+  - modules/CCBR/bedops/bedmap/**
+  - tests/modules/CCBR/bedops/bedmap/**
+
+bedtools/map:
+  - modules/CCBR/bedtools/map/**
+  - tests/modules/CCBR/bedtools/map/**
+
+bedtools/merge:
+  - modules/CCBR/bedtools/merge/**
+  - tests/modules/CCBR/bedtools/merge/**
+
+bedtools/sort:
+  - modules/CCBR/bedtools/sort/**
+  - tests/modules/CCBR/bedtools/sort/**
+
 bwa/index:
   - modules/CCBR/bwa/index/**
   - tests/modules/CCBR/bwa/index/**
@@ -6,9 +22,25 @@ bwa/mem:
   - modules/CCBR/bwa/mem/**
   - tests/modules/CCBR/bwa/mem/**
 
+cat/cat:
+  - modules/CCBR/cat/cat/**
+  - tests/modules/CCBR/cat/cat/**
+
+cat/fastq:
+  - modules/CCBR/cat/fastq/**
+  - tests/modules/CCBR/cat/fastq/**
+
 custom/bam2fastq:
   - modules/CCBR/custom/bam2fastq/**
   - tests/modules/CCBR/custom/bam2fastq/**
+
+custom/combinepeakcounts:
+  - modules/CCBR/custom/combinepeakcounts/**
+  - tests/modules/CCBR/custom/combinepeakcounts/**
+
+custom/consensuspeaks:
+  - modules/CCBR/custom/consensuspeaks/**
+  - tests/modules/CCBR/custom/consensuspeaks/**
 
 custom/convertsicer:
   - modules/CCBR/custom/convertsicer/**
@@ -17,6 +49,10 @@ custom/convertsicer:
 custom/countfastq:
   - modules/CCBR/custom/countfastq/**
   - tests/modules/CCBR/custom/countfastq/**
+
+custom/normalizepeaks:
+  - modules/CCBR/custom/normalizepeaks/**
+  - tests/modules/CCBR/custom/normalizepeaks/**
 
 cutadapt:
   - modules/CCBR/cutadapt/**
@@ -33,6 +69,10 @@ picard/samtofastq:
 samtools/filteraligned:
   - modules/CCBR/samtools/filteraligned/**
   - tests/modules/CCBR/samtools/filteraligned/**
+
+subworkflows/consensus_peaks:
+  - subworkflows/CCBR/consensus_peaks/**
+  - tests/subworkflows/CCBR/consensus_peaks/**
 
 subworkflows/filter_blacklist:
   - subworkflows/CCBR/filter_blacklist/**

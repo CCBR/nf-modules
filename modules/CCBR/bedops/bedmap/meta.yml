@@ -1,0 +1,55 @@
+---
+name: "bedops_bedmap"
+description: The bedmap program is used to retrieve and process signal or other features over regions of interest in BED files
+keywords:
+  - bedops
+  - bedmap
+  - bed
+  - intervals
+tools:
+  - bedops:
+      description: |
+        fast, highly scalable and easily-parallelizable genome analysis toolkit
+      documentation: https://bedops.readthedocs.io/
+      tool_dev_url: https://github.com/bedops/bedops
+      licence: ["GPLv2"]
+      doi: 10.1093/bioinformatics/bts277
+
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. `[ id:'test', single_end:false ]`
+
+  - refbed:
+      type: file
+      description: BED file
+      pattern: "*.bed"
+  - mapbed:
+      type: file
+      description: BED file
+      pattern: "*.bed"
+
+output:
+  #Only when we have meta
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. `[ id:'test', single_end:false ]`
+
+  - mapped_bed:
+      type: file
+      description: BED file
+      pattern: "*.bed"
+
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+
+authors:
+  - "@kelly-sovacool"
+maintainers:
+  - "@kelly-sovacool"
