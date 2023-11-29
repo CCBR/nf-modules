@@ -9,7 +9,7 @@ tools:
   - "R":
       description: "R is a free software environment for statistical computing and graphics"
       homepage: "https://www.r-project.org/"
-      licence: "GPL-3"
+      licence: ["GPL-3"]
 
 input:
   # Only when we have meta
