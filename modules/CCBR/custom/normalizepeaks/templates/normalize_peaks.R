@@ -6,17 +6,17 @@ library(stringr)
 library(readr)
 library(tidyr)
 
-main <- function() {
-  write_lines(get_version(), "versions.yml")
-  count_dat <- read_peaks("${count}")
-  peak_dat <- read_peaks("${peaks}") %>%
+main <- function(versionfile = "versions.yml", counfile = "${count}", peakfile = "${peaks}", outfile = "${outfile}") {
+  write_lines(get_version(), versionfile)
+  count_dat <- read_peaks(countfile)
+  peak_dat <- read_peaks(peakfile) %>%
     mutate(peakID = glue("{chrom}:{start}-{end}")) %>%
     normalize() %>%
     select(peakID, pvalue, qvalue)
   count_dat %>%
     select(-c(pvalue, qvalue)) %>%
     left_join(peak_dat, by = "peakID") %>%
-    write_tsv("${outfile}", col_names = FALSE)
+    write_tsv(outfile, col_names = FALSE)
 }
 
 get_version <- function() {
@@ -61,4 +61,4 @@ corces <- function(x) {
   return(x / sum(x) / 10^6)
 }
 
-main()
+main("versions.yml", "${count}", "${peaks}", "${outfile}")
