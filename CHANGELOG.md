@@ -26,4 +26,5 @@ Our documentation website is now live: <https://ccbr.github.io/nf-modules/> (#16
 
 ### New subworkflows
 
-- custom/filter_blacklist (#17,#27)
+- consensus_peaks (#37)
+- filter_blacklist (#17,#27)
