@@ -6,7 +6,10 @@ library(stringr)
 library(readr)
 library(tidyr)
 
-main <- function(versionfile = "versions.yml", counfile = "${count}", peakfile = "${peaks}", outfile = "${outfile}") {
+main <- function(versionfile = "versions.yml",
+                 countfile = "${count}",
+                 peakfile = "${peaks}",
+                 outfile = "${outfile}") {
   write_lines(get_version(), versionfile)
   count_dat <- read_peaks(countfile)
   peak_dat <- read_peaks(peakfile) %>%
