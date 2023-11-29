@@ -1,5 +1,11 @@
 ## Development version
 
+### New modules
+
+### New subworkflows
+
+## nf-modules 0.1.0
+
 Our documentation website is now live: <https://ccbr.github.io/nf-modules/> (#16)
 
 ### New modules
