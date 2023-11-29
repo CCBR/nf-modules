@@ -70,6 +70,10 @@ samtools/filteraligned:
   - modules/CCBR/samtools/filteraligned/**
   - tests/modules/CCBR/samtools/filteraligned/**
 
+subworkflows/consensus_peaks:
+  - subworkflows/CCBR/consensus_peaks/**
+  - tests/subworkflows/CCBR/consensus_peaks/**
+
 subworkflows/filter_blacklist:
   - subworkflows/CCBR/filter_blacklist/**
   - tests/subworkflows/CCBR/filter_blacklist/**
