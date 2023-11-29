@@ -25,10 +25,14 @@ combine_peaks <- function(count_files) {
     }) %>%
     list_rbind() %>%
     group_by(peakID) %>%
-    summarize(score = sum(count) / length(count_files)) %>%
+    summarize(score = format(sum(count) / length(count_files), nsmall = 3)) %>%
     separate_wider_delim(peakID, ":", names = c("chrom", "coords"), cols_remove = FALSE) %>%
     separate_wider_delim(coords, "-", names = c("start", "end")) %>%
-    mutate(strand = ".", signal = NA, pvalue = NA, qvalue = NA)
+    mutate(
+      start = as.numeric(start), end = as.numeric(end),
+      strand = ".", signal = NA, pvalue = NA, qvalue = NA
+    ) %>%
+    arrange(chrom, start, end)
   return(count_dat)
 }
 
