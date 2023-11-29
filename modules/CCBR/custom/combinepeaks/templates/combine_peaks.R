@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 library(dplyr)
 library(purrr)
 library(stringr)
@@ -5,8 +6,14 @@ library(readr)
 library(tidyr)
 
 main <- function() {
-  dat <- combine_peaks(unlist(str_split("${count_files}", " ")))
+  write_lines(get_version(), "versions.yml")
+  print("${peakcounts}")
+  dat <- combine_peaks(unlist(str_split("${count_files}", ",")))
   write_tsv(dat, "${outfile}", col_names = FALSE)
+}
+
+get_version <- function() {
+  return(paste0(R.version[["major"]], ".", R.version[["minor"]]))
 }
 
 combine_peaks <- function(count_files) {
