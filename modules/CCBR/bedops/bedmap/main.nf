@@ -1,10 +1,10 @@
 process BEDOPS_BEDMAP {
-    tag { meta.id }
+    tag "${meta.id}.${refmeta.id}"
     label 'process_single'
     container 'nciccbr/ccbr_ubuntu_base_20.04:v6.1'
 
     input:
-    tuple val(meta), path(mapbed), path(refbed)
+    tuple val(meta), path(mapbed), val(refmeta), path(refbed)
 
     output:
     tuple val(meta), path("*.mapped.bed"), emit: bed
@@ -21,7 +21,7 @@ process BEDOPS_BEDMAP {
         --count \\
         ${refbed} \\
         ${mapbed} \\
-        > ${meta.id}.mapped.bed
+        > ${meta.id}.${refmeta.id}.mapped.bed
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
@@ -31,7 +31,7 @@ process BEDOPS_BEDMAP {
 
     stub:
     """
-    touch ${meta.id}.mapped.bed
+    touch ${meta.id}.${refmeta.id}.mapped.bed
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

@@ -23,10 +23,8 @@ workflow test_bedops_bedmap {
         .groupTuple() | CAT_CAT
     SORT_CAT(CAT_CAT.out.file_out, [])
     SORT_CAT.out.sorted | BEDTOOLS_MERGE
-    ref_bed = BEDTOOLS_MERGE.out.bed.map{ meta, bed -> bed }
 
     // map peaks to reference
     SORT_PEAK(ch_peaks, [])
-    SORT_PEAK.out.sorted | view
-    BEDOPS_BEDMAP( SORT_PEAK.out.sorted.combine(ref_bed) )
+    SORT_PEAK.out.sorted.combine(BEDTOOLS_MERGE.out.bed) | BEDOPS_BEDMAP
 }
