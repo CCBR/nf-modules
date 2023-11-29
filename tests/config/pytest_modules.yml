@@ -34,6 +34,10 @@ custom/bam2fastq:
   - modules/CCBR/custom/bam2fastq/**
   - tests/modules/CCBR/custom/bam2fastq/**
 
+custom/combinepeaks:
+  - modules/CCBR/custom/combinepeaks/**
+  - tests/modules/CCBR/custom/combinepeaks/**
+
 custom/consensuspeaks:
   - modules/CCBR/custom/consensuspeaks/**
   - tests/modules/CCBR/custom/consensuspeaks/**
