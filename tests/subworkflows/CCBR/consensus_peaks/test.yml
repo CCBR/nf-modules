@@ -1,0 +1,57 @@
+- name: consensus_peaks test_consensus_peaks_broad
+  command: nextflow run ./tests/subworkflows/CCBR/consensus_peaks -entry test_consensus_peaks_broad -c ./tests/config/nextflow.config
+  tags:
+    - bedops
+    - bedops/bedmap
+    - bedtools
+    - bedtools/merge
+    - bedtools/sort
+    - cat
+    - cat/cat
+    - custom
+    - custom/combinepeakcounts
+    - custom/normalizepeaks
+    - subworkflows
+    - subworkflows/consensus_peaks
+  files:
+    - path: output/bedops_bedmap/SPT5_T0_1_peaks.macs_broad.mapped.bed
+      md5sum: a46e2f78e8534ecdc882fff22f0baa87
+    - path: output/bedops_bedmap/SPT5_T0_2_peaks.macs_broad.mapped.bed
+      md5sum: c58be7ebe1f63c1cdf9eef66a41e23c1
+    - path: output/bedtools_merge/macs_broad.merged.bed
+      md5sum: d67c8c15b99b310ec5aa0ec363dcd147
+    - path: output/bedtools_sort/SPT5_T0_1_peaks.sorted.broadPeak
+      md5sum: 03b87e9021f85db1c8e07f5c0b4d7347
+    - path: output/bedtools_sort/SPT5_T0_2_peaks.sorted.broadPeak
+      md5sum: d3216918f24ced4b76b8eed6e38aa5c6
+    - path: output/bedtools_sort/macs_broad.sorted.broadPeak
+      md5sum: 2541c1a79171d255fd0582bd7ea80493
+    - path: output/cat_cat/macs_broad.broadPeak
+      md5sum: 4c8d04c85c4782bf667297ecb23b6703
+    - path: output/custom_combinepeakcounts/macs_broad.consensus.bed
+      md5sum: 600f5c2dfeae440ada8c412c153a677e
+
+- name: consensus_peaks test_consensus_peaks_broad stub
+  command: nextflow run ./tests/subworkflows/CCBR/consensus_peaks -entry test_consensus_peaks_broad -c ./tests/config/nextflow.config -stub
+  tags:
+    - bedops
+    - bedops/bedmap
+    - bedtools
+    - bedtools/merge
+    - bedtools/sort
+    - cat
+    - cat/cat
+    - custom
+    - custom/combinepeakcounts
+    - custom/normalizepeaks
+    - subworkflows
+    - subworkflows/consensus_peaks
+  files:
+    - path: output/bedops_bedmap/SPT5_T0_1_peaks.macs_broad.mapped.bed
+    - path: output/bedops_bedmap/SPT5_T0_2_peaks.macs_broad.mapped.bed
+    - path: output/bedtools_merge/macs_broad.merged.bed
+    - path: output/bedtools_sort/SPT5_T0_1_peaks.sorted.broadPeak
+    - path: output/bedtools_sort/SPT5_T0_2_peaks.sorted.broadPeak
+    - path: output/bedtools_sort/macs_broad.sorted.broadPeak
+    - path: output/cat_cat/macs_broad.broadPeak
+    - path: output/custom_combinepeakcounts/macs_broad.consensus.bed
