@@ -21,9 +21,8 @@ process CUSTOM_COMBINEPEAKS {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def outfile = "${prefix}.consensus.bed"
     def count_files = peakcounts.join(' ')
-    """
     template 'combine_peaks.R'
-
+    """
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         : \$(echo \$(R --version | grep 'R version' | sed 's/R version //; s/ (.*//'))
