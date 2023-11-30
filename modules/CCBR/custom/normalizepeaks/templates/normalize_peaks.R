@@ -6,24 +6,22 @@ library(stringr)
 library(readr)
 library(tidyr)
 
-main <- function(versionfile = "versions.yml",
-                 countfile = "${count}",
-                 peakfile = "${peaks}",
-                 outfile = "${outfile}") {
-  write_lines(get_version(), versionfile)
-  count_dat <- read_peaks(countfile)
-  peak_dat <- read_peaks(peakfile) %>%
+main <- function(version_file = "versions.yml",
+                 peak_file = "${peak}",
+                 out_file = "${outfile}") {
+  write_version(version_file)
+  peak_dat <- read_peaks(peak_file) %>%
     mutate(peakID = glue("{chrom}:{start}-{end}")) %>%
     normalize() %>%
-    select(peakID, pvalue, qvalue)
-  count_dat %>%
-    select(-c(pvalue, qvalue)) %>%
-    left_join(peak_dat, by = "peakID") %>%
-    write_tsv(outfile, col_names = FALSE)
+    write_tsv(out_file, col_names = FALSE)
 }
 
 get_version <- function() {
   return(paste0(R.version[["major"]], ".", R.version[["minor"]]))
+}
+
+write_version <- function(version_file) {
+  write_lines(get_version(), version_file)
 }
 
 read_peaks <- function(peak_file) {
@@ -47,7 +45,6 @@ read_peaks <- function(peak_file) {
 normalize <- function(peak_dat, norm_method = corces) {
   return(
     peak_dat %>%
-      group_by(peakID) %>%
       mutate(
         pvalue_norm = norm_method(pvalue),
         qvalue_norm = 10^(-pvalue_norm) %>% p.adjust(method = "BH") %>% -log10(.)
@@ -64,4 +61,4 @@ corces <- function(x) {
   return(x / sum(x) / 10^6)
 }
 
-main("versions.yml", "${count}", "${peaks}", "${outfile}")
+main("versions.yml", "${peak}", "${outfile}")

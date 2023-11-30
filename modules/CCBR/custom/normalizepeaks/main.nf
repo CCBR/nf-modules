@@ -8,7 +8,7 @@ process CUSTOM_NORMALIZEPEAKS {
     container 'nciccbr/spacesavers2:0.1.1'
 
     input:
-    tuple val(meta), path(count), path(peaks)
+    tuple val(meta), path(peak)
 
     output:
     tuple val(meta), path("*norm.bed"), emit: bed
@@ -19,12 +19,12 @@ process CUSTOM_NORMALIZEPEAKS {
 
     script:
     prefix = task.ext.prefix ?: "${meta.id}"
-    outfile = "${count.baseName}.norm.bed"
+    outfile = "${peak.baseName}.norm.bed"
     template 'normalize_peaks.R'
 
     stub:
     """
-    touch ${count.baseName}.norm.bed
+    touch ${peak.baseName}.norm.bed
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
