@@ -9,5 +9,5 @@ workflow test_bedtools_merge {
               file(params.test_data['sarscov2']['genome']['test_bed'], checkIfExists: true)
             ]
 
-    BEDTOOLS_MERGE ( input )
+    BEDTOOLS_MERGE ( input, '' )
 }

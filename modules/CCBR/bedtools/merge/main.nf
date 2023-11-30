@@ -6,6 +6,7 @@ process BEDTOOLS_MERGE {
 
     input:
     tuple val(meta), path(bed)
+    val(args)
 
     output:
     tuple val(meta), path('*.bed'), emit: bed
@@ -15,7 +16,6 @@ process BEDTOOLS_MERGE {
     task.ext.when == null || task.ext.when
 
     script:
-    def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}.merged"
     if ("$bed" == "${prefix}.bed") error "Input and output names are the same, use \"task.ext.prefix\" to disambiguate!"
     """
