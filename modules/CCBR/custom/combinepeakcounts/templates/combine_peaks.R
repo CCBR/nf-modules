@@ -5,17 +5,19 @@ library(stringr)
 library(readr)
 library(tidyr)
 
-main <- function() {
-  write_lines(get_version(), "versions.yml")
-  dat <- combine_peaks(unlist(str_split("${count_files}", ",")))
-  write_tsv(dat, "${outfile}", col_names = FALSE)
+main <- function(version_file = "versions.yml",
+                 count_files = unlist(str_split("${count_files}", ",")),
+                 out_file = "${outfile}") {
+  write_lines(get_version(), version_file)
+  dat <- combine_peak_counts(count_files)
+  write_tsv(dat, out_file, col_names = FALSE)
 }
 
 get_version <- function() {
   return(paste0(R.version[["major"]], ".", R.version[["minor"]]))
 }
 
-combine_peaks <- function(count_files) {
+combine_peak_counts <- function(count_files) {
   count_dat <- count_files %>%
     map(function(file) {
       dat <- read_tsv(file, col_names = FALSE)
@@ -35,12 +37,38 @@ combine_peaks <- function(count_files) {
   return(count_dat)
 }
 
-join_peaks <- function(peakfiles) {
-  return()
+read_peaks <- function(peak_file) {
+  peak_colnames <- c(
+    "chrom",
+    "start",
+    "end",
+    "peakID",
+    "score",
+    "strand",
+    "signal",
+    "pvalue",
+    "qvalue",
+    "peak"
+  )
+  peaks <- read_tsv(peak_file, col_names = FALSE)
+  colnames(peaks) <- peak_colnames[seq_len(ncol(peaks))]
+  return(peaks)
 }
 
-normalize_scores <- function(dat) {
-  return()
+join_counts <- function(versionfile = "versions.yml",
+                        countfile = "${count}",
+                        peakfile = "${peaks}",
+                        outfile = "${outfile}") {
+  write_lines(get_version(), versionfile)
+  count_dat <- read_peaks(countfile)
+  peak_dat <- read_peaks(peakfile) %>%
+    mutate(peakID = glue("{chrom}:{start}-{end}")) %>%
+    normalize() %>%
+    select(peakID, pvalue, qvalue)
+  count_dat %>%
+    select(-c(pvalue, qvalue)) %>%
+    left_join(peak_dat, by = "peakID") %>%
+    write_tsv(outfile, col_names = FALSE)
 }
 
 main()
