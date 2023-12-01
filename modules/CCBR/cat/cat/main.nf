@@ -35,7 +35,7 @@ process CAT_CAT {
     """
     $command1 \\
         $args \\
-        ${file_list.join(' ')} \\
+        ${file_list.sort({ a, b -> a.baseName <=> b.baseName }).join(' ')} \\
         $command2 \\
         > ${prefix}
 
