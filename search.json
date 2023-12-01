@@ -70,88 +70,116 @@
     "text": "consensus_peaks\n\n\nFind consensus peaks from peak files, and optionally perform normalization. This is an alternative to the custom/consensuspeaks module.\n\n\n\npeaks\n\n\nchipseq\n\n\nnormalization\n\n\nconsensus\n\n\n\n\n\n\n\n\n\n\n\nfilter_blacklist\n\n\nFilter out reads that align to an index\n\n\n\nbwa\n\n\nsamtools\n\n\nfastq\n\n\nbam\n\n\nfilter\n\n\nblacklist\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "docs/modules/samtools_flagstat.html",
-    "href": "docs/modules/samtools_flagstat.html",
-    "title": "samtools_flagstat",
+    "objectID": "docs/modules/samtools_sort.html",
+    "href": "docs/modules/samtools_sort.html",
+    "title": "samtools_sort",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/flagstat\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/flagstat/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/sort\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/sort/"
   },
   {
-    "objectID": "docs/modules/samtools_flagstat.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/samtools_flagstat.html#fa-arrow-right-to-bracket-input",
-    "title": "samtools_flagstat",
+    "objectID": "docs/modules/samtools_sort.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/samtools_sort.html#fa-arrow-right-to-bracket-input",
+    "title": "samtools_sort",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM/CRAM/SAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nIndex for BAM/CRAM/SAM file\n*.{bai,crai,sai}"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM/CRAM/SAM file\n*.{bam,cram,sam}"
   },
   {
-    "objectID": "docs/modules/samtools_flagstat.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/samtools_flagstat.html#fa-arrow-right-from-bracket-output",
-    "title": "samtools_flagstat",
+    "objectID": "docs/modules/samtools_sort.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/samtools_sort.html#fa-arrow-right-from-bracket-output",
+    "title": "samtools_sort",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nflagstat\nfile\nFile containing samtools flagstat output\n*.{flagstat}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nSorted BAM/CRAM/SAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nSorted BAM Index file\n*.bai\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\ncsi\nfile\nBAM index file (optional)\n*.csi"
   },
   {
-    "objectID": "docs/modules/samtools_flagstat.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/samtools_flagstat.html#fa-screwdriver-wrench-tools",
-    "title": "samtools_flagstat",
+    "objectID": "docs/modules/samtools_sort.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/samtools_sort.html#fa-screwdriver-wrench-tools",
+    "title": "samtools_sort",
     "section": " Tools",
     "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
   },
   {
-    "objectID": "docs/modules/picard_samtofastq.html",
-    "href": "docs/modules/picard_samtofastq.html",
-    "title": "picard_samtofastq",
+    "objectID": "docs/modules/samtools_filteraligned.html",
+    "href": "docs/modules/samtools_filteraligned.html",
+    "title": "samtools_filteraligned",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install picard/samtofastq\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/picard/samtofastq/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/filteraligned\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/filteraligned/"
   },
   {
-    "objectID": "docs/modules/picard_samtofastq.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/picard_samtofastq.html#fa-arrow-right-to-bracket-input",
-    "title": "picard_samtofastq",
+    "objectID": "docs/modules/samtools_filteraligned.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/samtools_filteraligned.html#fa-arrow-right-to-bracket-input",
+    "title": "samtools_filteraligned",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nSAM or BAM file"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nInput BAM file"
   },
   {
-    "objectID": "docs/modules/picard_samtofastq.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/picard_samtofastq.html#fa-arrow-right-from-bracket-output",
-    "title": "picard_samtofastq",
+    "objectID": "docs/modules/samtools_filteraligned.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/samtools_filteraligned.html#fa-arrow-right-from-bracket-output",
+    "title": "samtools_filteraligned",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\nfastq\nfile\nfastq files\n*.{fastq}"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nOutput BAM file with only reads that were not aligned\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/picard_samtofastq.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/picard_samtofastq.html#fa-screwdriver-wrench-tools",
-    "title": "picard_samtofastq",
+    "objectID": "docs/modules/samtools_filteraligned.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/samtools_filteraligned.html#fa-screwdriver-wrench-tools",
+    "title": "samtools_filteraligned",
     "section": " Tools",
-    "text": "Tools\n\npicard\n Home    Docs    Code   MIT\nA set of command line tools (in Java) for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF."
+    "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
   },
   {
-    "objectID": "docs/modules/cutadapt.html",
-    "href": "docs/modules/cutadapt.html",
-    "title": "cutadapt",
+    "objectID": "docs/modules/khmer_uniquekmers.html",
+    "href": "docs/modules/khmer_uniquekmers.html",
+    "title": "khmer_uniquekmers",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install cutadapt\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/cutadapt/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install khmer/uniquekmers\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/khmer/uniquekmers/"
   },
   {
-    "objectID": "docs/modules/cutadapt.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/cutadapt.html#fa-arrow-right-to-bracket-input",
-    "title": "cutadapt",
+    "objectID": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-to-bracket-input",
+    "title": "khmer_uniquekmers",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\nrespectively."
+    "text": "Input\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nfasta\nfile\nfasta file\n*.{fa,fasta}\n\n\nkmer_size\ninteger\nk-mer size to use\n[0-9]+"
   },
   {
-    "objectID": "docs/modules/cutadapt.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/cutadapt.html#fa-arrow-right-from-bracket-output",
-    "title": "cutadapt",
+    "objectID": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-from-bracket-output",
+    "title": "khmer_uniquekmers",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nThe trimmed/modified fastq reads\n*fastq.gz\n\n\nlog\nfile\ncuatadapt log file\n*cutadapt.log\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nreport\nfile\nText file containing unique-kmers.py execution report\nreport.txt\n\n\nkmers\nfile\nText file containing number of kmers\nkmers.txt\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/cutadapt.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/cutadapt.html#fa-screwdriver-wrench-tools",
-    "title": "cutadapt",
+    "objectID": "docs/modules/khmer_uniquekmers.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/khmer_uniquekmers.html#fa-screwdriver-wrench-tools",
+    "title": "khmer_uniquekmers",
     "section": " Tools",
-    "text": "Tools\n\ncuatadapt\n   Docs     MIT\nCutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads."
+    "text": "Tools\n\nkhmer\n Home    Docs    Code   BSD License\nkhmer k-mer counting library"
+  },
+  {
+    "objectID": "docs/modules/custom_normalizepeaks.html",
+    "href": "docs/modules/custom_normalizepeaks.html",
+    "title": "custom_normalizepeaks",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/normalizepeaks\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/normalizepeaks/"
+  },
+  {
+    "objectID": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-to-bracket-input",
+    "title": "custom_normalizepeaks",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\ncount\nfile\nconsensus peak file from custom/combinepeakcounts\n*.bed\n\n\npeaks\nfile\nmerged and sorted peak file\n*.bed"
+  },
+  {
+    "objectID": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-from-bracket-output",
+    "title": "custom_normalizepeaks",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nconsensus peak file with normalized p-values and q-values\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/custom_normalizepeaks.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/custom_normalizepeaks.html#fa-screwdriver-wrench-tools",
+    "title": "custom_normalizepeaks",
+    "section": " Tools",
+    "text": "Tools\n\nR\n Home       GPL-3\nR is a free software environment for statistical computing and graphics"
   },
   {
     "objectID": "docs/modules/custom_countfastq.html",
@@ -305,7 +333,7 @@
     "href": "docs/modules/bedtools_merge.html#fa-arrow-right-to-bracket-input",
     "title": "bedtools_merge",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbed\nfile\nInput BED file\n*.{bed}"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbed\nfile\nInput BED file\n*.{bed}\n\n\nargs\nstring\noptional arguments for bedtools merge\nNA"
   },
   {
     "objectID": "docs/modules/bedtools_merge.html#fa-arrow-right-from-bracket-output",
@@ -382,7 +410,7 @@
     "href": "docs/modules.html",
     "title": "modules",
     "section": "",
-    "text": "bedops_bedmap\n\n\nThe bedmap program is used to retrieve and process signal or other features over regions of interest in BED files\n\n\n\nbedops\n\n\nbedmap\n\n\nbed\n\n\nintervals\n\n\n\n\n\n\n\n\n\n\n\nbedtools_map\n\n\nAllows one to screen for overlaps between two sets of genomic features. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools\n\n\n\nbed\n\n\nvcf\n\n\ngff\n\n\nmap\n\n\nbedtools\n\n\n\n\n\n\n\n\n\n\n\nbedtools_merge\n\n\ncombines overlapping or “book-ended” features in an interval file into a single feature which spans all of the combined features. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools\n\n\n\nbed\n\n\nmerge\n\n\nbedtools\n\n\noverlapped bed\n\n\n\n\n\n\n\n\n\n\n\nbedtools_sort\n\n\nSorts a feature file by chromosome and other criteria. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools\n\n\n\nbed\n\n\nsort\n\n\nbedtools\n\n\nchromosome\n\n\n\n\n\n\n\n\n\n\n\nbwa_index\n\n\nCreate BWA index for reference genome. Adapted from the nf-core bwa index module.\n\n\n\nindex\n\n\nfasta\n\n\ngenome\n\n\nreference\n\n\n\n\n\n\n\n\n\n\n\nbwa_mem\n\n\nPerforms fastq alignment to a fasta reference using BWA. Adapted from the nf-core bwa-mem module.\n\n\n\nmem\n\n\nbwa\n\n\nalignment\n\n\nmap\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\ncat_cat\n\n\nA module for concatenation of gzipped or uncompressed files. Adapted from the nf-core cat module https://github.com/nf-core/modules/tree/9326d73af3fbe2ee90d9ce0a737461a727c5118e/modules/nf-core/cat\n\n\n\nconcatenate\n\n\ngzip\n\n\ncat\n\n\n\n\n\n\n\n\n\n\n\ncat_fastq\n\n\nConcatenates fastq files. Adapted from the nf-core cat module https://github.com/nf-core/modules/tree/9326d73af3fbe2ee90d9ce0a737461a727c5118e/modules/nf-core/cat\n\n\n\ncat\n\n\nfastq\n\n\nconcatenate\n\n\n\n\n\n\n\n\n\n\n\nconvert_sicer\n\n\nConvert SICER output to BED and broadPeak format\n\n\n\nsicer\n\n\npeaks\n\n\nchipseq\n\n\nbed\n\n\nbroadPeak\n\n\n\n\n\n\n\n\n\n\n\ncustom_bam2fastq\n\n\nThe module converts a BAM file to FASTQ format. It uses samtools bam2fq if reads are single end, or picard SamToFastq if reads are paired.\n\n\n\nbam2fq\n\n\nsamtools\n\n\nfastq\n\n\npicard\n\n\n\n\n\n\n\n\n\n\n\ncustom_combinepeakcounts\n\n\ncombine counts into consensus peaks\n\n\n\nchipseq\n\n\npeaks\n\n\nconsensus\n\n\n\n\n\n\n\n\n\n\n\ncustom_consensuspeaks\n\n\nFind consensus peaks from two or more peak files. The consensus_peaks subworkflow is a re-implementation of this module; new pipelines should use the subworkflow instead.\n\n\n\npeaks\n\n\nchipseq\n\n\nnormalization\n\n\nconsensus\n\n\n\n\n\n\n\n\n\n\n\ncustom_countfastq\n\n\nCount reads in a fastq file\n\n\n\nfastq\n\n\nbiopython\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\ncustom_normalizepeaks\n\n\nnormalize p-values and q-values of consensus peaks with the method from Corces et al. (https://doi.org/10.1126/science.aav1898)\n\n\n\nchipseq\n\n\npeaks\n\n\nconsensus\n\n\nnormalization\n\n\n\n\n\n\n\n\n\n\n\ncutadapt\n\n\nPerform adapter/quality trimming on sequencing reads. Adapted from the nf-core cutadapt module.\n\n\n\ntrimming\n\n\nadapter trimming\n\n\nadapters\n\n\nquality trimming\n\n\n\n\n\n\n\n\n\n\n\nkhmer_uniquekmers\n\n\nIn-memory nucleotide sequence k-mer counting, filtering, graph traversal and more. Adapted from nf-core/modules khmer/uniquekhmers.\n\n\n\nkhmer\n\n\nk-mer\n\n\neffective genome size\n\n\n\n\n\n\n\n\n\n\n\npicard_samtofastq\n\n\nConverts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq module.\n\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\nsamtools_filteraligned\n\n\nFilter out aligned reads from a BAM file.\n\n\n\nbam\n\n\nfilter\n\n\nsamtools\n\n\n\n\n\n\n\n\n\n\n\nsamtools_flagstat\n\n\nCounts the number of alignments in a BAM/CRAM/SAM file for each FLAG type\n\n\n\nstats\n\n\nmapping\n\n\ncounts\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\n\n\n\nsamtools_sort\n\n\nSort a SAM/BAM/CRAM file. Adapted from the nf-core samtools sort module.\n\n\n\nsort\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "bedops_bedmap\n\n\nThe bedmap program is used to retrieve and process signal or other features over regions of interest in BED files\n\n\n\nbedops\n\n\nbedmap\n\n\nbed\n\n\nintervals\n\n\n\n\n\n\n\n\n\n\n\nbedtools_map\n\n\nAllows one to screen for overlaps between two sets of genomic features. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools\n\n\n\nbed\n\n\nvcf\n\n\ngff\n\n\nmap\n\n\nbedtools\n\n\n\n\n\n\n\n\n\n\n\nbedtools_merge\n\n\ncombines overlapping or “book-ended” features in an interval file into a single feature which spans all of the combined features. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools\n\n\n\nbed\n\n\nmerge\n\n\nbedtools\n\n\noverlapped bed\n\n\n\n\n\n\n\n\n\n\n\nbedtools_sort\n\n\nSorts a feature file by chromosome and other criteria. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools\n\n\n\nbed\n\n\nsort\n\n\nbedtools\n\n\nchromosome\n\n\n\n\n\n\n\n\n\n\n\nbwa_index\n\n\nCreate BWA index for reference genome. Adapted from the nf-core bwa index module.\n\n\n\nindex\n\n\nfasta\n\n\ngenome\n\n\nreference\n\n\n\n\n\n\n\n\n\n\n\nbwa_mem\n\n\nPerforms fastq alignment to a fasta reference using BWA. Adapted from the nf-core bwa-mem module.\n\n\n\nmem\n\n\nbwa\n\n\nalignment\n\n\nmap\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\ncat_cat\n\n\nA module for concatenation of gzipped or uncompressed files. Adapted from the nf-core cat module https://github.com/nf-core/modules/tree/9326d73af3fbe2ee90d9ce0a737461a727c5118e/modules/nf-core/cat\n\n\n\nconcatenate\n\n\ngzip\n\n\ncat\n\n\n\n\n\n\n\n\n\n\n\ncat_fastq\n\n\nConcatenates fastq files. Adapted from the nf-core cat module https://github.com/nf-core/modules/tree/9326d73af3fbe2ee90d9ce0a737461a727c5118e/modules/nf-core/cat\n\n\n\ncat\n\n\nfastq\n\n\nconcatenate\n\n\n\n\n\n\n\n\n\n\n\nconvert_sicer\n\n\nConvert SICER output to BED and broadPeak format\n\n\n\nsicer\n\n\npeaks\n\n\nchipseq\n\n\nbed\n\n\nbroadPeak\n\n\n\n\n\n\n\n\n\n\n\ncustom_bam2fastq\n\n\nThe module converts a BAM file to FASTQ format. It uses samtools bam2fq if reads are single end, or picard SamToFastq if reads are paired.\n\n\n\nbam2fq\n\n\nsamtools\n\n\nfastq\n\n\npicard\n\n\n\n\n\n\n\n\n\n\n\ncustom_combinepeakcounts\n\n\ncombine counts into consensus peaks\n\n\n\nchipseq\n\n\npeaks\n\n\nconsensus\n\n\n\n\n\n\n\n\n\n\n\ncustom_consensuspeaks\n\n\nFind consensus peaks from two or more peak files. The consensus_peaks subworkflow is a re-implementation of this module; new pipelines should use the subworkflow instead.\n\n\n\npeaks\n\n\nchipseq\n\n\nnormalization\n\n\nconsensus\n\n\n\n\n\n\n\n\n\n\n\ncustom_countfastq\n\n\nCount reads in a fastq file\n\n\n\nfastq\n\n\nbiopython\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\ncustom_formatmergedbed\n\n\nReformat consensus peaks from bedtools merge. Used in the consensus_peaks subworkflow.\n\n\n\nchipseq\n\n\npeaks\n\n\nconsensus\n\n\nbedtools\n\n\n\n\n\n\n\n\n\n\n\ncustom_normalizepeaks\n\n\nnormalize p-values and q-values of consensus peaks with the method from Corces et al. (https://doi.org/10.1126/science.aav1898)\n\n\n\nchipseq\n\n\npeaks\n\n\nconsensus\n\n\nnormalization\n\n\n\n\n\n\n\n\n\n\n\ncutadapt\n\n\nPerform adapter/quality trimming on sequencing reads. Adapted from the nf-core cutadapt module.\n\n\n\ntrimming\n\n\nadapter trimming\n\n\nadapters\n\n\nquality trimming\n\n\n\n\n\n\n\n\n\n\n\nkhmer_uniquekmers\n\n\nIn-memory nucleotide sequence k-mer counting, filtering, graph traversal and more. Adapted from nf-core/modules khmer/uniquekhmers.\n\n\n\nkhmer\n\n\nk-mer\n\n\neffective genome size\n\n\n\n\n\n\n\n\n\n\n\npicard_samtofastq\n\n\nConverts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq module.\n\n\n\nfastq\n\n\nbam\n\n\nsam\n\n\n\n\n\n\n\n\n\n\n\nsamtools_filteraligned\n\n\nFilter out aligned reads from a BAM file.\n\n\n\nbam\n\n\nfilter\n\n\nsamtools\n\n\n\n\n\n\n\n\n\n\n\nsamtools_flagstat\n\n\nCounts the number of alignments in a BAM/CRAM/SAM file for each FLAG type\n\n\n\nstats\n\n\nmapping\n\n\ncounts\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\n\n\n\nsamtools_sort\n\n\nSort a SAM/BAM/CRAM file. Adapted from the nf-core samtools sort module.\n\n\n\nsort\n\n\nbam\n\n\nsam\n\n\ncram\n\n\n\n\n\n\n\n\n\n\n\nsort_bed\n\n\nsort a bed file by chromosome then by start position\n\n\n\nsort\n\n\nbed\n\n\ngenomics\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "docs/modules/bedtools_map.html",
@@ -553,116 +581,144 @@
     "text": "Tools\n\nPython\n Home       Python License 2.0\nThe Python Programming Language\n\n\nbedtools\n   Docs     MIT\nA set of tools for genomic analysis tasks, specifically enabling genome arithmetic (merge, count, complement) on various file types.\n\n\nbedops\n   Docs    Code   GPLv2\nfast, highly scalable and easily-parallelizable genome analysis toolkit\n\n\nbedSort\n   Docs    \nUCSC Genome Browser tool for sorting .bed files by chrom,chromStart."
   },
   {
-    "objectID": "docs/modules/custom_normalizepeaks.html",
-    "href": "docs/modules/custom_normalizepeaks.html",
-    "title": "custom_normalizepeaks",
+    "objectID": "docs/modules/custom_formatmergedbed.html",
+    "href": "docs/modules/custom_formatmergedbed.html",
+    "title": "custom_formatmergedbed",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/normalizepeaks\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/normalizepeaks/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/formatmergedbed\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/formatmergedbed/"
   },
   {
-    "objectID": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-to-bracket-input",
-    "title": "custom_normalizepeaks",
+    "objectID": "docs/modules/custom_formatmergedbed.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/custom_formatmergedbed.html#fa-arrow-right-to-bracket-input",
+    "title": "custom_formatmergedbed",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\ncount\nfile\nconsensus peak file from custom/combinepeakcounts\n*.bed\n\n\npeaks\nfile\nmerged and sorted peak file\n*.bed"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nmerged_bed\nfile\nMerged output file from calling\n\n\n\n\nbedtools merge -c 1,5,6,7,8,9 -o count,collapse,collapse,collapse,collapse,collapse on a concatenated & sorted peak file |*.bed |"
   },
   {
-    "objectID": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/custom_normalizepeaks.html#fa-arrow-right-from-bracket-output",
-    "title": "custom_normalizepeaks",
+    "objectID": "docs/modules/custom_formatmergedbed.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/custom_formatmergedbed.html#fa-arrow-right-from-bracket-output",
+    "title": "custom_formatmergedbed",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nconsensus peak file with normalized p-values and q-values\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nA narrow peak bed file with the best p-value for each consensus peak\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/custom_normalizepeaks.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/custom_normalizepeaks.html#fa-screwdriver-wrench-tools",
-    "title": "custom_normalizepeaks",
+    "objectID": "docs/modules/custom_formatmergedbed.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/custom_formatmergedbed.html#fa-screwdriver-wrench-tools",
+    "title": "custom_formatmergedbed",
     "section": " Tools",
     "text": "Tools\n\nR\n Home       GPL-3\nR is a free software environment for statistical computing and graphics"
   },
   {
-    "objectID": "docs/modules/khmer_uniquekmers.html",
-    "href": "docs/modules/khmer_uniquekmers.html",
-    "title": "khmer_uniquekmers",
+    "objectID": "docs/modules/cutadapt.html",
+    "href": "docs/modules/cutadapt.html",
+    "title": "cutadapt",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install khmer/uniquekmers\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/khmer/uniquekmers/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install cutadapt\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/cutadapt/"
   },
   {
-    "objectID": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-to-bracket-input",
-    "title": "khmer_uniquekmers",
+    "objectID": "docs/modules/cutadapt.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/cutadapt.html#fa-arrow-right-to-bracket-input",
+    "title": "cutadapt",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nfasta\nfile\nfasta file\n*.{fa,fasta}\n\n\nkmer_size\ninteger\nk-mer size to use\n[0-9]+"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\nrespectively."
   },
   {
-    "objectID": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/khmer_uniquekmers.html#fa-arrow-right-from-bracket-output",
-    "title": "khmer_uniquekmers",
+    "objectID": "docs/modules/cutadapt.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/cutadapt.html#fa-arrow-right-from-bracket-output",
+    "title": "cutadapt",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nreport\nfile\nText file containing unique-kmers.py execution report\nreport.txt\n\n\nkmers\nfile\nText file containing number of kmers\nkmers.txt\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nThe trimmed/modified fastq reads\n*fastq.gz\n\n\nlog\nfile\ncuatadapt log file\n*cutadapt.log\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/khmer_uniquekmers.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/khmer_uniquekmers.html#fa-screwdriver-wrench-tools",
-    "title": "khmer_uniquekmers",
+    "objectID": "docs/modules/cutadapt.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/cutadapt.html#fa-screwdriver-wrench-tools",
+    "title": "cutadapt",
     "section": " Tools",
-    "text": "Tools\n\nkhmer\n Home    Docs    Code   BSD License\nkhmer k-mer counting library"
+    "text": "Tools\n\ncuatadapt\n   Docs     MIT\nCutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads."
   },
   {
-    "objectID": "docs/modules/samtools_filteraligned.html",
-    "href": "docs/modules/samtools_filteraligned.html",
-    "title": "samtools_filteraligned",
+    "objectID": "docs/modules/picard_samtofastq.html",
+    "href": "docs/modules/picard_samtofastq.html",
+    "title": "picard_samtofastq",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/filteraligned\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/filteraligned/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install picard/samtofastq\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/picard/samtofastq/"
   },
   {
-    "objectID": "docs/modules/samtools_filteraligned.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/samtools_filteraligned.html#fa-arrow-right-to-bracket-input",
-    "title": "samtools_filteraligned",
+    "objectID": "docs/modules/picard_samtofastq.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/picard_samtofastq.html#fa-arrow-right-to-bracket-input",
+    "title": "picard_samtofastq",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nInput BAM file"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nSAM or BAM file"
   },
   {
-    "objectID": "docs/modules/samtools_filteraligned.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/samtools_filteraligned.html#fa-arrow-right-from-bracket-output",
-    "title": "samtools_filteraligned",
+    "objectID": "docs/modules/picard_samtofastq.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/picard_samtofastq.html#fa-arrow-right-from-bracket-output",
+    "title": "picard_samtofastq",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nOutput BAM file with only reads that were not aligned\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\nfastq\nfile\nfastq files\n*.{fastq}"
   },
   {
-    "objectID": "docs/modules/samtools_filteraligned.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/samtools_filteraligned.html#fa-screwdriver-wrench-tools",
-    "title": "samtools_filteraligned",
+    "objectID": "docs/modules/picard_samtofastq.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/picard_samtofastq.html#fa-screwdriver-wrench-tools",
+    "title": "picard_samtofastq",
+    "section": " Tools",
+    "text": "Tools\n\npicard\n Home    Docs    Code   MIT\nA set of command line tools (in Java) for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF."
+  },
+  {
+    "objectID": "docs/modules/samtools_flagstat.html",
+    "href": "docs/modules/samtools_flagstat.html",
+    "title": "samtools_flagstat",
+    "section": "",
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/flagstat\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/flagstat/"
+  },
+  {
+    "objectID": "docs/modules/samtools_flagstat.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/samtools_flagstat.html#fa-arrow-right-to-bracket-input",
+    "title": "samtools_flagstat",
+    "section": " Input",
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM/CRAM/SAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nIndex for BAM/CRAM/SAM file\n*.{bai,crai,sai}"
+  },
+  {
+    "objectID": "docs/modules/samtools_flagstat.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/samtools_flagstat.html#fa-arrow-right-from-bracket-output",
+    "title": "samtools_flagstat",
+    "section": " Output",
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nflagstat\nfile\nFile containing samtools flagstat output\n*.{flagstat}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
+  },
+  {
+    "objectID": "docs/modules/samtools_flagstat.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/samtools_flagstat.html#fa-screwdriver-wrench-tools",
+    "title": "samtools_flagstat",
     "section": " Tools",
     "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
   },
   {
-    "objectID": "docs/modules/samtools_sort.html",
-    "href": "docs/modules/samtools_sort.html",
-    "title": "samtools_sort",
+    "objectID": "docs/modules/sort_bed.html",
+    "href": "docs/modules/sort_bed.html",
+    "title": "sort_bed",
     "section": "",
-    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/sort\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/sort/"
+    "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install sort/bed\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/sort/bed/"
   },
   {
-    "objectID": "docs/modules/samtools_sort.html#fa-arrow-right-to-bracket-input",
-    "href": "docs/modules/samtools_sort.html#fa-arrow-right-to-bracket-input",
-    "title": "samtools_sort",
+    "objectID": "docs/modules/sort_bed.html#fa-arrow-right-to-bracket-input",
+    "href": "docs/modules/sort_bed.html#fa-arrow-right-to-bracket-input",
+    "title": "sort_bed",
     "section": " Input",
-    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM/CRAM/SAM file\n*.{bam,cram,sam}"
+    "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nBED file, or any tab-delimited text file with at least two columns\n*.bed"
   },
   {
-    "objectID": "docs/modules/samtools_sort.html#fa-arrow-right-from-bracket-output",
-    "href": "docs/modules/samtools_sort.html#fa-arrow-right-from-bracket-output",
-    "title": "samtools_sort",
+    "objectID": "docs/modules/sort_bed.html#fa-arrow-right-from-bracket-output",
+    "href": "docs/modules/sort_bed.html#fa-arrow-right-from-bracket-output",
+    "title": "sort_bed",
     "section": " Output",
-    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nSorted BAM/CRAM/SAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nSorted BAM Index file\n*.bai\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\ncsi\nfile\nBAM index file (optional)\n*.csi"
+    "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\ninput file sorted by first and second columns\n*.bed\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/samtools_sort.html#fa-screwdriver-wrench-tools",
-    "href": "docs/modules/samtools_sort.html#fa-screwdriver-wrench-tools",
-    "title": "samtools_sort",
+    "objectID": "docs/modules/sort_bed.html#fa-screwdriver-wrench-tools",
+    "href": "docs/modules/sort_bed.html#fa-screwdriver-wrench-tools",
+    "title": "sort_bed",
     "section": " Tools",
-    "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
+    "text": "Tools\n\nGNU_coreutils\n Home       GPL-3.0\nThe GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every operating system."
   },
   {
     "objectID": "docs/subworkflows/consensus_peaks.html",
@@ -690,14 +746,14 @@
     "href": "CHANGELOG.html",
     "title": "nf-modules",
     "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/normalizepeaks (#37)\n\n\n\n\n\nconsensus_peaks (#37)"
+    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39)\ncustom/normalizepeaks (#37,#39)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
   },
   {
     "objectID": "CHANGELOG.html#development-version",
     "href": "CHANGELOG.html#development-version",
     "title": "nf-modules",
     "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/normalizepeaks (#37)\n\n\n\n\n\nconsensus_peaks (#37)"
+    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39)\ncustom/normalizepeaks (#37,#39)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
   },
   {
     "objectID": "CHANGELOG.html#nf-modules-0.1.0",
