@@ -19,12 +19,12 @@ process CUSTOM_NORMALIZEPEAKS {
 
     script:
     prefix = task.ext.prefix ?: "${meta.id}"
-    outfile = "${peak.baseName}.norm.bed"
+    outfile = "${peak}.norm.bed"
     template 'normalize_peaks.R'
 
     stub:
     """
-    touch ${peak.baseName}.norm.bed
+    touch ${peak}.norm.bed
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

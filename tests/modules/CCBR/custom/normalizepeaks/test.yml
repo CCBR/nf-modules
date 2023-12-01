@@ -1,21 +1,21 @@
 - name: custom normalizepeaks test_custom_normalizepeaks
   command: nextflow run ./tests/modules/CCBR/custom/normalizepeaks -entry test_custom_normalizepeaks -c ./tests/config/nextflow.config
   tags:
-    - custom
     - custom/normalizepeaks
+    - custom
   files:
-    - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.norm.bed
+    - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.broadPeak.norm.bed
       md5sum: 7129eb9aa8927da730105395afab08b7
-    - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.norm.bed
+    - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.broadPeak.norm.bed
       md5sum: b0be5d27ea40294c99ba48275dd0e54c
     - path: output/custom_normalizepeaks/versions.yml
 
 - name: custom normalizepeaks test_custom_normalizepeaks stub
   command: nextflow run ./tests/modules/CCBR/custom/normalizepeaks -entry test_custom_normalizepeaks -c ./tests/config/nextflow.config -stub
   tags:
-    - custom
     - custom/normalizepeaks
+    - custom
   files:
-    - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.norm.bed
-    - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.norm.bed
+    - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.broadPeak.norm.bed
+    - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.broadPeak.norm.bed
     - path: output/custom_normalizepeaks/versions.yml
