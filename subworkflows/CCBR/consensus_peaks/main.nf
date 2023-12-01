@@ -31,14 +31,14 @@ workflow CONSENSUS_PEAKS {
             }
             .groupTuple()
         peaks_grouped | CAT_CAT
-        BEDTOOLS_SORT( CAT_CAT.out.file_out )
-        BEDTOOLS_MERGE(BEDTOOLS_SORT.out.sorted, ' -c 1,5,6,7,8,9 -o count,collapse,collapse,collapse,collapse,collapse ')
+        SORT_BED( CAT_CAT.out.file_out )
+        BEDTOOLS_MERGE(SORT_BED.out.bed, ' -c 1,5,6,7,8,9 -o count,collapse,collapse,collapse,collapse,collapse ')
         CUSTOM_FORMATMERGEDBED(BEDTOOLS_MERGE.out.bed)
         consensus_peaks = CUSTOM_FORMATMERGEDBED.out.bed
 
         ch_versions = ch_versions.mix(
             CAT_CAT.out.versions,
-            BEDTOOLS_SORT.out.versions,
+            SORT_BED.out.versions,
             BEDTOOLS_MERGE.out.versions,
             CUSTOM_FORMATMERGEDBED.out.versions
         )

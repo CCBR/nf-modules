@@ -2,7 +2,7 @@
 
 nextflow.enable.dsl = 2
 
-include { BEDTOOLS_SORT  } from '../../../modules/CCBR/bedtools/sort/'
+include { SORT_BED  } from '../../../modules/CCBR/sort/bed'
 include { CONSENSUS_PEAKS } from '../../../../subworkflows/CCBR/consensus_peaks'
 
 
@@ -13,8 +13,8 @@ workflow test_consensus_peaks_broad {
         .map { peak ->
             [ [id: peak.baseName, group: 'macs_broad'], peak ]
         }
-    BEDTOOLS_SORT(input, [])
-    peaks = BEDTOOLS_SORT.out.sorted
+    SORT_BED(input)
+    peaks = SORT_BED.out.bed
 
     CONSENSUS_PEAKS( peaks, false )
 }
@@ -32,8 +32,8 @@ workflow test_consensus_peaks_mix_norm {
             [ [id: peak.baseName, group: 'macs_narrow'], peak ]
         }
     input = broad.mix(narrow)
-    BEDTOOLS_SORT(input, [])
-    peaks = BEDTOOLS_SORT.out.sorted
+    SORT_BED(input)
+    peaks = SORT_BED.out.bed
 
     CONSENSUS_PEAKS( peaks, true )
 }
