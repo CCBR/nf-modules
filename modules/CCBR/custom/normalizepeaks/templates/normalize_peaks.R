@@ -49,7 +49,7 @@ normalize <- function(peak_dat, norm_method = corces) {
         pvalue_norm = norm_method(pvalue),
         qvalue_norm = 10^(-pvalue_norm) %>% p.adjust(method = "BH") %>% -log10(.)
       ) %>%
-      slice_max(pvalue_norm) %>%
+      slice_max(pvalue_norm, n = 1, with_ties = FALSE) %>%
       select(-c(pvalue, qvalue)) %>%
       rename(pvalue = pvalue_norm, qvalue = qvalue_norm)
   )
