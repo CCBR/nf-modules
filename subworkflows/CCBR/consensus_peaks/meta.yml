@@ -11,7 +11,6 @@ components:
   - bedtools/merge
   - bedops/bedmap
   - cat/cat
-  - custom/combinepeakcounts
   - custom/normalizepeaks
   - custom/formatmergedbed
   - sort/bed
