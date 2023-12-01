@@ -17,7 +17,7 @@ process CAT_CAT {
     script:
     def args = task.ext.args ?: ''
     def args2 = task.ext.args2 ?: ''
-    def file_list = files_in.collect { it.toString() }
+    def file_list = files_in.sort({ a, b -> a.baseName <=> b.baseName }).collect{ it.toString() }
 
     // | input     | output     | command1 | command2 |
     // |-----------|------------|----------|----------|
@@ -35,7 +35,7 @@ process CAT_CAT {
     """
     $command1 \\
         $args \\
-        ${file_list.sort({ a, b -> a.baseName <=> b.baseName }).join(' ')} \\
+        ${file_list.join(' ')} \\
         $command2 \\
         > ${prefix}
 
