@@ -49,7 +49,7 @@ select_best_peak <- function(dat_row) {
     dat_row %>%
       vec_to_df() %>%
       pivot_collapsed_columns() %>%
-      slice_max(pvalue)
+      slice_max(pvalue, n = 1, with_ties = FALSE)
   )
 }
 
