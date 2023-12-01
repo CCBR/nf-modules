@@ -55,20 +55,4 @@ read_peaks <- function(peak_file) {
   return(peaks)
 }
 
-join_counts <- function(versionfile = "versions.yml",
-                        countfile = "${count}",
-                        peakfile = "${peaks}",
-                        outfile = "${outfile}") {
-  write_lines(get_version(), versionfile)
-  count_dat <- read_peaks(countfile)
-  peak_dat <- read_peaks(peakfile) %>%
-    mutate(peakID = glue("{chrom}:{start}-{end}")) %>%
-    normalize() %>%
-    select(peakID, pvalue, qvalue)
-  count_dat %>%
-    select(-c(pvalue, qvalue)) %>%
-    left_join(peak_dat, by = "peakID") %>%
-    write_tsv(outfile, col_names = FALSE)
-}
-
 main()

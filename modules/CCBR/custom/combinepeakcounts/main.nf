@@ -24,9 +24,10 @@ process CUSTOM_COMBINEPEAKCOUNTS {
     template 'combine_peaks.R'
 
     stub:
-    def prefix = task.ext.prefix ?: "${meta.id}"
+    prefix = task.ext.prefix ?: "${meta.id}"
+    outfile = "${prefix}.consensus.bed"
     """
-    touch ${prefix}.consensus.bed
+    touch ${outfile}
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
