@@ -17,7 +17,7 @@ process BEDTOOLS_SORT {
 
     script:
     def args       = task.ext.args   ?: ''
-    def prefix     = task.ext.prefix ?: "${meta.id}.sorted"
+    def prefix     = task.ext.prefix ?: "${intervals.baseName}.sorted"
     def genome_cmd = genome_file     ?  "-g $genome_file" : ""
     extension      = task.ext.suffix ?: intervals.extension
     if ("$intervals" == "${prefix}.${extension}") {
