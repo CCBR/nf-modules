@@ -21,6 +21,9 @@ input:
       type: file
       description: Input BED file
       pattern: "*.{bed}"
+  - args:
+      type: string
+      description: optional arguments for bedtools merge
 output:
   - meta:
       type: map

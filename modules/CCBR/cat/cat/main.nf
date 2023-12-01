@@ -17,7 +17,7 @@ process CAT_CAT {
     script:
     def args = task.ext.args ?: ''
     def args2 = task.ext.args2 ?: ''
-    def file_list = files_in.collect { it.toString() }
+    def file_list = files_in.sort({ a, b -> a.baseName <=> b.baseName }).collect{ it.toString() }
 
     // | input     | output     | command1 | command2 |
     // |-----------|------------|----------|----------|

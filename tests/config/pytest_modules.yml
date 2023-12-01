@@ -50,6 +50,10 @@ custom/countfastq:
   - modules/CCBR/custom/countfastq/**
   - tests/modules/CCBR/custom/countfastq/**
 
+custom/formatmergedbed:
+  - modules/CCBR/custom/formatmergedbed/**
+  - tests/modules/CCBR/custom/formatmergedbed/**
+
 custom/normalizepeaks:
   - modules/CCBR/custom/normalizepeaks/**
   - tests/modules/CCBR/custom/normalizepeaks/**
@@ -69,6 +73,10 @@ picard/samtofastq:
 samtools/filteraligned:
   - modules/CCBR/samtools/filteraligned/**
   - tests/modules/CCBR/samtools/filteraligned/**
+
+sort/bed:
+  - modules/CCBR/sort/bed/**
+  - tests/modules/CCBR/sort/bed/**
 
 subworkflows/consensus_peaks:
   - subworkflows/CCBR/consensus_peaks/**

@@ -1,15 +1,15 @@
 - name: custom combinepeakcounts test_custom_combinepeakcounts
   command: nextflow run ./tests/modules/CCBR/custom/combinepeakcounts -entry test_custom_combinepeakcounts -c ./tests/config/nextflow.config
   tags:
-    - custom
     - custom/combinepeakcounts
+    - custom
   files:
     - path: output/bedops_bedmap/SPT5_T0_1_peaks.test.mapped.bed
       md5sum: a46e2f78e8534ecdc882fff22f0baa87
     - path: output/bedops_bedmap/SPT5_T0_2_peaks.test.mapped.bed
       md5sum: c58be7ebe1f63c1cdf9eef66a41e23c1
     - path: output/bedops_bedmap/versions.yml
-    - path: output/bedtools_merge/test.merged.bed
+    - path: output/bedtools_merge/test.sorted.merged.bed
       md5sum: d67c8c15b99b310ec5aa0ec363dcd147
     - path: output/bedtools_merge/versions.yml
     - path: output/cat_cat/test.broadPeak
@@ -30,13 +30,13 @@
 - name: custom combinepeakcounts test_custom_combinepeakcounts stub
   command: nextflow run ./tests/modules/CCBR/custom/combinepeakcounts -entry test_custom_combinepeakcounts -c ./tests/config/nextflow.config -stub
   tags:
-    - custom
     - custom/combinepeakcounts
+    - custom
   files:
     - path: output/bedops_bedmap/SPT5_T0_1_peaks.test.mapped.bed
     - path: output/bedops_bedmap/SPT5_T0_2_peaks.test.mapped.bed
     - path: output/bedops_bedmap/versions.yml
-    - path: output/bedtools_merge/test.merged.bed
+    - path: output/bedtools_merge/test.sorted.merged.bed
     - path: output/bedtools_merge/versions.yml
     - path: output/cat_cat/test.broadPeak
     - path: output/cat_cat/versions.yml

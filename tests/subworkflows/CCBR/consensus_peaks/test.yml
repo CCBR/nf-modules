@@ -5,42 +5,24 @@
     - bedops/bedmap
     - bedtools
     - bedtools/merge
-    - bedtools/sort
     - cat
     - cat/cat
     - custom
-    - custom/combinepeakcounts
+    - custom/formatmergedbed
     - custom/normalizepeaks
+    - sort
+    - sort/bed
     - subworkflows
     - subworkflows/consensus_peaks
   files:
-    - path: output/custom_combinepeakcounts/macs_broad.consensus.bed
-      md5sum: 600f5c2dfeae440ada8c412c153a677e
-
-- name: consensus_peaks test_consensus_peaks_broad stub
-  command: nextflow run ./tests/subworkflows/CCBR/consensus_peaks -entry test_consensus_peaks_broad -c ./tests/config/nextflow.config -stub
-  tags:
-    - bedops
-    - bedops/bedmap
-    - bedtools
-    - bedtools/merge
-    - bedtools/sort
-    - cat
-    - cat/cat
-    - custom
-    - custom/combinepeakcounts
-    - custom/normalizepeaks
-    - subworkflows
-    - subworkflows/consensus_peaks
-  files:
-    - path: output/bedops_bedmap/SPT5_T0_1_peaks.macs_broad.mapped.bed
-    - path: output/bedops_bedmap/SPT5_T0_2_peaks.macs_broad.mapped.bed
-    - path: output/bedtools_merge/macs_broad.merged.bed
-    - path: output/bedtools_sort/SPT5_T0_1_peaks.sorted.broadPeak
-    - path: output/bedtools_sort/SPT5_T0_2_peaks.sorted.broadPeak
-    - path: output/bedtools_sort/macs_broad.sorted.broadPeak
+    - path: output/bedtools_merge/macs_broad.sorted.merged.bed
+      md5sum: 04ce00285f1960a006f13e5f90482ea1
     - path: output/cat_cat/macs_broad.broadPeak
-    - path: output/custom_combinepeakcounts/macs_broad.consensus.bed
+      md5sum: c5d73e727a10d2a32b139efcdd369f59
+    - path: output/custom_formatmergedbed/macs_broad.sorted.merged.consensus.bed
+      md5sum: 4266c4e4fed0ceaaaf97ecd0a6baaec4
+    - path: output/sort_bed/macs_broad.sorted.bed
+      md5sum: 7ea9a8ca2c6ad93dc7e7714016789559
 
 - name: consensus_peaks test_consensus_peaks_mix_norm
   command: nextflow run ./tests/subworkflows/CCBR/consensus_peaks -entry test_consensus_peaks_mix_norm -c ./tests/config/nextflow.config
@@ -49,16 +31,59 @@
     - bedops/bedmap
     - bedtools
     - bedtools/merge
-    - bedtools/sort
     - cat
     - cat/cat
     - custom
-    - custom/combinepeakcounts
+    - custom/formatmergedbed
     - custom/normalizepeaks
+    - sort
+    - sort/bed
     - subworkflows
     - subworkflows/consensus_peaks
   files:
-    - path: output/custom_normalizepeaks/macs_broad.consensus.norm.bed
-      md5sum: 9b133bf0d129a51491c9d722a7d577c0
-    - path: output/custom_normalizepeaks/macs_narrow.consensus.norm.bed
-      md5sum: 29d222c145ef196b2cc11b304c3ed2ed
+    - path: output/bedtools_merge/macs_broad.sorted.merged.bed
+      md5sum: 91dccf5c4f870193980bd298aa03864c
+    - path: output/bedtools_merge/macs_narrow.sorted.merged.bed
+      md5sum: 51d897e9f46241f7dadfd5bacd023660
+    - path: output/cat_cat/macs_broad.bed
+      md5sum: 1789beed3cb0688990ecca83344a8584
+    - path: output/cat_cat/macs_narrow.bed
+      md5sum: 063aaba2588582642cab5d511b48482c
+    - path: output/custom_formatmergedbed/macs_broad.sorted.merged.consensus.bed
+      md5sum: 7129eb9aa8927da730105395afab08b7
+    - path: output/custom_formatmergedbed/macs_narrow.sorted.merged.consensus.bed
+      md5sum: 2be28874a8902c61b82db0fecea29dd0
+    - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.broadPeak.norm.bed
+      md5sum: 7129eb9aa8927da730105395afab08b7
+    - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.narrowPeak.norm.bed
+      md5sum: 3a12d0a9387d254273bbeb805ff68bce
+    - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.broadPeak.norm.bed
+      md5sum: b0be5d27ea40294c99ba48275dd0e54c
+    - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.narrowPeak.norm.bed
+      md5sum: e09e72701b3e85583ba505cdc495e64e
+    - path: output/sort_bed/macs_broad.sorted.bed
+      md5sum: 1789beed3cb0688990ecca83344a8584
+    - path: output/sort_bed/macs_narrow.sorted.bed
+      md5sum: 063aaba2588582642cab5d511b48482c
+
+- name: consensus_peaks test_consensus_peaks_broad stub
+  command: nextflow run ./tests/subworkflows/CCBR/consensus_peaks -entry test_consensus_peaks_broad -c ./tests/config/nextflow.config -stub
+  tags:
+    - bedops
+    - bedops/bedmap
+    - bedtools
+    - bedtools/merge
+    - cat
+    - cat/cat
+    - custom
+    - custom/formatmergedbed
+    - custom/normalizepeaks
+    - sort
+    - sort/bed
+    - subworkflows
+    - subworkflows/consensus_peaks
+  files:
+    - path: output/bedtools_merge/macs_broad.sorted.merged.bed
+    - path: output/cat_cat/macs_broad.broadPeak
+    - path: output/custom_formatmergedbed/macs_broad.sorted.merged.consensus.bed
+    - path: output/sort_bed/macs_broad.sorted.bed

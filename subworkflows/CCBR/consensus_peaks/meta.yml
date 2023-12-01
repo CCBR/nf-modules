@@ -8,12 +8,11 @@ keywords:
   - normalization
   - consensus
 components:
-  - bedtools/sort
   - bedtools/merge
-  - bedops/bedmap
   - cat/cat
-  - custom/combinepeakcounts
   - custom/normalizepeaks
+  - custom/formatmergedbed
+  - sort/bed
 input:
   - ch_peaks:
       type: file

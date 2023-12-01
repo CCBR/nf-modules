@@ -38,7 +38,7 @@
     - cat/cat
   files:
     - path: output/cat/cat.txt
-      md5sum: c439d3b60e7bc03e8802a451a0d9a5d9
+      md5sum: 1a983f97a01107efe42c8c3e7728b4c1
 
 - name: cat zipped unzipped stub
   command: nextflow run ./tests/modules/CCBR/cat/cat -entry test_cat_zipped_unzipped -c ./tests/config/nextflow.config -c ./tests/modules/CCBR/cat/cat/nextflow.config -stub-run

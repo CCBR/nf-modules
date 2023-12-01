@@ -1,0 +1,21 @@
+- name: sort bed test_sort_bed
+  command: nextflow run ./tests/modules/CCBR/sort/bed -entry test_sort_bed -c ./tests/config/nextflow.config
+  tags:
+    - sort/bed
+    - sort
+  files:
+    - path: output/sort/SPT5_T0_1_peaks.sorted.bed
+      md5sum: 03b87e9021f85db1c8e07f5c0b4d7347
+    - path: output/sort/SPT5_T0_2_peaks.sorted.bed
+      md5sum: d3216918f24ced4b76b8eed6e38aa5c6
+    - path: output/sort/versions.yml
+
+- name: sort bed test_sort_bed stub
+  command: nextflow run ./tests/modules/CCBR/sort/bed -entry test_sort_bed -c ./tests/config/nextflow.config -stub
+  tags:
+    - sort/bed
+    - sort
+  files:
+    - path: output/sort/SPT5_T0_1_peaks.sorted.bed
+    - path: output/sort/SPT5_T0_2_peaks.sorted.bed
+    - path: output/sort/versions.yml
