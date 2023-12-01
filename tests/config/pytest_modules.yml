@@ -74,6 +74,10 @@ samtools/filteraligned:
   - modules/CCBR/samtools/filteraligned/**
   - tests/modules/CCBR/samtools/filteraligned/**
 
+sort/bed:
+  - modules/CCBR/sort/bed/**
+  - tests/modules/CCBR/sort/bed/**
+
 subworkflows/consensus_peaks:
   - subworkflows/CCBR/consensus_peaks/**
   - tests/subworkflows/CCBR/consensus_peaks/**

@@ -12,6 +12,7 @@
 - custom/consensuspeaks (#37)
 - custom/formatmergedbed (#39)
 - custom/normalizepeaks (#37,#39)
+- sort/bed (#39)
 
 ### New subworkflows
 
