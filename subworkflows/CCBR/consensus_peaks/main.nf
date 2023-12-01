@@ -1,7 +1,6 @@
 include { CAT_CAT        } from '../../../modules/CCBR/cat/cat/'
 include { SORT_BED  } from '../../../modules/CCBR/sort/bed'
 include { BEDTOOLS_MERGE } from '../../../modules/CCBR/bedtools/merge/'
-include { BEDOPS_BEDMAP  } from '../../../modules/CCBR/bedops/bedmap/'
 include { CUSTOM_FORMATMERGEDBED  } from '../../../modules/CCBR/custom/formatmergedbed/'
 include { CUSTOM_NORMALIZEPEAKS     } from '../../../modules/CCBR/custom/normalizepeaks/'
 

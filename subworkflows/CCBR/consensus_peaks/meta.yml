@@ -9,7 +9,6 @@ keywords:
   - consensus
 components:
   - bedtools/merge
-  - bedops/bedmap
   - cat/cat
   - custom/normalizepeaks
   - custom/formatmergedbed
