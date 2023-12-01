@@ -7,7 +7,7 @@ keywords:
   - bed
   - genomics
 tools:
-  - "GNU coreutils":
+  - "GNU_coreutils":
       description: "The GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every operating system."
       homepage: "https://www.gnu.org/software/coreutils/"
       licence: ["GPL-3.0"]
