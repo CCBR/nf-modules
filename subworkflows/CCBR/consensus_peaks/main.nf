@@ -1,5 +1,5 @@
 include { CAT_CAT        } from '../../../modules/CCBR/cat/cat/'
-include { BEDTOOLS_SORT  } from '../../../modules/CCBR/bedtools/sort/' // TODO use unix sort for better performance
+include { SORT_BED  } from '../../../modules/CCBR/sort/bed'
 include { BEDTOOLS_MERGE } from '../../../modules/CCBR/bedtools/merge/'
 include { BEDOPS_BEDMAP  } from '../../../modules/CCBR/bedops/bedmap/'
 include { CUSTOM_FORMATMERGEDBED  } from '../../../modules/CCBR/custom/formatmergedbed/'
@@ -31,7 +31,7 @@ workflow CONSENSUS_PEAKS {
             }
             .groupTuple()
         peaks_grouped | CAT_CAT
-        BEDTOOLS_SORT( CAT_CAT.out.file_out, [] )
+        BEDTOOLS_SORT( CAT_CAT.out.file_out )
         BEDTOOLS_MERGE(BEDTOOLS_SORT.out.sorted, ' -c 1,5,6,7,8,9 -o count,collapse,collapse,collapse,collapse,collapse ')
         CUSTOM_FORMATMERGEDBED(BEDTOOLS_MERGE.out.bed)
         consensus_peaks = CUSTOM_FORMATMERGEDBED.out.bed
