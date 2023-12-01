@@ -4,10 +4,8 @@
     - custom
     - custom/formatmergedbed
   files:
-    - path: output/bedtools/macs_broad.sorted.broadPeak
-      md5sum: b412285368f1698634177087e7ea4103
     - path: output/bedtools/macs_broad.sorted.merged.bed
-      md5sum: 767cd0823be78daedc7a6c1b570ee496
+      md5sum: 04ce00285f1960a006f13e5f90482ea1
     - path: output/bedtools/versions.yml
     - path: output/cat/macs_broad.broadPeak
       md5sum: c5d73e727a10d2a32b139efcdd369f59
@@ -15,6 +13,9 @@
     - path: output/custom/macs_broad.sorted.merged.consensus.bed
       md5sum: 4266c4e4fed0ceaaaf97ecd0a6baaec4
     - path: output/custom/versions.yml
+    - path: output/sort/macs_broad.sorted.bed
+      md5sum: 7ea9a8ca2c6ad93dc7e7714016789559
+    - path: output/sort/versions.yml
 
 - name: custom formatmergedbed test_custom_formatmergedbed stub
   command: nextflow run ./tests/modules/CCBR/custom/formatmergedbed -entry test_custom_formatmergedbed -c ./tests/config/nextflow.config -stub
@@ -22,10 +23,11 @@
     - custom
     - custom/formatmergedbed
   files:
-    - path: output/bedtools/macs_broad.sorted.broadPeak
     - path: output/bedtools/macs_broad.sorted.merged.bed
     - path: output/bedtools/versions.yml
     - path: output/cat/macs_broad.broadPeak
     - path: output/cat/versions.yml
     - path: output/custom/macs_broad.sorted.merged.consensus.bed
     - path: output/custom/versions.yml
+    - path: output/sort/macs_broad.sorted.bed
+    - path: output/sort/versions.yml
