@@ -23,7 +23,7 @@ workflow test_custom_combinepeakcounts {
         }
         .groupTuple() | CAT_CAT
     SORT_CAT(CAT_CAT.out.file_out, [])
-    SORT_CAT.out.sorted | BEDTOOLS_MERGE
+    BEDTOOLS_MERGE( SORT_CAT.out.sorted, '' )
 
     // map peaks to reference
     SORT_PEAK(ch_peaks, [])
