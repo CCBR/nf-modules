@@ -746,14 +746,14 @@
     "href": "CHANGELOG.html",
     "title": "nf-modules",
     "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39)\ncustom/normalizepeaks (#37,#39)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
+    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
   },
   {
     "objectID": "CHANGELOG.html#development-version",
     "href": "CHANGELOG.html#development-version",
     "title": "nf-modules",
     "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39)\ncustom/normalizepeaks (#37,#39)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
+    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
   },
   {
     "objectID": "CHANGELOG.html#nf-modules-0.1.0",
