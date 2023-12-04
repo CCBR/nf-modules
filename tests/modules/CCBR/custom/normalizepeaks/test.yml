@@ -5,9 +5,9 @@
     - custom
   files:
     - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.broadPeak.norm.bed
-      md5sum: 7129eb9aa8927da730105395afab08b7
+      md5sum: b330f110355268468fd775945de0e0d3
     - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.broadPeak.norm.bed
-      md5sum: b0be5d27ea40294c99ba48275dd0e54c
+      md5sum: 16dbbb977799d4b4c8051673671730ad
     - path: output/custom_normalizepeaks/versions.yml
 
 - name: custom normalizepeaks test_custom_normalizepeaks stub

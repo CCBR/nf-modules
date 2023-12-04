@@ -10,8 +10,8 @@
 - cat/fastq (#37)
 - custom/combinepeakcounts (#37)
 - custom/consensuspeaks (#37)
-- custom/formatmergedbed (#39)
-- custom/normalizepeaks (#37,#39)
+- custom/formatmergedbed (#39,#41)
+- custom/normalizepeaks (#37,#39,#41)
 - sort/bed (#39)
 
 ### New subworkflows
