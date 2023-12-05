@@ -43,15 +43,24 @@ read_peaks <- function(peak_file) {
 }
 
 normalize <- function(peak_dat, norm_method = corces) {
+  peak_dat[["pvalue_norm"]] <- peak_dat %>%
+    pull(pvalue) %>%
+    norm_method(.)
+  peak_dat[["qvalue_norm"]] <- peak_dat %>%
+    pull(pvalue_norm) %>%
+    raise_neg_log10(.) %>%
+    p.adjust(method = "BH") %>%
+    -log10(.)
   return(
     peak_dat %>%
-      mutate(
-        pvalue_norm = norm_method(pvalue),
-        qvalue_norm = 10^(-pvalue_norm) %>% p.adjust(method = "BH") %>% -log10(.)
-      ) %>%
       select(-c(pvalue, qvalue)) %>%
       rename(pvalue = pvalue_norm, qvalue = qvalue_norm)
   )
+}
+
+#' "Undo" a negative log10
+raise_neg_log10 <- function(x) {
+  return(10^(-x))
 }
 
 #' Normalize consensus peak values with the method from Corces et al.

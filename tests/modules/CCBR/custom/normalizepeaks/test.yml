@@ -1,8 +1,8 @@
 - name: custom normalizepeaks test_custom_normalizepeaks
   command: nextflow run ./tests/modules/CCBR/custom/normalizepeaks -entry test_custom_normalizepeaks -c ./tests/config/nextflow.config
   tags:
-    - custom/normalizepeaks
     - custom
+    - custom/normalizepeaks
   files:
     - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.broadPeak.norm.bed
       md5sum: b330f110355268468fd775945de0e0d3
@@ -13,8 +13,8 @@
 - name: custom normalizepeaks test_custom_normalizepeaks stub
   command: nextflow run ./tests/modules/CCBR/custom/normalizepeaks -entry test_custom_normalizepeaks -c ./tests/config/nextflow.config -stub
   tags:
-    - custom/normalizepeaks
     - custom
+    - custom/normalizepeaks
   files:
     - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.broadPeak.norm.bed
     - path: output/custom_normalizepeaks/SPT5_T0_2_peaks.broadPeak.norm.bed
