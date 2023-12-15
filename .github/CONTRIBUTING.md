@@ -1,5 +1,14 @@
 # Contributing to nf-modules
 
+Create a new module with:
+
+```sh
+nf-core modules create
+```
+
+Follow the prompts to name the module, set author information, etc.
+Then edit the `meta.yml` and `main.nf` files as needed.
+
 ## Unit tests
 
 Once you've written or updated a module under `modules/CCBR/[module-name]` and
