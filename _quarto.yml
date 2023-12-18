@@ -3,7 +3,8 @@ project:
   render:
     - "**.qmd"
     - "**.md"
-    - ".github/*.md"
+    - ".github/CONTRIBUTING.md"
+    - ".github/index.md"
     - "!docs/templates/"
 
 website:
