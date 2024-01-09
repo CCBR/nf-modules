@@ -4,6 +4,7 @@ Reusable modules and subworkflows for Nextflow pipelines
 
 [![test](https://github.com/CCBR/nf-modules/actions/workflows/test.yml/badge.svg)](https://github.com/CCBR/nf-modules/actions/workflows/test.yml)
 [![docs](https://img.shields.io/badge/docs-📖-blue)](https://ccbr.github.io/nf-modules/)
+[![DOI](https://zenodo.org/badge/697904903.svg)](https://zenodo.org/doi/10.5281/zenodo.10223357)
 
 ## Usage
 
