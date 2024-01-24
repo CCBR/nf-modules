@@ -17,7 +17,7 @@
       md5sum: 04ce00285f1960a006f13e5f90482ea1
     - path: output/cat_cat/macs_broad.broadPeak
       md5sum: c5d73e727a10d2a32b139efcdd369f59
-    - path: output/custom_formatmergedbed/macs_broad.sorted.merged.consensus.bed
+    - path: output/consensus_peaks_out/macs_broad.sorted.merged.consensus.bed
       md5sum: 4266c4e4fed0ceaaaf97ecd0a6baaec4
     - path: output/sort_bed/macs_broad.sorted.bed
       md5sum: 7ea9a8ca2c6ad93dc7e7714016789559
@@ -45,9 +45,9 @@
       md5sum: 64bdb72657a26b8bc963f9bd51f39565
     - path: output/cat_cat/macs_narrow.bed
       md5sum: 3974447bc99fc4930b56e171e545bc14
-    - path: output/custom_formatmergedbed/macs_broad.sorted.merged.consensus.bed
+    - path: output/consensus_peaks_out/macs_broad.sorted.merged.consensus.bed
       md5sum: 4f4d67389a8e327f21c0fd6d0d482780
-    - path: output/custom_formatmergedbed/macs_narrow.sorted.merged.consensus.bed
+    - path: output/consensus_peaks_out/macs_narrow.sorted.merged.consensus.bed
       md5sum: 51fee8455d9357b659d7c463c26e8158
     - path: output/custom_normalizepeaks/SPT5_T0_1_peaks.broadPeak.norm.bed
       md5sum: b330f110355268468fd775945de0e0d3
@@ -79,5 +79,5 @@
   files:
     - path: output/bedtools_merge/macs_broad.sorted.merged.bed
     - path: output/cat_cat/macs_broad.broadPeak
-    - path: output/custom_formatmergedbed/macs_broad.sorted.merged.consensus.bed
+    - path: output/consensus_peaks_out/macs_broad.sorted.merged.consensus.bed
     - path: output/sort_bed/macs_broad.sorted.bed
