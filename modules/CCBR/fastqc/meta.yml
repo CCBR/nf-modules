@@ -46,12 +46,6 @@ output:
       description: File containing software versions
       pattern: "versions.yml"
 authors:
-  - "@drpatelh"
-  - "@grst"
-  - "@ewels"
-  - "@FelixKrueger"
+  - "@kopardev"
 maintainers:
-  - "@drpatelh"
-  - "@grst"
-  - "@ewels"
-  - "@FelixKrueger"
+  - "@kopardev"
