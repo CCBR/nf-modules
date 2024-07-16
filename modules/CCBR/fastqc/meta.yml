@@ -1,5 +1,5 @@
 name: fastqc
-description: Run FastQC on sequenced reads
+description: Run FastQC on sequenced reads. Adapted from https://github.com/nf-core/modules/tree/73a6d7e6077b88aba1c5d6805635d79d6718270c/modules/nf-core/fastqc
 keywords:
   - quality control
   - qc
