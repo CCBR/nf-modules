@@ -2,122 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ccbr.github.io/nf-modules/LICENSE.html</loc>
-    <lastmod>2024-12-30T22:22:20.070Z</lastmod>
+    <lastmod>2024-12-30T23:45:54.070Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/subworkflows/filter_blacklist.html</loc>
-    <lastmod>2024-12-30T22:29:30.449Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.449Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/subworkflows.html</loc>
-    <lastmod>2024-12-30T22:22:20.107Z</lastmod>
+    <lastmod>2024-12-30T23:45:54.108Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/samtools_sort.html</loc>
-    <lastmod>2024-12-30T22:29:30.423Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.423Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/samtools_filteraligned.html</loc>
-    <lastmod>2024-12-30T22:29:30.432Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.431Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/khmer_uniquekmers.html</loc>
-    <lastmod>2024-12-30T22:29:30.442Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.441Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_normalizepeaks.html</loc>
-    <lastmod>2024-12-30T22:29:30.315Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.318Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_countfastq.html</loc>
-    <lastmod>2024-12-30T22:29:30.324Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.327Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_combinepeakcounts.html</loc>
-    <lastmod>2024-12-30T22:29:30.260Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.265Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/convert_sicer.html</loc>
-    <lastmod>2024-12-30T22:29:30.305Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.309Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/cat_cat.html</loc>
-    <lastmod>2024-12-30T22:29:30.401Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.401Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bwa_index.html</loc>
-    <lastmod>2024-12-30T22:29:30.364Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.365Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bedtools_merge.html</loc>
-    <lastmod>2024-12-30T22:29:30.251Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.257Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bedops_bedmap.html</loc>
-    <lastmod>2024-12-30T22:29:30.374Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.375Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/index.html</loc>
-    <lastmod>2024-12-30T22:22:20.107Z</lastmod>
+    <lastmod>2024-12-30T23:45:54.108Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ccbr.github.io/nf-modules/docs/cite.html</loc>
+    <lastmod>2024-12-30T23:45:54.108Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ccbr.github.io/nf-modules/docs/contributors.html</loc>
+    <lastmod>2024-12-30T23:45:54.108Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules.html</loc>
-    <lastmod>2024-12-30T22:22:20.107Z</lastmod>
+    <lastmod>2024-12-30T23:45:54.108Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bedtools_map.html</loc>
-    <lastmod>2024-12-30T22:29:30.226Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.231Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bedtools_sort.html</loc>
-    <lastmod>2024-12-30T22:29:30.236Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.242Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/bwa_mem.html</loc>
-    <lastmod>2024-12-30T22:29:30.354Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.356Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/cat_fastq.html</loc>
-    <lastmod>2024-12-30T22:29:30.392Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.393Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_bam2fastq.html</loc>
-    <lastmod>2024-12-30T22:29:30.296Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.300Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_consensuspeaks.html</loc>
-    <lastmod>2024-12-30T22:29:30.283Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.288Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/custom_formatmergedbed.html</loc>
-    <lastmod>2024-12-30T22:29:30.269Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.274Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/cutadapt.html</loc>
-    <lastmod>2024-12-30T22:29:30.334Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.337Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/picard_samtofastq.html</loc>
-    <lastmod>2024-12-30T22:29:30.344Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.346Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/samtools_flagstat.html</loc>
-    <lastmod>2024-12-30T22:29:30.412Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.412Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/modules/sort_bed.html</loc>
-    <lastmod>2024-12-30T22:29:30.383Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.384Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/docs/subworkflows/consensus_peaks.html</loc>
-    <lastmod>2024-12-30T22:29:30.458Z</lastmod>
+    <lastmod>2024-12-30T23:47:21.457Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/CHANGELOG.html</loc>
-    <lastmod>2024-12-30T22:22:20.070Z</lastmod>
+    <lastmod>2024-12-30T23:45:54.070Z</lastmod>
   </url>
   <url>
     <loc>https://ccbr.github.io/nf-modules/.github/CONTRIBUTING.html</loc>
-    <lastmod>2024-12-30T22:22:20.069Z</lastmod>
+    <lastmod>2024-12-30T23:45:54.070Z</lastmod>
   </url>
 </urlset>

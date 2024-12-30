@@ -4,7 +4,11 @@
     "href": "LICENSE.html",
     "title": "nf-modules",
     "section": "",
-    "text": "MIT License\nCopyright (c) 2023 CCR Collaborative Bioinformatics Resource\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+    "text": "MIT License\nCopyright (c) 2023 CCR Collaborative Bioinformatics Resource\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "crumbs": [
+      "project info",
+      "License"
+    ]
   },
   {
     "objectID": "docs/subworkflows/filter_blacklist.html",
@@ -347,28 +351,62 @@
     "href": "docs/index.html",
     "title": "CCBR/nf-modules",
     "section": "",
-    "text": "Reusable modules and subworkflows for Nextflow pipelines\n  \n\n\nTo re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]\n\n\n\nCome across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines.\n\n\n\nMany of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbedtools adapts the nf-core bedtools module\nbwa adapts the nf-core bwa module\ncat adapts the nf-core cat module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module"
+    "text": "Reusable modules and subworkflows for Nextflow pipelines\n  \n\n\nTo re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]\nView listings of available modules and subworkflows on the documentation website.\n\n\n\nCome across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines.\n\n\n\nMany of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbedtools adapts the nf-core bedtools module\nbwa adapts the nf-core bwa module\ncat adapts the nf-core cat module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module",
+    "crumbs": [
+      "home"
+    ]
   },
   {
     "objectID": "docs/index.html#usage",
     "href": "docs/index.html#usage",
     "title": "CCBR/nf-modules",
     "section": "",
-    "text": "To re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]"
+    "text": "To re-use a module in your nextflow pipeline, first install nf-core tools, then run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install [module]\nreplacing [module] with the name of the module you wish to install.\nTo update your local version of a module, run\nnf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [module]\nUse the subworkflows command in place of the modules command to install or update subworkflows.\nnf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  update [subworkflow]\nView listings of available modules and subworkflows on the documentation website.",
+    "crumbs": [
+      "home"
+    ]
   },
   {
     "objectID": "docs/index.html#help-contributing",
     "href": "docs/index.html#help-contributing",
     "title": "CCBR/nf-modules",
     "section": "",
-    "text": "Come across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines."
+    "text": "Come across a bug? Open an issue and include a minimal reproducible example.\nHave a question? Ask it in discussions.\nWant to contribute to this project? Check out the contributing guidelines.",
+    "crumbs": [
+      "home"
+    ]
   },
   {
     "objectID": "docs/index.html#references",
     "href": "docs/index.html#references",
     "title": "CCBR/nf-modules",
     "section": "",
-    "text": "Many of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbedtools adapts the nf-core bedtools module\nbwa adapts the nf-core bwa module\ncat adapts the nf-core cat module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module"
+    "text": "Many of the modules and subworkflows in this project reuse and adapt code from nf-core/modules. In those cases, credit is noted in the meta.yml file of the module/subworkflow and also listed here:\n\nbedtools adapts the nf-core bedtools module\nbwa adapts the nf-core bwa module\ncat adapts the nf-core cat module\ncutadapt adapts the nf-core cutadapt module\nkhmer adapts the nf-core khmer module\npicard/samtofastq adapts the nf-core gatk4 samtofastq module\nsamtools/sort adapts the nf-core samtools sort module",
+    "crumbs": [
+      "home"
+    ]
+  },
+  {
+    "objectID": "docs/cite.html",
+    "href": "docs/cite.html",
+    "title": "nf-modules",
+    "section": "",
+    "text": "Please cite this software if you use it in a publication:\n\nSovacool K., Koparde V. (2023). nf-modules: Reusable modules and subworkflows for CCBR Nextflow pipelines (version v0.1.0). DOI: 10.5281/zenodo.10223357 URL: https://CCBR.github.io/nf-modules/\n\n\nBibtex entry\n@misc{YourReferenceHere,\nauthor = {Sovacool, Kelly and Koparde, Vishal},\ndoi = {10.5281/zenodo.10223357},\nmonth = {11},\ntitle = {nf-modules: Reusable modules and subworkflows for CCBR Nextflow pipelines},\nurl = {https://CCBR.github.io/nf-modules/},\nyear = {2023}\n}",
+    "crumbs": [
+      "project info",
+      "Citation"
+    ]
+  },
+  {
+    "objectID": "docs/contributors.html",
+    "href": "docs/contributors.html",
+    "title": "Contributors",
+    "section": "",
+    "text": "Kelly Sovacool, PhD\n\n\n\n\n\nView the contributors graph on GitHub for more details.",
+    "crumbs": [
+      "project info",
+      "Contributors"
+    ]
   },
   {
     "objectID": "docs/modules.html",
@@ -711,62 +749,98 @@
     "href": "CHANGELOG.html",
     "title": "nf-modules",
     "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
+    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)",
+    "crumbs": [
+      "project info",
+      "Changelog"
+    ]
   },
   {
     "objectID": "CHANGELOG.html#development-version",
     "href": "CHANGELOG.html#development-version",
     "title": "nf-modules",
     "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)"
+    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)",
+    "crumbs": [
+      "project info",
+      "Changelog"
+    ]
   },
   {
     "objectID": "CHANGELOG.html#nf-modules-0.1.0",
     "href": "CHANGELOG.html#nf-modules-0.1.0",
     "title": "nf-modules",
     "section": "nf-modules 0.1.0",
-    "text": "nf-modules 0.1.0\nOur documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\nNew modules\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/convertsicer (#36)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\nNew subworkflows\n\nfilter_blacklist (#17,#27)"
+    "text": "nf-modules 0.1.0\nOur documentation website is now live: https://ccbr.github.io/nf-modules/ (#16)\n\nNew modules\n\nbwa/index\nbwa/mem\n\nalso runs samtools sort & outputs index in bai format. (#12)\n\ncustom/bam2fastq (#14,#22)\ncustom/convertsicer (#36)\ncustom/countfastq (#32)\ncutadapt (#11)\nkhmer/uniquekmers (#7)\npicard/samtofastq (#21)\nsamtools/filteraligned (#13,#20)\nsamtools/sort (#24,#28)\n\n\n\nNew subworkflows\n\nfilter_blacklist (#17,#27)",
+    "crumbs": [
+      "project info",
+      "Changelog"
+    ]
   },
   {
     "objectID": ".github/CONTRIBUTING.html",
     "href": ".github/CONTRIBUTING.html",
     "title": "Contributing to nf-modules",
     "section": "",
-    "text": "Create a new module with:\nnf-core modules create\nFollow the prompts to name the module, set author information, etc. Then edit the meta.yml and main.nf files as needed.\n\n\nOnce you’ve written or updated a module under modules/CCBR/[module-name] and a test workflow under tests/modules/CCBR/[module-name], then use nf-core tools to automatically create a test YAML file with:\nnf-core modules create-test-yml [module-name] --run-tests --force --no-prompts\nAdd the module to tests/config/pytest_modules.yml\nRun the tests with:\nPROFILE=docker nf-core modules test [module-name] --no-prompts\n\n\n\nPre-commit can automatically format your code, check for spelling errors, etc. every time you commit.\nInstall pre-commit if you haven’t already, then run pre-commit install to install the hooks specified in .pre-commit-config.yaml. Pre-commit will run the hooks every time you commit.\n\n\n\nKeep the changelog up to date with all notable changes in CHANGELOG.md1.\n\n\n\nIf you use VS code, installing nf-core extension pack is recommended."
+    "text": "Create a new module with:\nnf-core modules create\nFollow the prompts to name the module, set author information, etc. Then edit the meta.yml and main.nf files as needed.\n\n\nOnce you’ve written or updated a module under modules/CCBR/[module-name] and a test workflow under tests/modules/CCBR/[module-name], then use nf-core tools to automatically create a test YAML file with:\nnf-core modules create-test-yml [module-name] --run-tests --force --no-prompts\nAdd the module to tests/config/pytest_modules.yml\nRun the tests with:\nPROFILE=docker nf-core modules test [module-name] --no-prompts\n\n\n\nPre-commit can automatically format your code, check for spelling errors, etc. every time you commit.\nInstall pre-commit if you haven’t already, then run pre-commit install to install the hooks specified in .pre-commit-config.yaml. Pre-commit will run the hooks every time you commit.\n\n\n\nKeep the changelog up to date with all notable changes in CHANGELOG.md1.\n\n\n\nIf you use VS code, installing nf-core extension pack is recommended.",
+    "crumbs": [
+      "project info",
+      "Contributing"
+    ]
   },
   {
     "objectID": ".github/CONTRIBUTING.html#unit-tests",
     "href": ".github/CONTRIBUTING.html#unit-tests",
     "title": "Contributing to nf-modules",
     "section": "",
-    "text": "Once you’ve written or updated a module under modules/CCBR/[module-name] and a test workflow under tests/modules/CCBR/[module-name], then use nf-core tools to automatically create a test YAML file with:\nnf-core modules create-test-yml [module-name] --run-tests --force --no-prompts\nAdd the module to tests/config/pytest_modules.yml\nRun the tests with:\nPROFILE=docker nf-core modules test [module-name] --no-prompts"
+    "text": "Once you’ve written or updated a module under modules/CCBR/[module-name] and a test workflow under tests/modules/CCBR/[module-name], then use nf-core tools to automatically create a test YAML file with:\nnf-core modules create-test-yml [module-name] --run-tests --force --no-prompts\nAdd the module to tests/config/pytest_modules.yml\nRun the tests with:\nPROFILE=docker nf-core modules test [module-name] --no-prompts",
+    "crumbs": [
+      "project info",
+      "Contributing"
+    ]
   },
   {
     "objectID": ".github/CONTRIBUTING.html#pre-commit-hooks",
     "href": ".github/CONTRIBUTING.html#pre-commit-hooks",
     "title": "Contributing to nf-modules",
     "section": "",
-    "text": "Pre-commit can automatically format your code, check for spelling errors, etc. every time you commit.\nInstall pre-commit if you haven’t already, then run pre-commit install to install the hooks specified in .pre-commit-config.yaml. Pre-commit will run the hooks every time you commit."
+    "text": "Pre-commit can automatically format your code, check for spelling errors, etc. every time you commit.\nInstall pre-commit if you haven’t already, then run pre-commit install to install the hooks specified in .pre-commit-config.yaml. Pre-commit will run the hooks every time you commit.",
+    "crumbs": [
+      "project info",
+      "Contributing"
+    ]
   },
   {
     "objectID": ".github/CONTRIBUTING.html#changelog",
     "href": ".github/CONTRIBUTING.html#changelog",
     "title": "Contributing to nf-modules",
     "section": "",
-    "text": "Keep the changelog up to date with all notable changes in CHANGELOG.md1."
+    "text": "Keep the changelog up to date with all notable changes in CHANGELOG.md1.",
+    "crumbs": [
+      "project info",
+      "Contributing"
+    ]
   },
   {
     "objectID": ".github/CONTRIBUTING.html#vs-code-extensions",
     "href": ".github/CONTRIBUTING.html#vs-code-extensions",
     "title": "Contributing to nf-modules",
     "section": "",
-    "text": "If you use VS code, installing nf-core extension pack is recommended."
+    "text": "If you use VS code, installing nf-core extension pack is recommended.",
+    "crumbs": [
+      "project info",
+      "Contributing"
+    ]
   },
   {
     "objectID": ".github/CONTRIBUTING.html#footnotes",
     "href": ".github/CONTRIBUTING.html#footnotes",
     "title": "Contributing to nf-modules",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nchangelog guidelines: https://keepachangelog.com/en/1.1.0/↩︎"
+    "text": "Footnotes\n\n\nchangelog guidelines: https://keepachangelog.com/en/1.1.0/↩︎",
+    "crumbs": [
+      "project info",
+      "Contributing"
+    ]
   }
 ]
