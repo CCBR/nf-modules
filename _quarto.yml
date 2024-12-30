@@ -15,24 +15,32 @@ website:
   search:
     location: navbar
     type: textbox
+  page-navigation: true
+  sidebar:
+    - id: home
+      title: home
+      contents:
+        - text: home
+          file: docs/index.qmd
+        - section: project info
+          contents:
+            - text: Citation
+              file: docs/cite.qmd
+            - text: Contributing
+              file: .github/CONTRIBUTING.md
+            - href: docs/contributors.qmd
+            - text: License
+              file: LICENSE.md
+            - text: Changelog
+              file: CHANGELOG.md
   navbar:
-    title: false
     left:
-      - text: home
-        file: docs/index.qmd
+      - sidebar:home
       - text: modules
         file: docs/modules.qmd
       - text: subworkflows
         file: docs/subworkflows.qmd
     right:
-      - icon: list
-        menu:
-          - text: Contributing
-            file: .github/CONTRIBUTING.md
-          - text: Changelog
-            file: CHANGELOG.md
-          - text: License
-            file: LICENSE.md
       - icon: github
         href: https://github.com/CCBR/nf-modules
 

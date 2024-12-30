@@ -1,6 +1,6 @@
 # nf-modules
 
-Reusable modules and subworkflows for Nextflow pipelines
+Reusable [modules](https://ccbr.github.io/nf-modules/docs/modules.html) and [subworkflows](https://ccbr.github.io/nf-modules/docs/subworkflows.html) for Nextflow pipelines
 
 [![test](https://github.com/CCBR/nf-modules/actions/workflows/test.yml/badge.svg)](https://github.com/CCBR/nf-modules/actions/workflows/test.yml)
 [![docs](https://img.shields.io/badge/docs-📖-blue)](https://ccbr.github.io/nf-modules/)
@@ -33,6 +33,8 @@ nf-core subworkflows \
   --git-remote https://github.com/CCBR/nf-modules \
   update [subworkflow]
 ```
+
+View listings of available [modules](https://ccbr.github.io/nf-modules/docs/modules.html) and [subworkflows](https://ccbr.github.io/nf-modules/docs/subworkflows.html) on the [documentation website](https://ccbr.github.io/nf-modules/).
 
 ## Help & Contributing
 
