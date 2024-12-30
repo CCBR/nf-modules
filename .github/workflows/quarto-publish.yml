@@ -28,6 +28,8 @@ jobs:
 
       - name: Setup Python
         uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
