@@ -1,0 +1,36 @@
+[
+  {
+    "listing": "/docs/subworkflows.html",
+    "items": [
+      "/docs/subworkflows/consensus_peaks.html",
+      "/docs/subworkflows/filter_blacklist.html"
+    ]
+  },
+  {
+    "listing": "/docs/modules.html",
+    "items": [
+      "/docs/modules/bedops_bedmap.html",
+      "/docs/modules/bedtools_map.html",
+      "/docs/modules/bedtools_merge.html",
+      "/docs/modules/bedtools_sort.html",
+      "/docs/modules/bwa_index.html",
+      "/docs/modules/bwa_mem.html",
+      "/docs/modules/cat_cat.html",
+      "/docs/modules/cat_fastq.html",
+      "/docs/modules/convert_sicer.html",
+      "/docs/modules/custom_bam2fastq.html",
+      "/docs/modules/custom_combinepeakcounts.html",
+      "/docs/modules/custom_consensuspeaks.html",
+      "/docs/modules/custom_countfastq.html",
+      "/docs/modules/custom_formatmergedbed.html",
+      "/docs/modules/custom_normalizepeaks.html",
+      "/docs/modules/cutadapt.html",
+      "/docs/modules/khmer_uniquekmers.html",
+      "/docs/modules/picard_samtofastq.html",
+      "/docs/modules/samtools_filteraligned.html",
+      "/docs/modules/samtools_flagstat.html",
+      "/docs/modules/samtools_sort.html",
+      "/docs/modules/sort_bed.html"
+    ]
+  }
+]
