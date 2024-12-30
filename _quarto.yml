@@ -31,18 +31,20 @@ website:
             file: .github/CONTRIBUTING.md
           - text: Changelog
             file: CHANGELOG.md
+          - text: License
+            file: LICENSE.md
       - icon: github
         href: https://github.com/CCBR/nf-modules
+
   page-footer:
+    background: black
+    foreground: white
     left: |
+      [![](/_extensions/fnl/fnl-logo-dark.png){height=70px}](https://frederick.cancer.gov/research/science-areas/bioinformatics-and-computational-science/advanced-biomedical-computational-science)
+    center: |
       Created by the
       [CCR Collaborative Bioinformatics Resource](https://github.com/CCBR)
 
 execute:
   freeze: auto
-format:
-  html:
-    theme:
-      dark: solar
-      light: yeti
-    embed-resources: true
+format: fnl-html
