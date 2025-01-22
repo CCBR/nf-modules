@@ -5,12 +5,6 @@
                 "0": [
 
                 ],
-                "1": [
-
-                ],
-                "peaks": [
-
-                ],
                 "recap": [
 
                 ]
@@ -18,31 +12,37 @@
         ],
         "meta": {
             "nf-test": "0.9.1",
-            "nextflow": "24.10.0"
+            "nextflow": "24.10.3"
         },
-        "timestamp": "2024-12-11T16:34:47.684081028"
+        "timestamp": "2025-01-22T11:56:57.195032075"
     },
     "hsapiens stub": {
         "content": [
             {
                 "0": [
-
-                ],
-                "1": [
-
-                ],
-                "peaks": [
-
+                    [
+                        {
+                            "id": "test",
+                            "single_end": false
+                        },
+                        "SPT5_T0_1_peaks.RECAP.bootstrap_1_peaks.xls:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
                 ],
                 "recap": [
-
+                    [
+                        {
+                            "id": "test",
+                            "single_end": false
+                        },
+                        "SPT5_T0_1_peaks.RECAP.bootstrap_1_peaks.xls:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
                 ]
             }
         ],
         "meta": {
             "nf-test": "0.9.1",
-            "nextflow": "24.10.0"
+            "nextflow": "24.10.3"
         },
-        "timestamp": "2024-12-11T16:34:53.055465915"
+        "timestamp": "2025-01-22T12:13:32.499838583"
     }
 }
