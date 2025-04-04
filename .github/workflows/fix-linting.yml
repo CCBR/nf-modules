@@ -4,6 +4,11 @@ on:
   issue_comment:
     types: [created]
 
+permissions:
+  pull-requests: write
+  issues: write
+  contents: write
+
 jobs:
   fix-linting:
     # Only run if comment is on a PR with the main repo, and if it contains the magic keywords
