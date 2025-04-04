@@ -8,6 +8,9 @@ on:
     types:
       - assigned
 
+permissions:
+  issues: read
+
 jobs:
   add-to-project:
     uses: CCBR/.github/.github/workflows/auto-add-user-project.yml@v0.1.0
