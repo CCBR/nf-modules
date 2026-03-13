@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,17 +32,19 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0f678b7eab269e1f93ad2a885b46ecea.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b8f2631c081afeae376df51fffb043a0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-65803ac9f8b9a226f900d64efc7d6e1f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6c43f866430f66231ec7948ae9cfb461.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4940864a6af0f7cce6bb4c41fcab0fbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-2c2dd3e39f4dd278257b1c79b7bdc29c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ef91ded33184ba6f06685698a9b17406.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-dee7d6ebaa87278523fdc410e70f5228.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +116,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -132,7 +134,167 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -239,6 +401,7 @@ window.Quarto = {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-grid" id="listing-modules">
 <div class="listing-actions-group">
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -247,7 +410,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="YmVkb3BzJTJDYmVkbWFwJTJDYmVkJTJDaW50ZXJ2YWxz" data-listing-file-modified-sort="1735602441375" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="0" data-categories="YmVkb3BzJTJDYmVkbWFwJTJDYmVkJTJDaW50ZXJ2YWxz" data-listing-file-modified-sort="1773414305440" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedops_bedmap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -258,24 +421,20 @@ bedops_bedmap
 The bedmap program is used to retrieve and process signal or other features over regions of interest in BED files
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('YmVkb3Bz'); return false;">
-bedops
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVkbWFw'); return false;">
-bedmap
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">
-bed
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJ2YWxz'); return false;">
-intervals
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVkb3Bz'); return false;">bedops</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVkbWFw'); return false;">bedmap</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">bed</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJ2YWxz'); return false;">intervals</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="YmVkJTJDdmNmJTJDZ2ZmJTJDbWFwJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1735602441231" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="1" data-categories="YmVkJTJDdmNmJTJDZ2ZmJTJDbWFwJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1773414305414" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedtools_map.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -286,27 +445,22 @@ bedtools_map
 Allows one to screen for overlaps between two sets of genomic features. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">
-bed
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('dmNm'); return false;">
-vcf
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z2Zm'); return false;">
-gff
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bWFw'); return false;">
-map
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">
-bedtools
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">bed</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dmNm'); return false;">vcf</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2Zm'); return false;">gff</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWFw'); return false;">map</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">bedtools</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="YmVkJTJDbWVyZ2UlMkNiZWR0b29scyUyQ292ZXJsYXBwZWQlMjBiZWQ=" data-listing-file-modified-sort="1735602441257" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="2" data-categories="YmVkJTJDbWVyZ2UlMkNiZWR0b29scyUyQ292ZXJsYXBwZWQlMjBiZWQ=" data-listing-file-modified-sort="1773414305429" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedtools_merge.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -317,24 +471,20 @@ bedtools_merge
 combines overlapping or “book-ended” features in an interval file into a single feature which spans all of the combined features. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">
-bed
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bWVyZ2U='); return false;">
-merge
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">
-bedtools
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('b3ZlcmxhcHBlZCUyMGJlZA=='); return false;">
-overlapped bed
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">bed</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWVyZ2U='); return false;">merge</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">bedtools</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('b3ZlcmxhcHBlZCUyMGJlZA=='); return false;">overlapped bed</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="YmVkJTJDc29ydCUyQ2JlZHRvb2xzJTJDY2hyb21vc29tZQ==" data-listing-file-modified-sort="1735602441242" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="3" data-categories="YmVkJTJDc29ydCUyQ2JlZHRvb2xzJTJDY2hyb21vc29tZQ==" data-listing-file-modified-sort="1773414305402" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedtools_sort.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -345,24 +495,20 @@ bedtools_sort
 Sorts a feature file by chromosome and other criteria. Adapted from https://github.com/nf-core/modules/tree/fff2c3fc7cdcb81a2a37c3263b8ace9b353af407/modules/nf-core/bedtools
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">
-bed
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c29ydA=='); return false;">
-sort
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">
-bedtools
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hyb21vc29tZQ=='); return false;">
-chromosome
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">bed</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c29ydA=='); return false;">sort</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">bedtools</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2hyb21vc29tZQ=='); return false;">chromosome</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="aW5kZXglMkNmYXN0YSUyQ2dlbm9tZSUyQ3JlZmVyZW5jZQ==" data-listing-file-modified-sort="1735602441365" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="4" data-categories="aW5kZXglMkNmYXN0YSUyQ2dlbm9tZSUyQ3JlZmVyZW5jZQ==" data-listing-file-modified-sort="1773414305520" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bwa_index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -373,24 +519,20 @@ bwa_index
 Create BWA index for reference genome. Adapted from the nf-core bwa index module.
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('aW5kZXg='); return false;">
-index
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdGE='); return false;">
-fasta
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z2Vub21l'); return false;">
-genome
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cmVmZXJlbmNl'); return false;">
-reference
+
+<div class="listing-category" onclick="window.quartoListingCategory('aW5kZXg='); return false;">index</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdGE='); return false;">fasta</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2Vub21l'); return false;">genome</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cmVmZXJlbmNl'); return false;">reference</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="bWVtJTJDYndhJTJDYWxpZ25tZW50JTJDbWFwJTJDZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1735602441356" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="5" data-categories="bWVtJTJDYndhJTJDYWxpZ25tZW50JTJDbWFwJTJDZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1773414305530" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bwa_mem.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -401,33 +543,26 @@ bwa_mem
 Performs fastq alignment to a fasta reference using BWA. Adapted from the nf-core bwa-mem module.
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bWVt'); return false;">
-mem
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Yndh'); return false;">
-bwa
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YWxpZ25tZW50'); return false;">
-alignment
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bWFw'); return false;">
-map
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">
-fastq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">
-bam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">
-sam
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWVt'); return false;">mem</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Yndh'); return false;">bwa</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWxpZ25tZW50'); return false;">alignment</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWFw'); return false;">map</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">fastq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">bam</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">sam</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="Y29uY2F0ZW5hdGUlMkNnemlwJTJDY2F0" data-listing-file-modified-sort="1735602441401" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="6" data-categories="Y29uY2F0ZW5hdGUlMkNnemlwJTJDY2F0" data-listing-file-modified-sort="1773414305511" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/cat_cat.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -438,21 +573,18 @@ cat_cat
 A module for concatenation of gzipped or uncompressed files. Adapted from the nf-core cat module https://github.com/nf-core/modules/tree/9326d73af3fbe2ee90d9ce0a737461a727c5118e/modules/nf-core/cat
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y29uY2F0ZW5hdGU='); return false;">
-concatenate
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z3ppcA=='); return false;">
-gzip
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y2F0'); return false;">
-cat
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29uY2F0ZW5hdGU='); return false;">concatenate</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z3ppcA=='); return false;">gzip</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2F0'); return false;">cat</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="Y2F0JTJDZmFzdHElMkNjb25jYXRlbmF0ZQ==" data-listing-file-modified-sort="1735602441393" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="7" data-categories="Y2F0JTJDZmFzdHElMkNjb25jYXRlbmF0ZQ==" data-listing-file-modified-sort="1773414305503" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/cat_fastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -463,21 +595,18 @@ cat_fastq
 Concatenates fastq files. Adapted from the nf-core cat module https://github.com/nf-core/modules/tree/9326d73af3fbe2ee90d9ce0a737461a727c5118e/modules/nf-core/cat
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y2F0'); return false;">
-cat
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">
-fastq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29uY2F0ZW5hdGU='); return false;">
-concatenate
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2F0'); return false;">cat</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">fastq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29uY2F0ZW5hdGU='); return false;">concatenate</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="c2ljZXIlMkNwZWFrcyUyQ2NoaXBzZXElMkNiZWQlMkNicm9hZFBlYWs=" data-listing-file-modified-sort="1735602441309" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="8" data-categories="c2ljZXIlMkNwZWFrcyUyQ2NoaXBzZXElMkNiZWQlMkNicm9hZFBlYWs=" data-listing-file-modified-sort="1773414305575" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/convert_sicer.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -488,27 +617,22 @@ convert_sicer
 <p>Convert SICER output to BED and broadPeak format</p>
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('c2ljZXI='); return false;">
-sicer
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">
-peaks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">
-chipseq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">
-bed
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YnJvYWRQZWFr'); return false;">
-broadPeak
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2ljZXI='); return false;">sicer</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">peaks</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">chipseq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">bed</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YnJvYWRQZWFr'); return false;">broadPeak</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="YmFtMmZxJTJDc2FtdG9vbHMlMkNmYXN0cSUyQ3BpY2FyZA==" data-listing-file-modified-sort="1735602441300" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="9" data-categories="YmFtMmZxJTJDc2FtdG9vbHMlMkNmYXN0cSUyQ3BpY2FyZA==" data-listing-file-modified-sort="1773414305550" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_bam2fastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -519,24 +643,20 @@ custom_bam2fastq
 <p>The module converts a BAM file to FASTQ format. It uses samtools bam2fq if reads are single end, or picard SamToFastq if reads are paired.</p>
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('YmFtMmZx'); return false;">
-bam2fq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c2FtdG9vbHM='); return false;">
-samtools
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">
-fastq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cGljYXJk'); return false;">
-picard
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmFtMmZx'); return false;">bam2fq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2FtdG9vbHM='); return false;">samtools</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">fastq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGljYXJk'); return false;">picard</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3Vz" data-listing-file-modified-sort="1735602441265" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="10" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3Vz" data-listing-file-modified-sort="1773414305538" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_combinepeakcounts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -547,21 +667,18 @@ custom_combinepeakcounts
 combine counts into consensus peaks
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">
-chipseq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">
-peaks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">
-consensus
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">chipseq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">peaks</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">consensus</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="cGVha3MlMkNjaGlwc2VxJTJDbm9ybWFsaXphdGlvbiUyQ2NvbnNlbnN1cw==" data-listing-file-modified-sort="1735602441288" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="11" data-categories="cGVha3MlMkNjaGlwc2VxJTJDbm9ybWFsaXphdGlvbiUyQ2NvbnNlbnN1cw==" data-listing-file-modified-sort="1773414305587" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_consensuspeaks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -572,24 +689,20 @@ custom_consensuspeaks
 <p>Find consensus peaks from two or more peak files. The consensus_peaks subworkflow is a re-implementation of this module; new pipelines should use the subworkflow instead.</p>
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">
-peaks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">
-chipseq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bm9ybWFsaXphdGlvbg=='); return false;">
-normalization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">
-consensus
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">peaks</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">chipseq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bm9ybWFsaXphdGlvbg=='); return false;">normalization</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">consensus</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="ZmFzdHElMkNiaW9weXRob24lMkNweXRob24=" data-listing-file-modified-sort="1735602441327" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="12" data-categories="ZmFzdHElMkNiaW9weXRob24lMkNweXRob24=" data-listing-file-modified-sort="1773414305558" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_countfastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -600,21 +713,18 @@ custom_countfastq
 <p>Count reads in a fastq file</p>
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">
-fastq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmlvcHl0aG9u'); return false;">
-biopython
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">
-python
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">fastq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmlvcHl0aG9u'); return false;">biopython</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1735602441274" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="13" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1773414305567" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_formatmergedbed.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -625,24 +735,20 @@ custom_formatmergedbed
 <p>Reformat consensus peaks from bedtools merge. Used in the consensus_peaks subworkflow.</p>
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">
-chipseq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">
-peaks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">
-consensus
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">
-bedtools
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">chipseq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">peaks</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">consensus</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVkdG9vbHM='); return false;">bedtools</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="14" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDbm9ybWFsaXphdGlvbg==" data-listing-file-modified-sort="1735602441318" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="14" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDbm9ybWFsaXphdGlvbg==" data-listing-file-modified-sort="1773414305596" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_normalizepeaks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -653,24 +759,20 @@ custom_normalizepeaks
 normalize p-values and q-values of consensus peaks with the method from Corces et al.&nbsp;(https://doi.org/10.1126/science.aav1898)
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">
-chipseq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">
-peaks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">
-consensus
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bm9ybWFsaXphdGlvbg=='); return false;">
-normalization
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2hpcHNlcQ=='); return false;">chipseq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGVha3M='); return false;">peaks</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29uc2Vuc3Vz'); return false;">consensus</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bm9ybWFsaXphdGlvbg=='); return false;">normalization</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="15" data-categories="dHJpbW1pbmclMkNhZGFwdGVyJTIwdHJpbW1pbmclMkNhZGFwdGVycyUyQ3F1YWxpdHklMjB0cmltbWluZw==" data-listing-file-modified-sort="1735602441337" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="15" data-categories="dHJpbW1pbmclMkNhZGFwdGVyJTIwdHJpbW1pbmclMkNhZGFwdGVycyUyQ3F1YWxpdHklMjB0cmltbWluZw==" data-listing-file-modified-sort="1773414305605" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/cutadapt.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -681,24 +783,20 @@ cutadapt
 Perform adapter/quality trimming on sequencing reads. Adapted from the nf-core cutadapt module.
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('dHJpbW1pbmc='); return false;">
-trimming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YWRhcHRlciUyMHRyaW1taW5n'); return false;">
-adapter trimming
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YWRhcHRlcnM='); return false;">
-adapters
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cXVhbGl0eSUyMHRyaW1taW5n'); return false;">
-quality trimming
+
+<div class="listing-category" onclick="window.quartoListingCategory('dHJpbW1pbmc='); return false;">trimming</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWRhcHRlciUyMHRyaW1taW5n'); return false;">adapter trimming</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWRhcHRlcnM='); return false;">adapters</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cXVhbGl0eSUyMHRyaW1taW5n'); return false;">quality trimming</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="16" data-categories="a2htZXIlMkNrLW1lciUyQ2VmZmVjdGl2ZSUyMGdlbm9tZSUyMHNpemU=" data-listing-file-modified-sort="1735602441441" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="16" data-categories="a2htZXIlMkNrLW1lciUyQ2VmZmVjdGl2ZSUyMGdlbm9tZSUyMHNpemU=" data-listing-file-modified-sort="1773414305449" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/khmer_uniquekmers.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -709,21 +807,18 @@ khmer_uniquekmers
 In-memory nucleotide sequence k-mer counting, filtering, graph traversal and more. Adapted from nf-core/modules khmer/uniquekhmers.
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('a2htZXI='); return false;">
-khmer
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ay1tZXI='); return false;">
-k-mer
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZWZmZWN0aXZlJTIwZ2Vub21lJTIwc2l6ZQ=='); return false;">
-effective genome size
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('a2htZXI='); return false;">khmer</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ay1tZXI='); return false;">k-mer</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZWZmZWN0aXZlJTIwZ2Vub21lJTIwc2l6ZQ=='); return false;">effective genome size</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="17" data-categories="ZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1735602441346" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="17" data-categories="ZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1773414305495" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/picard_samtofastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -734,21 +829,18 @@ picard_samtofastq
 Converts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq module.
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">
-fastq
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">
-bam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">
-sam
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmFzdHE='); return false;">fastq</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">bam</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">sam</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="18" data-categories="YmFtJTJDZmlsdGVyJTJDc2FtdG9vbHM=" data-listing-file-modified-sort="1735602441431" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="18" data-categories="YmFtJTJDZmlsdGVyJTJDc2FtdG9vbHM=" data-listing-file-modified-sort="1773414305466" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/samtools_filteraligned.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -759,21 +851,18 @@ samtools_filteraligned
 Filter out aligned reads from a BAM file.
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">
-bam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZmlsdGVy'); return false;">
-filter
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c2FtdG9vbHM='); return false;">
-samtools
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">bam</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZmlsdGVy'); return false;">filter</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2FtdG9vbHM='); return false;">samtools</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
-</div>
-<div class="g-col-1" data-index="19" data-categories="c3RhdHMlMkNtYXBwaW5nJTJDY291bnRzJTJDYmFtJTJDc2FtJTJDY3JhbQ==" data-listing-file-modified-sort="1735602441412" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="19" data-categories="c3RhdHMlMkNtYXBwaW5nJTJDY291bnRzJTJDYmFtJTJDc2FtJTJDY3JhbQ==" data-listing-file-modified-sort="1773414305487" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/samtools_flagstat.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -784,30 +873,24 @@ samtools_flagstat
 Counts the number of alignments in a BAM/CRAM/SAM file for each FLAG type
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('c3RhdHM='); return false;">
-stats
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bWFwcGluZw=='); return false;">
-mapping
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y291bnRz'); return false;">
-counts
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">
-bam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">
-sam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JhbQ=='); return false;">
-cram
+
+<div class="listing-category" onclick="window.quartoListingCategory('c3RhdHM='); return false;">stats</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bWFwcGluZw=='); return false;">mapping</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y291bnRz'); return false;">counts</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">bam</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">sam</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3JhbQ=='); return false;">cram</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="20" data-categories="c29ydCUyQ2JhbSUyQ3NhbSUyQ2NyYW0=" data-listing-file-modified-sort="1735602441423" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="20" data-categories="c29ydCUyQ2JhbSUyQ3NhbSUyQ2NyYW0=" data-listing-file-modified-sort="1773414305477" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/samtools_sort.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -818,24 +901,20 @@ samtools_sort
 Sort a SAM/BAM/CRAM file. Adapted from the nf-core samtools sort module.
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('c29ydA=='); return false;">
-sort
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">
-bam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">
-sam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y3JhbQ=='); return false;">
-cram
+
+<div class="listing-category" onclick="window.quartoListingCategory('c29ydA=='); return false;">sort</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmFt'); return false;">bam</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c2Ft'); return false;">sam</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y3JhbQ=='); return false;">cram</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="21" data-categories="c29ydCUyQ2JlZCUyQ2dlbm9taWNz" data-listing-file-modified-sort="1735602441384" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="21" data-categories="c29ydCUyQ2JlZCUyQ2dlbm9taWNz" data-listing-file-modified-sort="1773414305457" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/sort_bed.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -846,403 +925,274 @@ sort_bed
 sort a bed file by chromosome then by start position
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('c29ydA=='); return false;">
-sort
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">
-bed
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z2Vub21pY3M='); return false;">
-genomics
-</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('c29ydA=='); return false;">sort</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YmVk'); return false;">bed</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2Vub21pY3M='); return false;">genomics</div>
+
 </div>
 </div>
+</div></a>
 </div>
-</a>
 </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
+<div class="listing-no-matching d-none">No matching items</div>
 <nav id="modules-pagination" class="listing-pagination" aria-label="Page Navigation">
   <ul class="pagination"></ul>
 </nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
       return false;
     }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = true;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ccbr\.github\.io\/nf-modules");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/ccbr\.github\.io\/nf-modules");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1250,185 +1200,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
