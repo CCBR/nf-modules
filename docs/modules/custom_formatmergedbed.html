@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>custom_formatmergedbed – nf-modules</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -67,17 +70,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-65803ac9f8b9a226f900d64efc7d6e1f.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6c43f866430f66231ec7948ae9cfb461.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4416eb449187d038c775981408852c36.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5fe34569156a0560d3359a9fc06f1f15.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ef91ded33184ba6f06685698a9b17406.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-dee7d6ebaa87278523fdc410e70f5228.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-91e34908f40e8490359650226142bb61.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5c1482f4aa22f76b1bb291f73ddd383b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -352,9 +354,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#input" id="toc-input" class="nav-link active" data-scroll-target="#input"><i class="fa-solid fa-arrow-right-to-bracket" aria-label="arrow-right-to-bracket"></i> Input</a></li>
-  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"><i class="fa-solid fa-arrow-right-from-bracket" aria-label="arrow-right-from-bracket"></i> Output</a></li>
-  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</a>
+  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input" class="nav-link active" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input"><i class="fa-solid fa-arrow-right-to-bracket" aria-label="arrow-right-to-bracket"></i> Input</a></li>
+  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output"><i class="fa-solid fa-arrow-right-from-bracket" aria-label="arrow-right-from-bracket"></i> Output</a></li>
+  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</a>
   <ul class="collapse">
   <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
   </ul></li>
@@ -368,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">custom_formatmergedbed</h1>
-<p class="subtitle lead"></p><p>Reformat consensus peaks from bedtools merge. Used in the consensus_peaks subworkflow.</p><p></p>
+<p class="subtitle lead">Reformat consensus peaks from bedtools merge. Used in the consensus_peaks subworkflow.</p>
   <div class="quarto-categories">
     <div class="quarto-category">chipseq</div>
     <div class="quarto-category">peaks</div>
@@ -396,8 +398,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--git-remote</span> https://github.com/CCBR/nf-modules <span class="dt">\</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  install custom/formatmergedbed</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><a href="https://github.com/CCBR/nf-modules/tree/main/modules/CCBR/custom/formatmergedbed/"><i class="fa-brands fa-github" aria-label="github"></i> https://github.com/CCBR/nf-modules/…/modules/CCBR/custom/formatmergedbed/</a></p>
-<section id="input" class="level2">
-<h2 class="anchored" data-anchor-id="input"><i class="fa-solid fa-arrow-right-to-bracket" aria-label="arrow-right-to-bracket"></i> Input</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input" class="level2">
+<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input"><i class="fa-solid fa-arrow-right-to-bracket" aria-label="arrow-right-to-bracket"></i> Input</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -440,8 +442,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="output" class="level2">
-<h2 class="anchored" data-anchor-id="output"><i class="fa-solid fa-arrow-right-from-bracket" aria-label="arrow-right-from-bracket"></i> Output</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" class="level2">
+<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output"><i class="fa-solid fa-arrow-right-from-bracket" aria-label="arrow-right-from-bracket"></i> Output</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -489,8 +491,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="tools" class="level2">
-<h2 class="anchored" data-anchor-id="tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" class="level2">
+<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</h2>
 <section id="r" class="level3">
 <h3 class="anchored" data-anchor-id="r">R</h3>
 <p><a href="https://www.r-project.org/"><i class="fa-solid fa-globe" aria-label="globe"></i> Home</a>       <code>GPL-3</code></p>

@@ -18,15 +18,15 @@
     "text": "nf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install filter/blacklist\nhttps://github.com/CCBR/nf-modules/…/subworkflows/CCBR/filter_blacklist/"
   },
   {
-    "objectID": "docs/subworkflows/filter_blacklist.html#input",
-    "href": "docs/subworkflows/filter_blacklist.html#input",
+    "objectID": "docs/subworkflows/filter_blacklist.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/subworkflows/filter_blacklist.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "filter_blacklist",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nch_fastq_input\nmap\nA channel containing fastq files\n\n\nch_blacklist_index\nfile\nA BWA index created by running BWA/INDEX on a fasta file of blacklisted regions/"
   },
   {
-    "objectID": "docs/subworkflows/filter_blacklist.html#output",
-    "href": "docs/subworkflows/filter_blacklist.html#output",
+    "objectID": "docs/subworkflows/filter_blacklist.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/subworkflows/filter_blacklist.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "filter_blacklist",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nreads\nmap\nReads from the fastq files that do not align to the blacklist\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
@@ -46,22 +46,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/sort\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/sort/"
   },
   {
-    "objectID": "docs/modules/samtools_sort.html#input",
-    "href": "docs/modules/samtools_sort.html#input",
+    "objectID": "docs/modules/samtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/samtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "samtools_sort",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM/CRAM/SAM file\n*.{bam,cram,sam}"
   },
   {
-    "objectID": "docs/modules/samtools_sort.html#output",
-    "href": "docs/modules/samtools_sort.html#output",
+    "objectID": "docs/modules/samtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/samtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "samtools_sort",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nSorted BAM/CRAM/SAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nSorted BAM Index file\n*.bai\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\ncsi\nfile\nBAM index file (optional)\n*.csi"
   },
   {
-    "objectID": "docs/modules/samtools_sort.html#tools",
-    "href": "docs/modules/samtools_sort.html#tools",
+    "objectID": "docs/modules/samtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/samtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "samtools_sort",
     "section": " Tools",
     "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
@@ -74,22 +74,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/filteraligned\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/filteraligned/"
   },
   {
-    "objectID": "docs/modules/samtools_filteraligned.html#input",
-    "href": "docs/modules/samtools_filteraligned.html#input",
+    "objectID": "docs/modules/samtools_filteraligned.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/samtools_filteraligned.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "samtools_filteraligned",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nInput BAM file"
   },
   {
-    "objectID": "docs/modules/samtools_filteraligned.html#output",
-    "href": "docs/modules/samtools_filteraligned.html#output",
+    "objectID": "docs/modules/samtools_filteraligned.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/samtools_filteraligned.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "samtools_filteraligned",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nOutput BAM file with only reads that were not aligned\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/samtools_filteraligned.html#tools",
-    "href": "docs/modules/samtools_filteraligned.html#tools",
+    "objectID": "docs/modules/samtools_filteraligned.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/samtools_filteraligned.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "samtools_filteraligned",
     "section": " Tools",
     "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
@@ -102,22 +102,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install khmer/uniquekmers\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/khmer/uniquekmers/"
   },
   {
-    "objectID": "docs/modules/khmer_uniquekmers.html#input",
-    "href": "docs/modules/khmer_uniquekmers.html#input",
+    "objectID": "docs/modules/khmer_uniquekmers.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/khmer_uniquekmers.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "khmer_uniquekmers",
     "section": " Input",
     "text": "Input\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nfasta\nfile\nfasta file\n*.{fa,fasta}\n\n\nkmer_size\ninteger\nk-mer size to use\n[0-9]+"
   },
   {
-    "objectID": "docs/modules/khmer_uniquekmers.html#output",
-    "href": "docs/modules/khmer_uniquekmers.html#output",
+    "objectID": "docs/modules/khmer_uniquekmers.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/khmer_uniquekmers.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "khmer_uniquekmers",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nreport\nfile\nText file containing unique-kmers.py execution report\nreport.txt\n\n\nkmers\nfile\nText file containing number of kmers\nkmers.txt\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/khmer_uniquekmers.html#tools",
-    "href": "docs/modules/khmer_uniquekmers.html#tools",
+    "objectID": "docs/modules/khmer_uniquekmers.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/khmer_uniquekmers.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "khmer_uniquekmers",
     "section": " Tools",
     "text": "Tools\n\nkhmer\n Home    Docs    Code   BSD License\nkhmer k-mer counting library"
@@ -130,22 +130,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/normalizepeaks\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/normalizepeaks/"
   },
   {
-    "objectID": "docs/modules/custom_normalizepeaks.html#input",
-    "href": "docs/modules/custom_normalizepeaks.html#input",
+    "objectID": "docs/modules/custom_normalizepeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/custom_normalizepeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "custom_normalizepeaks",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\ncount\nfile\nconsensus peak file from custom/combinepeakcounts\n*.bed\n\n\npeaks\nfile\nmerged and sorted peak file\n*.bed"
   },
   {
-    "objectID": "docs/modules/custom_normalizepeaks.html#output",
-    "href": "docs/modules/custom_normalizepeaks.html#output",
+    "objectID": "docs/modules/custom_normalizepeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/custom_normalizepeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "custom_normalizepeaks",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nconsensus peak file with normalized p-values and q-values\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/custom_normalizepeaks.html#tools",
-    "href": "docs/modules/custom_normalizepeaks.html#tools",
+    "objectID": "docs/modules/custom_normalizepeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/custom_normalizepeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "custom_normalizepeaks",
     "section": " Tools",
     "text": "Tools\n\nR\n Home       GPL-3\nR is a free software environment for statistical computing and graphics"
@@ -158,22 +158,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/countfastq\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/countfastq/"
   },
   {
-    "objectID": "docs/modules/custom_countfastq.html#input",
-    "href": "docs/modules/custom_countfastq.html#input",
+    "objectID": "docs/modules/custom_countfastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/custom_countfastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "custom_countfastq",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nfastq\nfile\nfastq file\n*.{fastq.gz}"
   },
   {
-    "objectID": "docs/modules/custom_countfastq.html#output",
-    "href": "docs/modules/custom_countfastq.html#output",
+    "objectID": "docs/modules/custom_countfastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/custom_countfastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "custom_countfastq",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\ncount\nfile\nPlain text file containing the number of reads in the fastq files\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/custom_countfastq.html#tools",
-    "href": "docs/modules/custom_countfastq.html#tools",
+    "objectID": "docs/modules/custom_countfastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/custom_countfastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "custom_countfastq",
     "section": " Tools",
     "text": "Tools\n\nBiopython\n Home      Code   BSD 3-Clause\nPython tools for computational molecular biology"
@@ -186,22 +186,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/combinepeakcounts\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/combinepeakcounts/"
   },
   {
-    "objectID": "docs/modules/custom_combinepeakcounts.html#input",
-    "href": "docs/modules/custom_combinepeakcounts.html#input",
+    "objectID": "docs/modules/custom_combinepeakcounts.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/custom_combinepeakcounts.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "custom_combinepeakcounts",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\ncounts\nfile\npeak file from bedops/bedmap\n*.bed"
   },
   {
-    "objectID": "docs/modules/custom_combinepeakcounts.html#output",
-    "href": "docs/modules/custom_combinepeakcounts.html#output",
+    "objectID": "docs/modules/custom_combinepeakcounts.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/custom_combinepeakcounts.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "custom_combinepeakcounts",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nconsensus peak file\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/custom_combinepeakcounts.html#tools",
-    "href": "docs/modules/custom_combinepeakcounts.html#tools",
+    "objectID": "docs/modules/custom_combinepeakcounts.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/custom_combinepeakcounts.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "custom_combinepeakcounts",
     "section": " Tools",
     "text": "Tools\n\nR\n Home       GPL-3\nR is a free software environment for statistical computing and graphics"
@@ -214,22 +214,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install convert/sicer\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/convertsicer/"
   },
   {
-    "objectID": "docs/modules/convert_sicer.html#input",
-    "href": "docs/modules/convert_sicer.html#input",
+    "objectID": "docs/modules/convert_sicer.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/convert_sicer.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "convert_sicer",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nsicer_peaks\nfile\nSICER peak file"
   },
   {
-    "objectID": "docs/modules/convert_sicer.html#output",
-    "href": "docs/modules/convert_sicer.html#output",
+    "objectID": "docs/modules/convert_sicer.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/convert_sicer.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "convert_sicer",
     "section": " Output",
     "text": "Output\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nbed\nfile\nBED file\n*.bed\n\n\npeak\nfile\nbroadPeak file\n*.broadPeak\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/convert_sicer.html#tools",
-    "href": "docs/modules/convert_sicer.html#tools",
+    "objectID": "docs/modules/convert_sicer.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/convert_sicer.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "convert_sicer",
     "section": " Tools",
     "text": "Tools\n\nPython\n Home       Python License 2.0\nThe Python Programming Language"
@@ -242,22 +242,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install cat/cat\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/cat/cat/"
   },
   {
-    "objectID": "docs/modules/cat_cat.html#input",
-    "href": "docs/modules/cat_cat.html#input",
+    "objectID": "docs/modules/cat_cat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/cat_cat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "cat_cat",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nfiles_in\nfile\nList of compressed / uncompressed files\n*"
   },
   {
-    "objectID": "docs/modules/cat_cat.html#output",
-    "href": "docs/modules/cat_cat.html#output",
+    "objectID": "docs/modules/cat_cat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/cat_cat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "cat_cat",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\nfile_out\nfile\nConcatenated file. Will be gzipped if file_out ends with “.gz”\n${file_out}"
   },
   {
-    "objectID": "docs/modules/cat_cat.html#tools",
-    "href": "docs/modules/cat_cat.html#tools",
+    "objectID": "docs/modules/cat_cat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/cat_cat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "cat_cat",
     "section": " Tools",
     "text": "Tools\n\ncat\n   Docs     GPL-3.0-or-later\nJust concatenation"
@@ -270,22 +270,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/index\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bwa/index/"
   },
   {
-    "objectID": "docs/modules/bwa_index.html#input",
-    "href": "docs/modules/bwa_index.html#input",
+    "objectID": "docs/modules/bwa_index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/bwa_index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "bwa_index",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nfasta\nfile\nInput genome fasta file"
   },
   {
-    "objectID": "docs/modules/bwa_index.html#output",
-    "href": "docs/modules/bwa_index.html#output",
+    "objectID": "docs/modules/bwa_index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/bwa_index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "bwa_index",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing reference information.\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\n*.{amb,ann,bwt,pac,sa}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bwa_index.html#tools",
-    "href": "docs/modules/bwa_index.html#tools",
+    "objectID": "docs/modules/bwa_index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/bwa_index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "bwa_index",
     "section": " Tools",
     "text": "Tools\n\nbwa\n Home    Docs     GPL-3.0-or-later\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome."
@@ -298,22 +298,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bedtools/merge\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bedtools/merge/"
   },
   {
-    "objectID": "docs/modules/bedtools_merge.html#input",
-    "href": "docs/modules/bedtools_merge.html#input",
+    "objectID": "docs/modules/bedtools_merge.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/bedtools_merge.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "bedtools_merge",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbed\nfile\nInput BED file\n*.{bed}\n\n\nargs\nstring\noptional arguments for bedtools merge\nNA"
   },
   {
-    "objectID": "docs/modules/bedtools_merge.html#output",
-    "href": "docs/modules/bedtools_merge.html#output",
+    "objectID": "docs/modules/bedtools_merge.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/bedtools_merge.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "bedtools_merge",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbed\nfile\nOverlapped bed file with combined features\n*.{bed}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bedtools_merge.html#tools",
-    "href": "docs/modules/bedtools_merge.html#tools",
+    "objectID": "docs/modules/bedtools_merge.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/bedtools_merge.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "bedtools_merge",
     "section": " Tools",
     "text": "Tools\n\nbedtools\n   Docs     MIT\nA set of tools for genomic analysis tasks, specifically enabling genome arithmetic (merge, count, complement) on various file types."
@@ -326,22 +326,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bedops/bedmap\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bedops/bedmap/"
   },
   {
-    "objectID": "docs/modules/bedops_bedmap.html#input",
-    "href": "docs/modules/bedops_bedmap.html#input",
+    "objectID": "docs/modules/bedops_bedmap.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/bedops_bedmap.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "bedops_bedmap",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nrefbed\nfile\nBED file\n*.bed\n\n\nmapbed\nfile\nBED file\n*.bed"
   },
   {
-    "objectID": "docs/modules/bedops_bedmap.html#output",
-    "href": "docs/modules/bedops_bedmap.html#output",
+    "objectID": "docs/modules/bedops_bedmap.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/bedops_bedmap.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "bedops_bedmap",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nmapped_bed\nfile\nBED file\n*.bed\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bedops_bedmap.html#tools",
-    "href": "docs/modules/bedops_bedmap.html#tools",
+    "objectID": "docs/modules/bedops_bedmap.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/bedops_bedmap.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "bedops_bedmap",
     "section": " Tools",
     "text": "Tools\n\nbedops\n   Docs    Code   GPLv2\nfast, highly scalable and easily-parallelizable genome analysis toolkit"
@@ -423,22 +423,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bedtools/map\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bedtools/map/"
   },
   {
-    "objectID": "docs/modules/bedtools_map.html#input",
-    "href": "docs/modules/bedtools_map.html#input",
+    "objectID": "docs/modules/bedtools_map.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/bedtools_map.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "bedtools_map",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nintervals1\nfile\nBAM/BED/GFF/VCF\n*.{bed|gff|vcf}\n\n\nintervals2\nfile\nBAM/BED/GFF/VCF\n*.{bed|gff|vcf}\n\n\nmeta2\nmap\nGroovy Map containing reference chromosome sizes\n\n\n\ne.g. [ id:‘test’ ]\nNA\n\n\n\n\nchrom_sizes\nfile\nChromosome sizes file\n*{.sizes,.txt}"
   },
   {
-    "objectID": "docs/modules/bedtools_map.html#output",
-    "href": "docs/modules/bedtools_map.html#output",
+    "objectID": "docs/modules/bedtools_map.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/bedtools_map.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "bedtools_map",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nmap\nfile\nFile containing the description of overlaps found between the features in A and the features in B, with statistics\n*.${extension}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bedtools_map.html#tools",
-    "href": "docs/modules/bedtools_map.html#tools",
+    "objectID": "docs/modules/bedtools_map.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/bedtools_map.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "bedtools_map",
     "section": " Tools",
     "text": "Tools\n\nbedtools\n   Docs     MIT\nA set of tools for genomic analysis tasks, specifically enabling genome arithmetic (merge, count, complement) on various file types."
@@ -451,22 +451,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bedtools/sort\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bedtools/sort/"
   },
   {
-    "objectID": "docs/modules/bedtools_sort.html#input",
-    "href": "docs/modules/bedtools_sort.html#input",
+    "objectID": "docs/modules/bedtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/bedtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "bedtools_sort",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nintervals\nfile\nBED/BEDGRAPH\n*.{bed|bedGraph}\n\n\ngenome_file\nfile\nOptional reference genome 2 column file that defines the expected chromosome order.\n*.{fai,txt,chromsizes}"
   },
   {
-    "objectID": "docs/modules/bedtools_sort.html#output",
-    "href": "docs/modules/bedtools_sort.html#output",
+    "objectID": "docs/modules/bedtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/bedtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "bedtools_sort",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nsorted\nfile\nSorted output file\n*.${extension}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bedtools_sort.html#tools",
-    "href": "docs/modules/bedtools_sort.html#tools",
+    "objectID": "docs/modules/bedtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/bedtools_sort.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "bedtools_sort",
     "section": " Tools",
     "text": "Tools\n\nbedtools\n   Docs     MIT\nA set of tools for genomic analysis tasks, specifically enabling genome arithmetic (merge, count, complement) on various file types."
@@ -479,22 +479,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install bwa/mem\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/bwa/mem/"
   },
   {
-    "objectID": "docs/modules/bwa_mem.html#input",
-    "href": "docs/modules/bwa_mem.html#input",
+    "objectID": "docs/modules/bwa_mem.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/bwa_mem.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "bwa_mem",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\n\nrespectively.\nNA\n\n\n\n\nindex\nfile\nBWA genome index files\nDirectory containing BWA index *.{amb,ann,bwt,pac,sa}"
   },
   {
-    "objectID": "docs/modules/bwa_mem.html#output",
-    "href": "docs/modules/bwa_mem.html#output",
+    "objectID": "docs/modules/bwa_mem.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/bwa_mem.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "bwa_mem",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nbam\nfile\nOutput BAM file containing read alignments\n*.{bam}\n\n\nbai\nfile\nOutput BAI index file\n*.{bai}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/bwa_mem.html#tools",
-    "href": "docs/modules/bwa_mem.html#tools",
+    "objectID": "docs/modules/bwa_mem.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/bwa_mem.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "bwa_mem",
     "section": " Tools",
     "text": "Tools\n\nbwa\n Home    Docs     GPL-3.0-or-later\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome."
@@ -507,22 +507,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install cat/fastq\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/cat/fastq/"
   },
   {
-    "objectID": "docs/modules/cat_fastq.html#input",
-    "href": "docs/modules/cat_fastq.html#input",
+    "objectID": "docs/modules/cat_fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/cat_fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "cat_fastq",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nreads\nfile\nList of input FastQ files to be concatenated."
   },
   {
-    "objectID": "docs/modules/cat_fastq.html#output",
-    "href": "docs/modules/cat_fastq.html#output",
+    "objectID": "docs/modules/cat_fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/cat_fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "cat_fastq",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nMerged fastq file\n*.{merged.fastq.gz}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/cat_fastq.html#tools",
-    "href": "docs/modules/cat_fastq.html#tools",
+    "objectID": "docs/modules/cat_fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/cat_fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "cat_fastq",
     "section": " Tools",
     "text": "Tools\n\ncat\n   Docs     GPL-3.0-or-later\nThe cat utility reads files sequentially, writing them to the standard output."
@@ -535,22 +535,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/bam2fastq\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/bam2fastq/"
   },
   {
-    "objectID": "docs/modules/custom_bam2fastq.html#input",
-    "href": "docs/modules/custom_bam2fastq.html#input",
+    "objectID": "docs/modules/custom_bam2fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/custom_bam2fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "custom_bam2fastq",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nBAI (bam index) file\n*.{bai}"
   },
   {
-    "objectID": "docs/modules/custom_bam2fastq.html#output",
-    "href": "docs/modules/custom_bam2fastq.html#output",
+    "objectID": "docs/modules/custom_bam2fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/custom_bam2fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "custom_bam2fastq",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\nreads\nfile\n1 fastq file if single end, or 2 fastq files if paired-end.\n*.fastq.gz\n\n\nunpaired\nfile\nunpaired reads\n*.fastq.gz"
   },
   {
-    "objectID": "docs/modules/custom_bam2fastq.html#tools",
-    "href": "docs/modules/custom_bam2fastq.html#tools",
+    "objectID": "docs/modules/custom_bam2fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/custom_bam2fastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "custom_bam2fastq",
     "section": " Tools",
     "text": "Tools\n\nsamtools\n   Docs     MIT\nTools for dealing with SAM, BAM and CRAM files\n\n\npicard\n Home    Docs    Code   MIT\nA set of command line tools (in Java) for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF."
@@ -563,22 +563,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/consensuspeaks\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/consensuspeaks/"
   },
   {
-    "objectID": "docs/modules/custom_consensuspeaks.html#input",
-    "href": "docs/modules/custom_consensuspeaks.html#input",
+    "objectID": "docs/modules/custom_consensuspeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/custom_consensuspeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "custom_consensuspeaks",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\npeaks\nfile\nPeak files\n*.{broadPeak,narrowPeak,bed}"
   },
   {
-    "objectID": "docs/modules/custom_consensuspeaks.html#output",
-    "href": "docs/modules/custom_consensuspeaks.html#output",
+    "objectID": "docs/modules/custom_consensuspeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/custom_consensuspeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "custom_consensuspeaks",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\npeaks\nfile\nA single consensus peak file\n*.{broadPeak,narrowPeak,bed}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/custom_consensuspeaks.html#tools",
-    "href": "docs/modules/custom_consensuspeaks.html#tools",
+    "objectID": "docs/modules/custom_consensuspeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/custom_consensuspeaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "custom_consensuspeaks",
     "section": " Tools",
     "text": "Tools\n\nPython\n Home       Python License 2.0\nThe Python Programming Language\n\n\nbedtools\n   Docs     MIT\nA set of tools for genomic analysis tasks, specifically enabling genome arithmetic (merge, count, complement) on various file types.\n\n\nbedops\n   Docs    Code   GPLv2\nfast, highly scalable and easily-parallelizable genome analysis toolkit\n\n\nbedSort\n   Docs    \nUCSC Genome Browser tool for sorting .bed files by chrom,chromStart."
@@ -591,22 +591,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install custom/formatmergedbed\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/custom/formatmergedbed/"
   },
   {
-    "objectID": "docs/modules/custom_formatmergedbed.html#input",
-    "href": "docs/modules/custom_formatmergedbed.html#input",
+    "objectID": "docs/modules/custom_formatmergedbed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/custom_formatmergedbed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "custom_formatmergedbed",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nmerged_bed\nfile\nMerged output file from calling\n\n\n\n\nbedtools merge -c 1,5,6,7,8,9 -o count,collapse,collapse,collapse,collapse,collapse on a concatenated & sorted peak file |*.bed |"
   },
   {
-    "objectID": "docs/modules/custom_formatmergedbed.html#output",
-    "href": "docs/modules/custom_formatmergedbed.html#output",
+    "objectID": "docs/modules/custom_formatmergedbed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/custom_formatmergedbed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "custom_formatmergedbed",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nA narrow peak bed file with the best p-value for each consensus peak\nNA\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/custom_formatmergedbed.html#tools",
-    "href": "docs/modules/custom_formatmergedbed.html#tools",
+    "objectID": "docs/modules/custom_formatmergedbed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/custom_formatmergedbed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "custom_formatmergedbed",
     "section": " Tools",
     "text": "Tools\n\nR\n Home       GPL-3\nR is a free software environment for statistical computing and graphics"
@@ -619,22 +619,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install cutadapt\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/cutadapt/"
   },
   {
-    "objectID": "docs/modules/cutadapt.html#input",
-    "href": "docs/modules/cutadapt.html#input",
+    "objectID": "docs/modules/cutadapt.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/cutadapt.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "cutadapt",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nreads\nfile\nList of input FastQ files of size 1 and 2 for single-end and paired-end data,\n\n\nrespectively."
   },
   {
-    "objectID": "docs/modules/cutadapt.html#output",
-    "href": "docs/modules/cutadapt.html#output",
+    "objectID": "docs/modules/cutadapt.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/cutadapt.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "cutadapt",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nreads\nfile\nThe trimmed/modified fastq reads\n*fastq.gz\n\n\nlog\nfile\ncuatadapt log file\n*cutadapt.log\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/cutadapt.html#tools",
-    "href": "docs/modules/cutadapt.html#tools",
+    "objectID": "docs/modules/cutadapt.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/cutadapt.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "cutadapt",
     "section": " Tools",
     "text": "Tools\n\ncuatadapt\n   Docs     MIT\nCutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads."
@@ -647,22 +647,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install picard/samtofastq\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/picard/samtofastq/"
   },
   {
-    "objectID": "docs/modules/picard_samtofastq.html#input",
-    "href": "docs/modules/picard_samtofastq.html#input",
+    "objectID": "docs/modules/picard_samtofastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/picard_samtofastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "picard_samtofastq",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\ne.g. [ id:‘test’, single_end:false ]\n\n\n\n\nbam\nfile\nSAM or BAM file"
   },
   {
-    "objectID": "docs/modules/picard_samtofastq.html#output",
-    "href": "docs/modules/picard_samtofastq.html#output",
+    "objectID": "docs/modules/picard_samtofastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/picard_samtofastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "picard_samtofastq",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nversions\nfile\nFile containing software versions\nversions.yml\n\n\nfastq\nfile\nfastq files\n*.{fastq}"
   },
   {
-    "objectID": "docs/modules/picard_samtofastq.html#tools",
-    "href": "docs/modules/picard_samtofastq.html#tools",
+    "objectID": "docs/modules/picard_samtofastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/picard_samtofastq.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "picard_samtofastq",
     "section": " Tools",
     "text": "Tools\n\npicard\n Home    Docs    Code   MIT\nA set of command line tools (in Java) for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF."
@@ -675,22 +675,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install samtools/flagstat\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/samtools/flagstat/"
   },
   {
-    "objectID": "docs/modules/samtools_flagstat.html#input",
-    "href": "docs/modules/samtools_flagstat.html#input",
+    "objectID": "docs/modules/samtools_flagstat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/samtools_flagstat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "samtools_flagstat",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nbam\nfile\nBAM/CRAM/SAM file\n*.{bam,cram,sam}\n\n\nbai\nfile\nIndex for BAM/CRAM/SAM file\n*.{bai,crai,sai}"
   },
   {
-    "objectID": "docs/modules/samtools_flagstat.html#output",
-    "href": "docs/modules/samtools_flagstat.html#output",
+    "objectID": "docs/modules/samtools_flagstat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/samtools_flagstat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "samtools_flagstat",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:‘test’, single_end:false ]\nNA\n\n\n\n\nflagstat\nfile\nFile containing samtools flagstat output\n*.{flagstat}\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/samtools_flagstat.html#tools",
-    "href": "docs/modules/samtools_flagstat.html#tools",
+    "objectID": "docs/modules/samtools_flagstat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/samtools_flagstat.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "samtools_flagstat",
     "section": " Tools",
     "text": "Tools\n\nsamtools\n Home    Docs     MIT\nSAMtools is a set of utilities for interacting with and post-processing short DNA sequence read alignments in the SAM, BAM and CRAM formats, written by Heng Li. These files are generated as output by short read aligners like BWA."
@@ -703,22 +703,22 @@
     "text": "nf-core modules \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install sort/bed\nhttps://github.com/CCBR/nf-modules/…/modules/CCBR/sort/bed/"
   },
   {
-    "objectID": "docs/modules/sort_bed.html#input",
-    "href": "docs/modules/sort_bed.html#input",
+    "objectID": "docs/modules/sort_bed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/modules/sort_bed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "sort_bed",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\nBED file, or any tab-delimited text file with at least two columns\n*.bed"
   },
   {
-    "objectID": "docs/modules/sort_bed.html#output",
-    "href": "docs/modules/sort_bed.html#output",
+    "objectID": "docs/modules/sort_bed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/modules/sort_bed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "sort_bed",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\nbed\nfile\ninput file sorted by first and second columns\n*.bed\n\n\nversions\nfile\nFile containing software versions\nversions.yml"
   },
   {
-    "objectID": "docs/modules/sort_bed.html#tools",
-    "href": "docs/modules/sort_bed.html#tools",
+    "objectID": "docs/modules/sort_bed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
+    "href": "docs/modules/sort_bed.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools",
     "title": "sort_bed",
     "section": " Tools",
     "text": "Tools\n\nGNU_coreutils\n Home       GPL-3.0\nThe GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every operating system."
@@ -731,15 +731,15 @@
     "text": "nf-core subworkflows \\\n  --git-remote https://github.com/CCBR/nf-modules \\\n  install consensus/peaks\nhttps://github.com/CCBR/nf-modules/…/subworkflows/CCBR/consensus_peaks/"
   },
   {
-    "objectID": "docs/subworkflows/consensus_peaks.html#input",
-    "href": "docs/subworkflows/consensus_peaks.html#input",
+    "objectID": "docs/subworkflows/consensus_peaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
+    "href": "docs/subworkflows/consensus_peaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input",
     "title": "consensus_peaks",
     "section": " Input",
     "text": "Input\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nch_peaks\nfile\nThe input channel containing the peak files.\n\n\n\n\nStructure: [ val(meta), path(peak) ]. Meta must contain a group variable by which the peaks will be grouped for consensus calling. |*.{bed/narrowPeak/broadPeak} | |normalize |boolean |Whether to normalize p-values and q-values for consensus peaks. |NA |"
   },
   {
-    "objectID": "docs/subworkflows/consensus_peaks.html#output",
-    "href": "docs/subworkflows/consensus_peaks.html#output",
+    "objectID": "docs/subworkflows/consensus_peaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
+    "href": "docs/subworkflows/consensus_peaks.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output",
     "title": "consensus_peaks",
     "section": " Output",
     "text": "Output\n\n\n\n\n\n\n\n\n\n\n\nname\ntype\ndescription\npattern\n\n\n\n\nmeta\nmap\nGroovy Map containing sample information\n\n\n\ne.g. [ id:'test', single_end:false ]\nNA\n\n\n\n\npeaks\nfile\nA single consensus peak file for each meta.group\n*.{broadPeak,narrowPeak,bed}\n\n\nversions\nfile\nFile containing software versions\n\n\n\nStructure: [ path(versions.yml) ]\nversions.yml"
