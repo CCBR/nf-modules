@@ -1,0 +1,60 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/nf-core/modules/master/modules/meta-schema.json
+name: "recap_macs"
+description: RE-CAlibration of P-values from ChIP-seq peak calling with macs2
+keywords:
+  - RECAP
+  - macs2
+  - bootstrap
+  - ChIP-seq
+tools:
+  - "RECAP":
+      description: "RE-CAlibration of P-values from ChIP-seq peak calling, by method of RE-sampling reads and re-CAlling Peaks."
+      homepage: "https://github.com/theodorejperkins/RECAP"
+      documentation: "https://github.com/theodorejperkins/RECAP"
+      tool_dev_url: "https://github.com/theodorejperkins/RECAP"
+      doi: "10.1093/bioinformatics/btz150"
+      licence:
+      identifier:
+
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. `[ id:'sample1' ]`
+  - chip:
+      type: file
+      description: ChIP-seq treatment bed file
+      pattern: "*.bed"
+  - input:
+      type: file
+      description: input/control bed file
+      pattern: "*.bed"
+
+output:
+  - recap:
+      - meta:
+          type: map
+          description: |
+            Groovy Map containing sample information
+            e.g. `[ id:'sample1', single_end:false ]`
+      - "*.xls":
+          type: file
+          description: RECAP xls output file
+          pattern: "*.xls"
+      - "*.bed":
+          type: file
+          description: RECAP output file in bed format
+          pattern: "*.bed"
+
+  - versions:
+      - "versions.yml":
+          type: file
+          description: File containing software versions
+          pattern: "versions.yml"
+
+authors:
+  - "@kelly-sovacool"
+maintainers:
+  - "@kelly-sovacool"
