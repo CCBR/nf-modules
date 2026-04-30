@@ -18,7 +18,8 @@ process CUSTOM_BED2SAF {
         outfile.write('\\t'.join(['GeneID', 'Chr', 'Start', 'End', 'Strand']))
         with open("${bed}", 'r') as infile:
             for line in infile:
-                (chr, start, end,) = line.strip().split('\\t')
+                line_strip = line.strip().split('\\t')
+                chr, start, end = line_strip[:3]
                 peak_id = f'{chr}:{start}-{end}'
                 strand = '.' # no strand info available
                 outfile.write('\\t'.join([peak_id, chr, start, end, strand]) + '\\n')
