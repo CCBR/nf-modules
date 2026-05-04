@@ -1,0 +1,35 @@
+{
+    "Should run without failures": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.saf:md5,ab7473e78baf6476d2f8292417c75ccc"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,04be171a0046482fe7a05e101a88091d"
+                ],
+                "saf": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.saf:md5,ab7473e78baf6476d2f8292417c75ccc"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,04be171a0046482fe7a05e101a88091d"
+                ]
+            }
+        ],
+        "timestamp": "2026-04-30T10:38:38.477114931",
+        "meta": {
+            "nf-test": "0.9.4",
+            "nextflow": "25.10.0"
+        }
+    }
+}
