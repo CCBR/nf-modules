@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>custom_bam2fastq – nf-modules</title>
+<title>security – nf-modules</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,65 +23,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ee4c798a696f410de894479ed283eeec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d77082579015fd54bbb3bb0b5df6a1f6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-23225046f749d6199828014bbcbba35f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-57b43ad6b5e22281874bfb6c59593522.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ee4c798a696f410de894479ed283eeec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d77082579015fd54bbb3bb0b5df6a1f6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-23225046f749d6199828014bbcbba35f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-57b43ad6b5e22281874bfb6c59593522.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -279,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">nf-modules</span>
     </a>
   </div>
@@ -295,39 +258,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-home">    
         <li>
-    <a class="dropdown-item" href="../../docs/index.html">
+    <a class="dropdown-item" href="./docs/index.html">
  <span class="dropdown-text">home</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">project info</li>
         <li>
-    <a class="dropdown-item" href="../../docs/cite.html">
+    <a class="dropdown-item" href="./docs/cite.html">
  <span class="dropdown-text">Citation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../.github/CONTRIBUTING.html">
+    <a class="dropdown-item" href="./.github/CONTRIBUTING.html">
  <span class="dropdown-text">Contributing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../docs/contributors.html">
+    <a class="dropdown-item" href="./docs/contributors.html">
  <span class="dropdown-text">Contributors</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../LICENSE.html">
+    <a class="dropdown-item" href="./LICENSE.html">
  <span class="dropdown-text">License</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../CHANGELOG.html">
+    <a class="dropdown-item" href="./CHANGELOG.html">
  <span class="dropdown-text">Changelog</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/modules.html"> 
+    <a class="nav-link" href="./docs/modules.html"> 
 <span class="menu-text">modules</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../docs/subworkflows.html"> 
+    <a class="nav-link" href="./docs/subworkflows.html"> 
 <span class="menu-text">subworkflows</span></a>
   </li>  
 </ul>
@@ -354,168 +317,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input" class="nav-link active" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input"><i class="fa-solid fa-arrow-right-to-bracket" aria-label="arrow-right-to-bracket"></i> Input</a></li>
-  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output"><i class="fa-solid fa-arrow-right-from-bracket" aria-label="arrow-right-from-bracket"></i> Output</a></li>
-  <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</a>
+  <li><a href="#nci-standard-public-repository-security-policy" id="toc-nci-standard-public-repository-security-policy" class="nav-link active" data-scroll-target="#nci-standard-public-repository-security-policy">NCI Standard Public Repository Security Policy</a>
   <ul class="collapse">
-  <li><a href="#samtools" id="toc-samtools" class="nav-link" data-scroll-target="#samtools">samtools</a></li>
-  <li><a href="#picard" id="toc-picard" class="nav-link" data-scroll-target="#picard">picard</a></li>
+  <li><a href="#maintained-versions" id="toc-maintained-versions" class="nav-link" data-scroll-target="#maintained-versions">Maintained Versions</a></li>
+  <li><a href="#vulnerability-disclosure" id="toc-vulnerability-disclosure" class="nav-link" data-scroll-target="#vulnerability-disclosure">Vulnerability Disclosure:</a>
+  <ul class="collapse">
+  <li><a href="#option-1-hhs-vulnerability-disclosure" id="toc-option-1-hhs-vulnerability-disclosure" class="nav-link" data-scroll-target="#option-1-hhs-vulnerability-disclosure">Option 1: HHS Vulnerability Disclosure</a></li>
+  <li><a href="#option-2-private-vulnerability-report" id="toc-option-2-private-vulnerability-report" class="nav-link" data-scroll-target="#option-2-private-vulnerability-report">Option 2: Private Vulnerability Report</a></li>
+  </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/docs/modules/custom_bam2fastq.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/SECURITY.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">custom_bam2fastq</h1>
-<p class="subtitle lead">The module converts a BAM file to FASTQ format. It uses samtools bam2fq if reads are single end, or picard SamToFastq if reads are paired.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">bam2fq</div>
-    <div class="quarto-category">samtools</div>
-    <div class="quarto-category">fastq</div>
-    <div class="quarto-category">picard</div>
-  </div>
-  </div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<!-- This file is generated automatically from a template (docs/templates/modules.qmd) by docs/create-listings.py -->
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nf-core</span> modules <span class="dt">\</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--git-remote</span> https://github.com/CCBR/nf-modules <span class="dt">\</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  install custom/bam2fastq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><a href="https://github.com/CCBR/nf-modules/tree/main/modules/CCBR/custom/bam2fastq/"><i class="fa-brands fa-github" aria-label="github"></i> https://github.com/CCBR/nf-modules/…/modules/CCBR/custom/bam2fastq/</a></p>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input" class="level2">
-<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input"><i class="fa-solid fa-arrow-right-to-bracket" aria-label="arrow-right-to-bracket"></i> Input</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 74%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">name</th>
-<th style="text-align: left;">type</th>
-<th style="text-align: left;">description</th>
-<th style="text-align: left;">pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">meta</td>
-<td style="text-align: left;">map</td>
-<td style="text-align: left;">Groovy Map containing sample information</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">e.g.&nbsp;[ id:‘test’, single_end:false ]</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">bam</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">BAM file</td>
-<td style="text-align: left;">*.{bam,cram,sam}</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">bai</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">BAI (bam index) file</td>
-<td style="text-align: left;">*.{bai}</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="nci-standard-public-repository-security-policy" class="level1">
+<h1>NCI Standard Public Repository Security Policy</h1>
+<section id="maintained-versions" class="level2">
+<h2 class="anchored" data-anchor-id="maintained-versions">Maintained Versions</h2>
+<p>Actively maintained versions of contained software will vary from repository to repository, or may not be relevant at all.<br>
+The developers of this repository will update this section if any actively maintained versions of the software need to be publicly disclosed. Otherwise, contact the developers directly for any version information.</p>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" class="level2">
-<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output"><i class="fa-solid fa-arrow-right-from-bracket" aria-label="arrow-right-from-bracket"></i> Output</h2>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 4%">
-<col style="width: 74%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">name</th>
-<th style="text-align: left;">type</th>
-<th style="text-align: left;">description</th>
-<th style="text-align: left;">pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">meta</td>
-<td style="text-align: left;">map</td>
-<td style="text-align: left;">Groovy Map containing sample information</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">e.g.&nbsp;[ id:‘test’, single_end:false ]</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">versions</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">File containing software versions</td>
-<td style="text-align: left;">versions.yml</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">reads</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">1 fastq file if single end, or 2 fastq files if paired-end.</td>
-<td style="text-align: left;">*.fastq.gz</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">unpaired</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">unpaired reads</td>
-<td style="text-align: left;">*.fastq.gz</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="vulnerability-disclosure" class="level2">
+<h2 class="anchored" data-anchor-id="vulnerability-disclosure">Vulnerability Disclosure:</h2>
+<section id="option-1-hhs-vulnerability-disclosure" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-hhs-vulnerability-disclosure">Option 1: HHS Vulnerability Disclosure</h3>
+<p>Follow the instructions listed in the <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS vulnerability disclosure policy</a>.</p>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" class="level2">
-<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</h2>
-<section id="samtools" class="level3">
-<h3 class="anchored" data-anchor-id="samtools">samtools</h3>
-<p>  <a href="http://www.htslib.org/doc/1.1/samtools.html"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a>     <code>MIT</code></p>
-<p>Tools for dealing with SAM, BAM and CRAM files</p>
-</section>
-<section id="picard" class="level3">
-<h3 class="anchored" data-anchor-id="picard">picard</h3>
-<p><a href="https://broadinstitute.github.io/picard/"><i class="fa-solid fa-globe" aria-label="globe"></i> Home</a>   <a href="https://gatk.broadinstitute.org/hc/en-us/articles/360036510672-FastqToSam-Picard-"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a>   <a href="https://github.com/broadinstitute/picard"><i class="fa-regular fa-file-code" aria-label="file-code"></i> Code</a>   <code>MIT</code></p>
-<p>A set of command line tools (in Java) for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.</p>
+<section id="option-2-private-vulnerability-report" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-private-vulnerability-report">Option 2: Private Vulnerability Report</h3>
+<ol type="1">
+<li>Click on the <strong>Security and quality</strong> tab of this repository.</li>
+<li>Locate the <strong>Report a vulnerability</strong> button. If the button is not on the <strong>Security and quality</strong> landing page, look under the <strong>Advisories</strong> section in the side bar.</li>
+<li>Click the <strong>Report a vulnerability</strong> button and submit the form. The developers will receive a notification of your submission.</li>
+</ol>
 
 
+</section>
 </section>
 </section>
 
@@ -937,11 +780,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><a href="https://frederick.cancer.gov/research/science-areas/bioinformatics-and-computational-science/advanced-biomedical-computational-science"><img src="../../site_libs/quarto-contrib/quarto-project/fnl/fnl-logo-dark.png" height="70"></a></p>
+<p><a href="https://frederick.cancer.gov/research/science-areas/bioinformatics-and-computational-science/advanced-biomedical-computational-science"><img src="site_libs/quarto-contrib/quarto-project/fnl/fnl-logo-dark.png" height="70"></a></p>
 </div>   
     <div class="nav-footer-center">
 <p>Created by the <a href="https://github.com/CCBR">CCR Collaborative Bioinformatics Resource</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/docs/modules/custom_bam2fastq.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/SECURITY.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

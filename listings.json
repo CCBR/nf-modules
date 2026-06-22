@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/docs/subworkflows.html",
-    "items": [
-      "/docs/subworkflows/consensus_peaks.html",
-      "/docs/subworkflows/filter_blacklist.html"
-    ]
-  },
-  {
     "listing": "/docs/modules.html",
     "items": [
       "/docs/modules/bedops_bedmap.html",
@@ -31,6 +24,13 @@
       "/docs/modules/samtools_flagstat.html",
       "/docs/modules/samtools_sort.html",
       "/docs/modules/sort_bed.html"
+    ]
+  },
+  {
+    "listing": "/docs/subworkflows.html",
+    "items": [
+      "/docs/subworkflows/consensus_peaks.html",
+      "/docs/subworkflows/filter_blacklist.html"
     ]
   }
 ]
