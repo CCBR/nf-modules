@@ -6,3 +6,6 @@ samtools/sort:
 
 snakemake:
   - modules/nf-core/snakemake/**
+
+recap:
+  - modules/CCBR/recap/**
