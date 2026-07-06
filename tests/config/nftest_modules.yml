@@ -1,5 +1,5 @@
 fastqc:
-  - modules/nf-core/fastqc/**
+  - modules/CCBR/fastqc/**
 
 samtools/sort:
   - modules/CCBR/samtools/sort/**
