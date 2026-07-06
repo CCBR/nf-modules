@@ -1,0 +1,41 @@
+name: custom_bed2saf
+description: |
+  The module converts a BED file to SAF (simplified annotation format)
+
+keywords:
+  - bed
+  - saf
+tools:
+  - Python:
+      description: |
+        The Python Programming Language
+      homepage: https://www.python.org/
+      licence: ["Python License 2.0"]
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - bam:
+      type: file
+      description: BED file
+      pattern: "*.bed"
+output:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - saf:
+      type: file
+      description: SAF file
+      pattern: "*.saf"
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+authors:
+  - "@kelly-sovacool"
+maintainers:
+  - "@kelly-sovacool"
