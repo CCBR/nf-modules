@@ -15,6 +15,11 @@ concurrency:
   cancel-in-progress: true
 
 env:
+  NFT_DIFF: "pdiff"
+  NFT_DIFF_ARGS: "--line-numbers --width 120 --expand-tabs=2"
+  NFT_VER: "0.9.5"
+  NFT_WORKDIR: "~"
+  NXF_ANSI_LOG: false
   NXF_SINGULARITY_CACHEDIR: ${{ github.workspace }}/.singularity
   NXF_SINGULARITY_LIBRARYDIR: ${{ github.workspace }}/.singularity
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -24,75 +29,101 @@ permissions:
   pull-requests: read
 
 jobs:
-  prettier:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-
-      - name: Install NodeJS
-        uses: actions/setup-node@v3
-
-      - name: Install Prettier
-        run: npm install -g prettier
-
-      - name: Run Prettier --check
-        run: prettier --check .
-
-  pytest-changes:
-    name: pytest-changes
+  changes:
+    name: changes
     runs-on: ubuntu-latest
     outputs:
-      # Expose matched filters as job 'modules' output variable
-      modules: ${{ steps.filter.outputs.changes }}
+      pytest_modules: ${{ steps.pytest-filter.outputs.changes }}
+      nf_test_modules: ${{ steps.nftest-filter.outputs.changes }}
+      all_modules: ${{ steps.all-filter.outputs.changes }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: dorny/paths-filter@v2
-        id: filter
+      - name: Generate filter files from repo structure
+        run: |
+          PYTEST_FILE="tests/config/pytest_modules_generated.yml"
+          NFTEST_FILE="tests/config/nftest_modules_generated.yml"
+
+          # Initialize with distinct placeholders so files are never empty and can be safely concatenated
+          printf '_placeholder_pytest:\n  - .github/PLACEHOLDER_NONEXISTENT\n' > "$PYTEST_FILE"
+          printf '_placeholder_nftest:\n  - .github/PLACEHOLDER_NONEXISTENT\n' > "$NFTEST_FILE"
+
+          # Detect test framework for each module
+          while IFS= read -r main_nf; do
+            module_dir=$(dirname "$main_nf")
+            org=$(echo "$module_dir" | cut -d'/' -f2)
+            rel_path=$(echo "$module_dir" | sed "s|modules/$org/||")
+            if find "$module_dir/tests" -name '*.nf.test' 2>/dev/null | grep -q .; then
+              printf '%s:\n  - modules/%s/%s/**\n\n' "$rel_path" "$org" "$rel_path" >> "$NFTEST_FILE"
+            elif [ -f "tests/modules/$org/$rel_path/test.yml" ]; then
+              printf '%s:\n  - modules/%s/%s/**\n  - tests/modules/%s/%s/**\n\n' \
+                "$rel_path" "$org" "$rel_path" "$org" "$rel_path" >> "$PYTEST_FILE"
+            fi
+          done < <(find modules -name 'main.nf' -not -path '*/tests/*')
+
+          # Detect test framework for each subworkflow
+          while IFS= read -r main_nf; do
+            swf_dir=$(dirname "$main_nf")
+            org=$(echo "$swf_dir" | cut -d'/' -f2)
+            rel_path=$(echo "$swf_dir" | sed "s|subworkflows/$org/||")
+            key="subworkflows/$rel_path"
+            if find "$swf_dir/tests" -name '*.nf.test' 2>/dev/null | grep -q .; then
+              printf '%s:\n  - subworkflows/%s/%s/**\n\n' "$key" "$org" "$rel_path" >> "$NFTEST_FILE"
+            elif [ -f "tests/subworkflows/$org/$rel_path/test.yml" ]; then
+              printf '%s:\n  - subworkflows/%s/%s/**\n  - tests/subworkflows/%s/%s/**\n\n' \
+                "$key" "$org" "$rel_path" "$org" "$rel_path" >> "$PYTEST_FILE"
+            fi
+          done < <(find subworkflows -name 'main.nf' -not -path '*/tests/*')
+
+          # Combined file for linting all changed modules regardless of test framework
+          ALL_FILE="tests/config/all_modules_generated.yml"
+          cat "$PYTEST_FILE" "$NFTEST_FILE" > "$ALL_FILE"
+
+          echo '=== pytest filters ===' && cat "$PYTEST_FILE"
+          echo '=== nf-test filters ===' && cat "$NFTEST_FILE"
+
+      - uses: dorny/paths-filter@v4
+        id: pytest-filter
         with:
-          filters: "tests/config/pytest_modules.yml"
+          filters: "tests/config/pytest_modules_generated.yml"
+          token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - uses: dorny/paths-filter@v4
+        id: nftest-filter
+        with:
+          filters: "tests/config/nftest_modules_generated.yml"
+          token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - uses: dorny/paths-filter@v4
+        id: all-filter
+        with:
+          filters: "tests/config/all_modules_generated.yml"
           token: "${{ secrets.GITHUB_TOKEN }}"
 
   nf-core-lint:
     runs-on: ubuntu-latest
     name: nf-core-lint
-    needs: [pytest-changes]
-    if: needs.pytest-changes.outputs.modules != '[]'
+    needs: [changes]
+    if: needs.changes.outputs.all_modules != '[]'
     strategy:
       fail-fast: false
       matrix:
-        tags: ["${{ fromJson(needs.pytest-changes.outputs.modules) }}"]
+        tags: ["${{ fromJson(needs.changes.outputs.all_modules) }}"]
         exclude:
           - tags: "nf-test"
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v7
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: "3.x"
+          cache: "pip"
 
-      - uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.x"
-
-      - name: Install pip
-        run: python -m pip install --upgrade pip
-
-      - name: Install nf-core tools
-        run: python -m pip install nf-core==2.10
+      - name: Install python requirements
+        run: python -m pip install --upgrade pip -r tests/requirements.txt
 
       - name: Setup Nextflow
-        uses: nf-core/setup-nextflow@v1
+        uses: nf-core/setup-nextflow@v2
 
       - name: Lint module ${{ matrix.tags }}
         run: nf-core modules lint ${{ matrix.tags }}
@@ -109,36 +140,31 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     name: pytest
-    needs: [pytest-changes]
-    if: needs.pytest-changes.outputs.modules != '[]'
+    needs: [changes]
+    if: needs.changes.outputs.pytest_modules != '[]'
     strategy:
       fail-fast: false
       matrix:
-        tags: ["${{ fromJson(needs.pytest-changes.outputs.modules) }}"]
+        tags: ["${{ fromJson(needs.changes.outputs.pytest_modules) }}"]
         profile: ["docker"] #, "singularity", "conda"]
+        NXF_VER:
+          - "25.10.4"
     env:
       NXF_ANSI_LOG: false
 
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v7
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: "3.x"
+          cache: "pip"
 
-      - uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install Python dependencies
+      - name: Install python requirements
         run: python -m pip install --upgrade pip -r tests/requirements.txt
 
       - name: Setup Nextflow ${{ matrix.NXF_VER }}
-        uses: nf-core/setup-nextflow@v1
+        uses: nf-core/setup-nextflow@v2
         with:
           version: "${{ matrix.NXF_VER }}"
 
@@ -203,54 +229,32 @@ jobs:
             !/home/runner/pytest_workflow_*/*/work/singularity
             !${{ github.workspace }}/.singularity
 
-  nf-test-changes:
-    name: nf-test-changes
-    runs-on: ubuntu-latest
-    outputs:
-      # Expose matched filters as job 'modules' output variable
-      modules: ${{ steps.filter.outputs.changes }}
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: dorny/paths-filter@v2
-        id: filter
-        with:
-          filters: "tests/config/nftest_modules.yml"
-          token: "${{ secrets.GITHUB_TOKEN }}"
-
   nf-test:
     runs-on: ubuntu-latest
     name: nf-test
-    needs: [nf-test-changes]
-    if: needs.nf-test-changes.outputs.modules != '[]'
+    needs: [changes]
+    if: needs.changes.outputs.nf_test_modules != '[]'
     strategy:
       fail-fast: false
       matrix:
-        tags: ["${{ fromJson(needs.nf-test-changes.outputs.modules) }}"]
+        tags: ["${{ fromJson(needs.changes.outputs.nf_test_modules) }}"]
         profile: ["docker"] #, "singularity", "conda"]
+        NXF_VER:
+          - "25.10.4"
     env:
       NXF_ANSI_LOG: false
 
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v7
       - name: Setup Nextflow
-        uses: nf-core/setup-nextflow@v1
-
-      - name: Cache nf-test installation
-        id: cache-software
-        uses: actions/cache@v3
+        uses: nf-core/setup-nextflow@v2
         with:
-          path: |
-            /usr/local/bin/nf-test
-            /home/runner/.nf-test/nf-test.jar
-          key: ${{ runner.os }}-nftest
+          version: ${{ matrix.NXF_VER }}
 
       - name: Install nf-test
-        if: steps.cache-software.outputs.cache-hit != 'true'
-        run: |
-          wget -qO- https://code.askimed.com/install/nf-test | bash
-          sudo mv nf-test /usr/local/bin/
+        uses: nf-core/setup-nf-test@v2
+        with:
+          version: ${{ env.NFT_VER }}
 
       - name: Set up Singularity
         if: matrix.profile == 'singularity'
@@ -292,13 +296,19 @@ jobs:
           path: >-
             test.tap
 
+      - name: Output log on failure
+        if: failure()
+        run: |
+          sudo apt install bat > /dev/null
+          batcat --decorations=always --color=always ${{ github.workspace }}/.nf-test/tests/*/meta/nextflow.log
+
   docs-changes:
     runs-on: ubuntu-latest
     outputs:
       docs: ${{ steps.filter.outputs.docs }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: dorny/paths-filter@v2
+      - uses: actions/checkout@v7
+      - uses: dorny/paths-filter@v4
         id: filter
         with:
           filters: |
@@ -313,7 +323,7 @@ jobs:
     if: ${{ needs.docs-changes.outputs.docs == 'true' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
       - uses: actions/setup-python@v3
       - uses: r-lib/actions/setup-r@v2
@@ -332,16 +342,7 @@ jobs:
   confirm-pass:
     runs-on: ubuntu-latest
     needs:
-      [
-        prettier,
-        pytest-changes,
-        nf-core-lint,
-        pytest,
-        nf-test-changes,
-        nf-test,
-        docs-changes,
-        check-docs-render,
-      ]
+      [changes, nf-core-lint, pytest, nf-test, docs-changes, check-docs-render]
     if: always()
     steps:
       - name: All tests ok
