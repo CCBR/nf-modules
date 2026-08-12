@@ -5,6 +5,7 @@ description: |
 keywords:
   - bed
   - saf
+  - annotation
 tools:
   - Python:
       description: |
@@ -12,29 +13,47 @@ tools:
       homepage: https://www.python.org/
       licence: ["Python License 2.0"]
 input:
-  - meta:
-      type: map
-      description: |
-        Groovy Map containing sample information
-        e.g. [ id:'test', single_end:false ]
-  - bam:
-      type: file
-      description: BED file
-      pattern: "*.bed"
+  - - meta:
+        type: map
+        description: |
+          Groovy Map containing sample information
+          e.g. [ id:'test', single_end:false ]
+    - bed:
+        type: file
+        description: BED file
+        pattern: "*.bed"
 output:
-  meta:
-    type: map
-    description: |
-      Groovy Map containing sample information
-      e.g. [ id:'test', single_end:false ]
   saf:
-    type: file
-    description: SAF file
-    pattern: "*.saf"
+    - - meta:
+          type: map
+          description: |
+            Groovy Map containing sample information
+            e.g. [ id:'test', single_end:false ]
+      - "*.saf":
+          type: file
+          description: SAF file
+          pattern: "*.saf"
+  versions_python:
+    - - ${task.process}:
+          type: string
+          description: The name of the process
+      - python:
+          type: string
+          description: The name of the tool
+      - 'python --version 2>&1 | sed "s/^Python //"':
+          type: eval
+          description: The expression to obtain the version of the tool
+topics:
   versions:
-    type: file
-    description: File containing software versions
-    pattern: "versions.yml"
+    - - ${task.process}:
+          type: string
+          description: The name of the process
+      - python:
+          type: string
+          description: The name of the tool
+      - 'python --version 2>&1 | sed "s/^Python //"':
+          type: eval
+          description: The expression to obtain the version of the tool
 authors:
   - "@kelly-sovacool"
 maintainers:

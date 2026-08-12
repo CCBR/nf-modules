@@ -1,18 +1,21 @@
 process CUSTOM_BED2SAF {
     label 'process_single'
+    container 'python:3.14'
 
     input:
     tuple val(meta), path(bed)
 
     output:
     tuple val(meta), path("*.saf"), emit: saf
-    path('versions.yml'), emit: versions
+    tuple val("${task.process}"), val('python'), eval('python --version 2>&1 | sed "s/^Python //"'), topic: versions, emit: versions_python
+
+    when:
+    task.ext.when == null || task.ext.when
 
     script:
     def saf = "${bed.baseName}.saf"
     """
     #!/usr/bin/env python
-    import platform
 
     with open("${saf}", 'w') as outfile:
         outfile.write('\\t'.join(['GeneID', 'Chr', 'Start', 'End', 'Strand']))
@@ -24,13 +27,10 @@ process CUSTOM_BED2SAF {
                 strand = '.' # no strand info available
                 outfile.write('\\t'.join([peak_id, chr, start, end, strand]) + '\\n')
 
-    with open("versions.yml", "w") as outfile:
-        outfile.write('"${task.process}":\\n')
-        outfile.write(f'  Python: "{platform.python_version()}"\\n')
     """
 
     stub:
     """
-    touch ${bed.baseName}.saf versions.yml
+    touch ${bed.baseName}.saf
     """
 }
