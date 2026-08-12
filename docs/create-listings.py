@@ -18,7 +18,7 @@ def main():
 
 
 def write_listing_components(mtype):
-    with open(f"docs/templates/modules.qmd", "r") as infile:
+    with open("docs/templates/modules.qmd", "r") as infile:
         template = infile.read()
     for nf_meta in get_yaml_globs(f"{mtype}/**/meta.yml"):
         write_qmd(nf_meta, template, mtype=mtype)
