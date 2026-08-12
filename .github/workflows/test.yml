@@ -44,9 +44,9 @@ jobs:
           PYTEST_FILE="tests/config/pytest_modules_generated.yml"
           NFTEST_FILE="tests/config/nftest_modules_generated.yml"
 
-          # Initialize with a placeholder so files are never empty (dorny/paths-filter requires non-empty YAML)
-          printf '_placeholder:\n  - .github/PLACEHOLDER_NONEXISTENT\n' > "$PYTEST_FILE"
-          printf '_placeholder:\n  - .github/PLACEHOLDER_NONEXISTENT\n' > "$NFTEST_FILE"
+          # Initialize with distinct placeholders so files are never empty and can be safely concatenated
+          printf '_placeholder_pytest:\n  - .github/PLACEHOLDER_NONEXISTENT\n' > "$PYTEST_FILE"
+          printf '_placeholder_nftest:\n  - .github/PLACEHOLDER_NONEXISTENT\n' > "$NFTEST_FILE"
 
           # Detect test framework for each module
           while IFS= read -r main_nf; do
