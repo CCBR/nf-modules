@@ -1,6 +1,6 @@
 process CUSTOM_BED2SAF {
     label 'process_single'
-    container 'python:3.14'
+    container 'python:3.14.7'
 
     input:
     tuple val(meta), path(bed)

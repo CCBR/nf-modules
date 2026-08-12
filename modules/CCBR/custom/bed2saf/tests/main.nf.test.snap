@@ -2,6 +2,21 @@
     "Should run without failures": {
         "content": [
             {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.saf:md5,ab7473e78baf6476d2f8292417c75ccc"
+                    ]
+                ],
+                "1": [
+                    [
+                        "CUSTOM_BED2SAF",
+                        "python",
+                        "3.14.7"
+                    ]
+                ],
                 "saf": [
                     [
                         {
@@ -14,7 +29,7 @@
                     [
                         "CUSTOM_BED2SAF",
                         "python",
-                        "3.14.0"
+                        "3.14.7"
                     ]
                 ]
             }
