@@ -3,7 +3,6 @@
 adapted from https://github.com/CCBR/ASPEN/blob/55f909d76500c3502c1c397ef3000908649b0284/workflow/scripts/ccbr_get_consensus_peaks.py
 """
 import os
-import uuid
 import pandas
 import platform
 
