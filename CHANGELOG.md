@@ -15,7 +15,6 @@
 - custom/bed2saf (#50)
 - sort/bed (#39)
 
-
 ### New subworkflows
 
 - consensus_peaks (#37,#39)
