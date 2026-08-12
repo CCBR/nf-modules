@@ -82,19 +82,19 @@ jobs:
           echo '=== pytest filters ===' && cat "$PYTEST_FILE"
           echo '=== nf-test filters ===' && cat "$NFTEST_FILE"
 
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v4
         id: pytest-filter
         with:
           filters: "tests/config/pytest_modules_generated.yml"
           token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v4
         id: nftest-filter
         with:
           filters: "tests/config/nftest_modules_generated.yml"
           token: "${{ secrets.GITHUB_TOKEN }}"
 
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v4
         id: all-filter
         with:
           filters: "tests/config/all_modules_generated.yml"
@@ -308,7 +308,7 @@ jobs:
       docs: ${{ steps.filter.outputs.docs }}
     steps:
       - uses: actions/checkout@v7
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v4
         id: filter
         with:
           filters: |
