@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Kelly Sovacool <kelly.sovacool@nih.gov>"]
+channels = ["conda-forge", "bioconda"]
+name = "nf-modules"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+nextflow = ">=25,<26"
+nf-test = ">=0.9.5,<0.10"
