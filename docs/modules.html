@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,12 +44,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ee4c798a696f410de894479ed283eeec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d77082579015fd54bbb3bb0b5df6a1f6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17e5a23d094ee4d3ea1f9bf67e0e3d54.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4c7bfa4c4c7014df65ce8603dfb1d681.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-23225046f749d6199828014bbcbba35f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-57b43ad6b5e22281874bfb6c59593522.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-54add20ae3c1809f1d029fa0ba0ce7f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-4caebdf3beb4597a131e8ea06752b7a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -412,7 +415,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="YmVkb3BzJTJDYmVkbWFwJTJDYmVkJTJDaW50ZXJ2YWxz" data-listing-file-modified-sort="1783352614489" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="0" data-categories="YmVkb3BzJTJDYmVkbWFwJTJDYmVkJTJDaW50ZXJ2YWxz" data-listing-file-modified-sort="1786544222117" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedops_bedmap.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -436,7 +439,7 @@ The bedmap program is used to retrieve and process signal or other features over
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="YmVkJTJDdmNmJTJDZ2ZmJTJDbWFwJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1783352614560" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="1" data-categories="YmVkJTJDdmNmJTJDZ2ZmJTJDbWFwJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1786544222083" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedtools_map.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -462,7 +465,7 @@ Allows one to screen for overlaps between two sets of genomic features. Adapted 
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="YmVkJTJDbWVyZ2UlMkNiZWR0b29scyUyQ292ZXJsYXBwZWQlMjBiZWQ=" data-listing-file-modified-sort="1783352614575" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="2" data-categories="YmVkJTJDbWVyZ2UlMkNiZWR0b29scyUyQ292ZXJsYXBwZWQlMjBiZWQ=" data-listing-file-modified-sort="1786544222074" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedtools_merge.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -486,7 +489,7 @@ combines overlapping or “book-ended” features in an interval file into a sin
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="YmVkJTJDc29ydCUyQ2JlZHRvb2xzJTJDY2hyb21vc29tZQ==" data-listing-file-modified-sort="1783352614548" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="3" data-categories="YmVkJTJDc29ydCUyQ2JlZHRvb2xzJTJDY2hyb21vc29tZQ==" data-listing-file-modified-sort="1786544222060" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bedtools_sort.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -510,7 +513,7 @@ Sorts a feature file by chromosome and other criteria. Adapted from https://gith
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="aW5kZXglMkNmYXN0YSUyQ2dlbm9tZSUyQ3JlZmVyZW5jZQ==" data-listing-file-modified-sort="1783352614372" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="4" data-categories="aW5kZXglMkNmYXN0YSUyQ2dlbm9tZSUyQ3JlZmVyZW5jZQ==" data-listing-file-modified-sort="1786544221961" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bwa_index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -534,7 +537,7 @@ Create BWA index for reference genome. Adapted from the nf-core bwa index module
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="bWVtJTJDYndhJTJDYWxpZ25tZW50JTJDbWFwJTJDZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1783352614385" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="5" data-categories="bWVtJTJDYndhJTJDYWxpZ25tZW50JTJDbWFwJTJDZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1786544221970" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/bwa_mem.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -564,7 +567,7 @@ Performs fastq alignment to a fasta reference using BWA. Adapted from the nf-cor
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Y29uY2F0ZW5hdGUlMkNnemlwJTJDY2F0" data-listing-file-modified-sort="1783352614363" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="6" data-categories="Y29uY2F0ZW5hdGUlMkNnemlwJTJDY2F0" data-listing-file-modified-sort="1786544221938" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/cat_cat.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -586,7 +589,7 @@ A module for concatenation of gzipped or uncompressed files. Adapted from the nf
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="Y2F0JTJDZmFzdHElMkNjb25jYXRlbmF0ZQ==" data-listing-file-modified-sort="1783352614354" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="7" data-categories="Y2F0JTJDZmFzdHElMkNjb25jYXRlbmF0ZQ==" data-listing-file-modified-sort="1786544221946" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/cat_fastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -608,7 +611,7 @@ Concatenates fastq files. Adapted from the nf-core cat module https://github.com
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="c2ljZXIlMkNwZWFrcyUyQ2NoaXBzZXElMkNiZWQlMkNicm9hZFBlYWs=" data-listing-file-modified-sort="1783352614426" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="8" data-categories="c2ljZXIlMkNwZWFrcyUyQ2NoaXBzZXElMkNiZWQlMkNicm9hZFBlYWs=" data-listing-file-modified-sort="1786544221977" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/convert_sicer.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -634,7 +637,7 @@ convert_sicer
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="YmFtMmZxJTJDc2FtdG9vbHMlMkNmYXN0cSUyQ3BpY2FyZA==" data-listing-file-modified-sort="1783352614438" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="9" data-categories="YmFtMmZxJTJDc2FtdG9vbHMlMkNmYXN0cSUyQ3BpY2FyZA==" data-listing-file-modified-sort="1786544221996" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_bam2fastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -658,7 +661,7 @@ custom_bam2fastq
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3Vz" data-listing-file-modified-sort="1783352614408" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="10" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3Vz" data-listing-file-modified-sort="1786544222028" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_combinepeakcounts.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -680,7 +683,7 @@ combine counts into consensus peaks
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="cGVha3MlMkNjaGlwc2VxJTJDbm9ybWFsaXphdGlvbiUyQ2NvbnNlbnN1cw==" data-listing-file-modified-sort="1783352614399" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="11" data-categories="cGVha3MlMkNjaGlwc2VxJTJDbm9ybWFsaXphdGlvbiUyQ2NvbnNlbnN1cw==" data-listing-file-modified-sort="1786544222006" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_consensuspeaks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -704,7 +707,7 @@ custom_consensuspeaks
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="ZmFzdHElMkNiaW9weXRob24lMkNweXRob24=" data-listing-file-modified-sort="1783352614457" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="12" data-categories="ZmFzdHElMkNiaW9weXRob24lMkNweXRob24=" data-listing-file-modified-sort="1786544222014" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_countfastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -726,7 +729,7 @@ custom_countfastq
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1783352614417" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="13" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDYmVkdG9vbHM=" data-listing-file-modified-sort="1786544222021" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_formatmergedbed.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -750,7 +753,7 @@ custom_formatmergedbed
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="14" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDbm9ybWFsaXphdGlvbg==" data-listing-file-modified-sort="1783352614448" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="14" data-categories="Y2hpcHNlcSUyQ3BlYWtzJTJDY29uc2Vuc3VzJTJDbm9ybWFsaXphdGlvbg==" data-listing-file-modified-sort="1786544221985" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/custom_normalizepeaks.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -774,7 +777,7 @@ normalize p-values and q-values of consensus peaks with the method from Corces e
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="15" data-categories="dHJpbW1pbmclMkNhZGFwdGVyJTIwdHJpbW1pbmclMkNhZGFwdGVycyUyQ3F1YWxpdHklMjB0cmltbWluZw==" data-listing-file-modified-sort="1783352614499" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="15" data-categories="dHJpbW1pbmclMkNhZGFwdGVyJTIwdHJpbW1pbmclMkNhZGFwdGVycyUyQ3F1YWxpdHklMjB0cmltbWluZw==" data-listing-file-modified-sort="1786544222052" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/cutadapt.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -798,7 +801,7 @@ Perform adapter/quality trimming on sequencing reads. Adapted from the nf-core c
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="16" data-categories="a2htZXIlMkNrLW1lciUyQ2VmZmVjdGl2ZSUyMGdlbm9tZSUyMHNpemU=" data-listing-file-modified-sort="1783352614477" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="16" data-categories="a2htZXIlMkNrLW1lciUyQ2VmZmVjdGl2ZSUyMGdlbm9tZSUyMHNpemU=" data-listing-file-modified-sort="1786544222043" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/khmer_uniquekmers.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -820,7 +823,7 @@ In-memory nucleotide sequence k-mer counting, filtering, graph traversal and mor
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="17" data-categories="ZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1783352614508" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="17" data-categories="ZmFzdHElMkNiYW0lMkNzYW0=" data-listing-file-modified-sort="1786544222035" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/picard_samtofastq.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -842,7 +845,7 @@ Converts a BAM or SAM file to fastq. Adapted from the nf-core gatk4 samtofastq m
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="18" data-categories="YmFtJTJDZmlsdGVyJTJDc2FtdG9vbHM=" data-listing-file-modified-sort="1783352614539" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="18" data-categories="YmFtJTJDZmlsdGVyJTJDc2FtdG9vbHM=" data-listing-file-modified-sort="1786544222100" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/samtools_filteraligned.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -864,7 +867,7 @@ Filter out aligned reads from a BAM file.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="19" data-categories="c3RhdHMlMkNtYXBwaW5nJTJDY291bnRzJTJDYmFtJTJDc2FtJTJDY3JhbQ==" data-listing-file-modified-sort="1783352614530" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="19" data-categories="c3RhdHMlMkNtYXBwaW5nJTJDY291bnRzJTJDYmFtJTJDc2FtJTJDY3JhbQ==" data-listing-file-modified-sort="1786544222109" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/samtools_flagstat.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -892,7 +895,7 @@ Counts the number of alignments in a BAM/CRAM/SAM file for each FLAG type
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="20" data-categories="c29ydCUyQ2JhbSUyQ3NhbSUyQ2NyYW0=" data-listing-file-modified-sort="1783352614519" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="20" data-categories="c29ydCUyQ2JhbSUyQ3NhbSUyQ2NyYW0=" data-listing-file-modified-sort="1786544222092" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/samtools_sort.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -916,7 +919,7 @@ Sort a SAM/BAM/CRAM file. Adapted from the nf-core samtools sort module.
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="21" data-categories="c29ydCUyQ2JlZCUyQ2dlbm9taWNz" data-listing-file-modified-sort="1783352614467" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
+<div class="g-col-1" data-index="21" data-categories="c29ydCUyQ2JlZCUyQ2dlbm9taWNz" data-listing-file-modified-sort="1786544221953" data-listing-reading-time-sort="3" data-listing-word-count-sort="548">
 <a href="../docs/modules/sort_bed.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
