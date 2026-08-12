@@ -3,6 +3,9 @@ nextflow_process {
     name "Test Process CUSTOM_BED2SAF"
     script "modules/CCBR/custom/bed2saf/main.nf"
     process "CUSTOM_BED2SAF"
+    tag "modules"
+    tag "custom"
+    tag "custom/bed2saf"
 
     test("Should run without failures") {
 
