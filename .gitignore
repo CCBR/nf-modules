@@ -24,3 +24,6 @@ work/
 *.Rproj
 .Rbuildignore
 .Rhistory
+# pixi environments
+.pixi/*
+!.pixi/config.toml
