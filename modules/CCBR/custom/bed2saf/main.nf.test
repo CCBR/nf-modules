@@ -28,7 +28,8 @@ nextflow_process {
 
         then {
             assert process.success
-            assert snapshot(process.out).match()
+            assert snapshot(process.out.saf).match()
+            assert process.out.versions
         }
 
     }
