@@ -1,0 +1,32 @@
+[workspace]
+authors = ["Kelly Sovacool <kelly.sovacool@nih.gov>"]
+channels = ["conda-forge", "bioconda"]
+name = "nf-modules"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+nextflow = ">=25,<26"
+nf-core = ">=4.1.0,<5"
+
+[feature.test.dependencies]
+nf-test = ">=0.9.5,<0.10"
+nf-core = ">=4.1.0,<5"
+setuptools = ">=84.0.0,<85"
+pdiff = ">=1.1.5,<2"
+pysam = ">=0.24.0,<0.25"
+biopython = ">=1.88,<2"
+
+[feature.docs.dependencies]
+jupyter = ">=1.1.1,<2"
+
+[feature.docs.pypi-dependencies]
+ruamel-yaml = "*"
+ruamel-yaml-string = ">=0.1.1, <0.2"
+ccbr-tools = { git = "https://github.com/CCBR/Tools.git" }
+
+[environments]
+test = ["test"]
+docs = ["docs"]

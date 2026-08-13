@@ -53,7 +53,7 @@ jobs:
             module_dir=$(dirname "$main_nf")
             org=$(echo "$module_dir" | cut -d'/' -f2)
             rel_path=$(echo "$module_dir" | sed "s|modules/$org/||")
-            if find "$module_dir/tests" -name '*.nf.test' 2>/dev/null | grep -q .; then
+            if [ -f "$module_dir/main.nf.test" ] || find "$module_dir/tests" -name '*.nf.test' 2>/dev/null | grep -q .; then
               printf '%s:\n  - modules/%s/%s/**\n\n' "$rel_path" "$org" "$rel_path" >> "$NFTEST_FILE"
             elif [ -f "tests/modules/$org/$rel_path/test.yml" ]; then
               printf '%s:\n  - modules/%s/%s/**\n  - tests/modules/%s/%s/**\n\n' \
@@ -67,7 +67,7 @@ jobs:
             org=$(echo "$swf_dir" | cut -d'/' -f2)
             rel_path=$(echo "$swf_dir" | sed "s|subworkflows/$org/||")
             key="subworkflows/$rel_path"
-            if find "$swf_dir/tests" -name '*.nf.test' 2>/dev/null | grep -q .; then
+            if [ -f "$swf_dir/main.nf.test" ] || find "$swf_dir/tests" -name '*.nf.test' 2>/dev/null | grep -q .; then
               printf '%s:\n  - subworkflows/%s/%s/**\n\n' "$key" "$org" "$rel_path" >> "$NFTEST_FILE"
             elif [ -f "tests/subworkflows/$org/$rel_path/test.yml" ]; then
               printf '%s:\n  - subworkflows/%s/%s/**\n  - tests/subworkflows/%s/%s/**\n\n' \

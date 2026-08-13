@@ -1,0 +1,43 @@
+{
+    "Should run without failures": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.saf:md5,ab7473e78baf6476d2f8292417c75ccc"
+                    ]
+                ],
+                "1": [
+                    [
+                        "CUSTOM_BED2SAF",
+                        "python",
+                        "3.14.7"
+                    ]
+                ],
+                "saf": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.saf:md5,ab7473e78baf6476d2f8292417c75ccc"
+                    ]
+                ],
+                "versions_python": [
+                    [
+                        "CUSTOM_BED2SAF",
+                        "python",
+                        "3.14.7"
+                    ]
+                ]
+            }
+        ],
+        "timestamp": "2026-08-12T16:16:14.934082",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "25.10.4"
+        }
+    }
+}
