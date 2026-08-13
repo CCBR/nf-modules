@@ -1,4 +1,4 @@
 jupyter
 ruamel.yaml
 ruamel.yaml.string
-git+https://github.com/CCBR/Tools.git
+git+https://github.com/CCBR/Tools.git@v0.7

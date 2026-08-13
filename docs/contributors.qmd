@@ -2,7 +2,7 @@
 title: Contributors
 ---
 
-::: {layout-ncol=4}
+::: {layout-ncol=5}
 
 ```{python}
 #| echo: false
