@@ -20,10 +20,12 @@ work/
 /_freeze/
 /_site/
 /.quarto/
+**/*.quarto_ipynb
 .Rproj.user
 *.Rproj
 .Rbuildignore
 .Rhistory
+
 # pixi environments
 .pixi/*
 !.pixi/config.toml
