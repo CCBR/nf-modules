@@ -21,6 +21,7 @@ repos:
     hooks:
       - id: codespell
         # https://github.com/codespell-project/codespell/issues/1498
+        args: ["-L", "recal"]
   # Python formatting
   - repo: https://github.com/psf/black
     rev: 23.7.0

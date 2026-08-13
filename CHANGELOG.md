@@ -2,6 +2,7 @@
 
 ### New modules
 
+- fusion_arriba
 - bedops/bedmap (#37)
 - bedtools/map (#37)
 - bedtools/merge (#37,#39)
