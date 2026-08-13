@@ -16,12 +16,65 @@ library(tidyr)
 library(yaml)
 meta <- yaml::read_yaml(here(params$nf_yaml_file))
 yaml_to_df <- function(y) {
-  dat <- as.data.frame(y) %>% t() %>% as.data.frame()
-  dat['names'] <- rownames(dat)
-  dat <- as_tibble(dat)
-  dat %>%
-    separate_wider_delim(names, '.', names = c('name', 'value')) %>%
-    pivot_wider(names_from = value, values_from = V1)
+  is_leaf_entry <- function(x) {
+    is.list(x) &&
+      !is.null(names(x)) &&
+      any(names(x) %in% c('type', 'description', 'pattern'))
+  }
+
+  normalize_fields <- function(x) {
+    if (is.list(x)) {
+      return(x)
+    }
+    list(value = as.character(x))
+  }
+
+  make_row <- function(name, fields, group) {
+    c(
+      list(group = group, name = name),
+      normalize_fields(fields)
+    ) %>%
+      tibble::as_tibble_row()
+  }
+
+  collect_rows <- function(node, group = NA_character_) {
+    if (!is.list(node)) {
+      return(list())
+    }
+
+    node_names <- names(node)
+    is_unnamed_list <- is.null(node_names) || !any(nzchar(node_names))
+
+    if (is_unnamed_list) {
+      return(
+        purrr::map(node, collect_rows, group = group) %>%
+          unlist(recursive = FALSE)
+      )
+    }
+
+    purrr::imap(node, function(child, nm) {
+      if (is_leaf_entry(child)) {
+        return(list(make_row(name = nm, fields = child, group = group)))
+      }
+
+      if (is.list(child)) {
+        next_group <- if (is.na(group)) nm else group
+        return(collect_rows(child, group = next_group))
+      }
+
+      list()
+    }) %>%
+      unlist(recursive = FALSE)
+  }
+
+  rows <- collect_rows(y)
+
+  if (length(rows) == 0) {
+    return(tibble::tibble())
+  }
+
+  dplyr::bind_rows(rows) %>%
+    dplyr::relocate(dplyr::any_of(c('group', 'name')))
 }
 ```
 

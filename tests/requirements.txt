@@ -1,5 +1,6 @@
 biopython
 pysam>=0.22.0
 pytest-workflow
-nf-core==2.10
+nf-core
+setuptools
 pdiff
