@@ -403,13 +403,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
+<col style="width: 2%">
 <col style="width: 4%">
 <col style="width: 3%">
-<col style="width: 78%">
-<col style="width: 13%">
+<col style="width: 76%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: left;">group</th>
 <th style="text-align: left;">name</th>
 <th style="text-align: left;">type</th>
 <th style="text-align: left;">description</th>
@@ -418,6 +420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">NA</td>
 <td style="text-align: left;">ch_peaks</td>
 <td style="text-align: left;">file</td>
 <td style="text-align: left;">The input channel containing the peak files.</td>
@@ -425,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Structure: [ val(meta), path(peak) ]. Meta must contain a <code>group</code> variable by which the peaks will be grouped for consensus calling. |*.{bed/narrowPeak/broadPeak} | |normalize |boolean |Whether to normalize p-values and q-values for consensus peaks. |NA |</p>
+<p>Structure: [ val(meta), path(peak) ]. Meta must contain a <code>group</code> variable by which the peaks will be grouped for consensus calling. |*.{bed/narrowPeak/broadPeak} | |NA |normalize |boolean |Whether to normalize p-values and q-values for consensus peaks. |NA |</p>
 </div>
 </div>
 </section>
@@ -435,13 +438,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 7%">
 <col style="width: 4%">
-<col style="width: 64%">
-<col style="width: 23%">
+<col style="width: 7%">
+<col style="width: 3%">
+<col style="width: 61%">
+<col style="width: 22%">
 </colgroup>
 <thead>
 <tr class="header">
+<th style="text-align: left;">group</th>
 <th style="text-align: left;">name</th>
 <th style="text-align: left;">type</th>
 <th style="text-align: left;">description</th>
@@ -450,6 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">NA</td>
 <td style="text-align: left;">meta</td>
 <td style="text-align: left;">map</td>
 <td style="text-align: left;">Groovy Map containing sample information</td>
@@ -460,14 +466,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">NA</td>
 <td style="text-align: left;">peaks</td>
 <td style="text-align: left;">file</td>
 <td style="text-align: left;">A single consensus peak file for each meta.group</td>
 <td style="text-align: left;">*.{broadPeak,narrowPeak,bed}</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">NA</td>
 <td style="text-align: left;">versions</td>
 <td style="text-align: left;">file</td>
 <td style="text-align: left;">File containing software versions</td>
@@ -476,6 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td style="text-align: left;">Structure: [ path(versions.yml) ]</td>
 <td style="text-align: left;">versions.yml</td>
+<td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>bwa_mem – nf-modules</title>
+<title>custom_bed2saf – nf-modules</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -361,10 +361,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d66726f6d2d627261636b6574203e7d7d-output"><i class="fa-solid fa-arrow-right-from-bracket" aria-label="arrow-right-from-bracket"></i> Output</a></li>
   <li><a href="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" id="toc-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" class="nav-link" data-scroll-target="#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</a>
   <ul class="collapse">
-  <li><a href="#bwa" id="toc-bwa" class="nav-link" data-scroll-target="#bwa">bwa</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/docs/modules/bwa_mem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/docs/modules/custom_bed2saf.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -372,16 +372,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">bwa_mem</h1>
-<p class="subtitle lead">Performs fastq alignment to a fasta reference using BWA. Adapted from the nf-core bwa-mem module.</p>
+<h1 class="title">custom_bed2saf</h1>
+<p class="subtitle lead">The module converts a BED file to SAF (simplified annotation format)</p>
   <div class="quarto-categories">
-    <div class="quarto-category">mem</div>
-    <div class="quarto-category">bwa</div>
-    <div class="quarto-category">alignment</div>
-    <div class="quarto-category">map</div>
-    <div class="quarto-category">fastq</div>
-    <div class="quarto-category">bam</div>
-    <div class="quarto-category">sam</div>
+    <div class="quarto-category">bed</div>
+    <div class="quarto-category">saf</div>
+    <div class="quarto-category">annotation</div>
   </div>
   </div>
 
@@ -402,19 +398,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- This file is generated automatically from a template (docs/templates/modules.qmd) by docs/create-listings.py -->
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nf-core</span> modules <span class="dt">\</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--git-remote</span> https://github.com/CCBR/nf-modules <span class="dt">\</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  install bwa/mem</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><a href="https://github.com/CCBR/nf-modules/tree/main/modules/CCBR/bwa/mem/"><i class="fa-brands fa-github" aria-label="github"></i> https://github.com/CCBR/nf-modules/…/modules/CCBR/bwa/mem/</a></p>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  install custom/bed2saf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><a href="https://github.com/CCBR/nf-modules/tree/main/modules/CCBR/custom/bed2saf/"><i class="fa-brands fa-github" aria-label="github"></i> https://github.com/CCBR/nf-modules/…/modules/CCBR/custom/bed2saf/</a></p>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input" class="level2">
 <h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206172726f772d72696768742d746f2d627261636b6574203e7d7d-input"><i class="fa-solid fa-arrow-right-to-bracket" aria-label="arrow-right-to-bracket"></i> Input</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 3%">
-<col style="width: 3%">
-<col style="width: 3%">
-<col style="width: 56%">
-<col style="width: 33%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 76%">
+<col style="width: 7%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -442,24 +438,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td style="text-align: left;">NA</td>
-<td style="text-align: left;">reads</td>
+<td style="text-align: left;">bed</td>
 <td style="text-align: left;">file</td>
-<td style="text-align: left;">List of input FastQ files of size 1 and 2 for single-end and paired-end data,</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">respectively.</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">index</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">BWA genome index files</td>
-<td style="text-align: left;">Directory containing BWA index *.{amb,ann,bwt,pac,sa}</td>
+<td style="text-align: left;">BED file</td>
+<td style="text-align: left;">*.bed</td>
 </tr>
 </tbody>
 </table>
@@ -472,11 +454,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 7%">
-<col style="width: 11%">
-<col style="width: 6%">
-<col style="width: 56%">
-<col style="width: 17%">
+<col style="width: 10%">
+<col style="width: 30%">
+<col style="width: 4%">
+<col style="width: 49%">
+<col style="width: 5%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -489,25 +471,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">bam</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">Output BAM file containing read alignments</td>
-<td style="text-align: left;">*.{bam}</td>
+<td style="text-align: left;">saf</td>
+<td style="text-align: left;">meta</td>
+<td style="text-align: left;">map</td>
+<td style="text-align: left;">Groovy Map containing sample information</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">e.g.&nbsp;[ id:‘test’, single_end:false ]</td>
 <td style="text-align: left;">NA</td>
-<td style="text-align: left;">bai</td>
-<td style="text-align: left;">file</td>
-<td style="text-align: left;">Output BAI index file</td>
-<td style="text-align: left;">*.{bai}</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">NA</td>
-<td style="text-align: left;">versions</td>
+<td style="text-align: left;">saf</td>
+<td style="text-align: left;">*.saf</td>
 <td style="text-align: left;">file</td>
-<td style="text-align: left;">File containing software versions</td>
-<td style="text-align: left;">versions.yml</td>
+<td style="text-align: left;">SAF file</td>
+<td style="text-align: left;">*.saf</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">versions_python</td>
+<td style="text-align: left;">${task.process}</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">The name of the process</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">versions_python</td>
+<td style="text-align: left;">python</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">The name of the tool</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">versions_python</td>
+<td style="text-align: left;">python –version 2&gt;&amp;1 | sed “s/^Python //”</td>
+<td style="text-align: left;">eval</td>
+<td style="text-align: left;">The expression to obtain the version of the tool</td>
+<td style="text-align: left;">NA</td>
 </tr>
 </tbody>
 </table>
@@ -516,10 +519,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools" class="level2">
 <h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073637265776472697665722d7772656e6368203e7d7d-tools"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> Tools</h2>
-<section id="bwa" class="level3">
-<h3 class="anchored" data-anchor-id="bwa">bwa</h3>
-<p><a href="http://bio-bwa.sourceforge.net/"><i class="fa-solid fa-globe" aria-label="globe"></i> Home</a>   <a href="http://www.htslib.org/doc/samtools.html"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a>     <code>GPL-3.0-or-later</code></p>
-<p>BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome.</p>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+<p><a href="https://www.python.org/"><i class="fa-solid fa-globe" aria-label="globe"></i> Home</a>       <code>Python License 2.0</code></p>
+<p>The Python Programming Language</p>
 
 
 </section>
@@ -947,7 +950,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
 <p>Created by the <a href="https://github.com/CCBR">CCR Collaborative Bioinformatics Resource</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/docs/modules/bwa_mem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/CCBR/nf-modules/edit/main/docs/modules/custom_bed2saf.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/CCBR/nf-modules/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

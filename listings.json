@@ -12,6 +12,7 @@
       "/docs/modules/cat_fastq.html",
       "/docs/modules/convert_sicer.html",
       "/docs/modules/custom_bam2fastq.html",
+      "/docs/modules/custom_bed2saf.html",
       "/docs/modules/custom_combinepeakcounts.html",
       "/docs/modules/custom_consensuspeaks.html",
       "/docs/modules/custom_countfastq.html",
