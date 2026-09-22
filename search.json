@@ -21,22 +21,11 @@
     "text": "Follow the instructions listed in the HHS vulnerability disclosure policy.\n\n\n\n\nClick on the Security and quality tab of this repository.\nLocate the Report a vulnerability button. If the button is not on the Security and quality landing page, look under the Advisories section in the side bar.\nClick the Report a vulnerability button and submit the form. The developers will receive a notification of your submission."
   },
   {
-    "objectID": "CHANGELOG.html",
-    "href": "CHANGELOG.html",
+    "objectID": "CHANGELOG.html#nf-modules-0.2.0",
+    "href": "CHANGELOG.html#nf-modules-0.2.0",
     "title": "nf-modules",
-    "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\ncustom/bed2saf (#50)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)",
-    "crumbs": [
-      "project info",
-      "Changelog"
-    ]
-  },
-  {
-    "objectID": "CHANGELOG.html#development-version",
-    "href": "CHANGELOG.html#development-version",
-    "title": "nf-modules",
-    "section": "",
-    "text": "bedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\ncustom/bed2saf (#50)\nsort/bed (#39)\n\n\n\n\n\nconsensus_peaks (#37,#39)",
+    "section": "nf-modules 0.2.0",
+    "text": "nf-modules 0.2.0\n\nNew modules\n\nbedops/bedmap (#37)\nbedtools/map (#37)\nbedtools/merge (#37,#39)\nbedtools/sort (#37)\ncat/cat (#37)\ncat/fastq (#37)\ncustom/combinepeakcounts (#37)\ncustom/consensuspeaks (#37)\ncustom/formatmergedbed (#39,#41)\ncustom/normalizepeaks (#37,#39,#41)\ncustom/bed2saf (#50)\nsort/bed (#39)\n\n\n\nNew subworkflows\n\nconsensus_peaks (#37,#39)",
     "crumbs": [
       "project info",
       "Changelog"
@@ -455,7 +444,7 @@
     "href": "docs/cite.html",
     "title": "nf-modules",
     "section": "",
-    "text": "Please cite this software if you use it in a publication:\n\nSovacool K. and Koparde V. (2023). nf-modules: Reusable modules and subworkflows for CCBR Nextflow pipelines (version v0.1.0). DOI: 10.5281/zenodo.10223357 URL: https://CCBR.github.io/nf-modules/\n\n\nBibtex entry\n@misc{YourReferenceHere,\nauthor = {Sovacool, Kelly and Koparde, Vishal},\ndoi = {10.5281/zenodo.10223357},\nmonth = {11},\ntitle = {nf-modules: Reusable modules and subworkflows for CCBR Nextflow pipelines},\nurl = {https://CCBR.github.io/nf-modules/},\nyear = {2023}\n}",
+    "text": "Please cite this software if you use it in a publication:\n\nSovacool K. and Koparde V. (2026). nf-modules: Reusable modules and subworkflows for CCBR Nextflow pipelines (version v0.2.0). DOI: 10.5281/zenodo.10223357 URL: https://CCBR.github.io/nf-modules/\n\n\nBibtex entry\n@misc{YourReferenceHere,\nauthor = {Sovacool, Kelly and Koparde, Vishal},\ndoi = {10.5281/zenodo.10223357},\nmonth = {9},\ntitle = {nf-modules: Reusable modules and subworkflows for CCBR Nextflow pipelines},\nurl = {https://CCBR.github.io/nf-modules/},\nyear = {2026}\n}",
     "crumbs": [
       "project info",
       "Citation"
