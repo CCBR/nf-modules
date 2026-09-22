@@ -17,6 +17,8 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: CCBR/actions/post-release@v0.7
+      - uses: CCBR/actions/post-release@latest
         with:
           github-token: ${{ github.token }}
+          description-filepath: "" # this repo has a description file for R deps, but it is not actually an R package
+          ccbr-actions-version: latest
