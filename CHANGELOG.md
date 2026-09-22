@@ -1,4 +1,4 @@
-## Development version
+## nf-modules 0.2.0
 
 ### New modules
 
