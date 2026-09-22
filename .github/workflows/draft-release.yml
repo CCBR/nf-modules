@@ -30,3 +30,4 @@ jobs:
           github-token: ${{ github.token }}
           version-tag: ${{ github.event.inputs.version-tag }}
           ccbr-actions-version: main
+          description-filepath: "" # this repo has a description file for R deps, but it is not actually an R package
