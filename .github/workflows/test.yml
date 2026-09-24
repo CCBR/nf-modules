@@ -37,7 +37,7 @@ jobs:
       nf_test_modules: ${{ steps.nftest-filter.outputs.changes }}
       all_modules: ${{ steps.all-filter.outputs.changes }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Generate filter files from repo structure
         run: |
@@ -114,7 +114,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.x"
           cache: "pip"
@@ -123,7 +123,7 @@ jobs:
         run: python -m pip install --upgrade pip -r tests/requirements.txt
 
       - name: Setup Nextflow
-        uses: nf-core/setup-nextflow@v2
+        uses: nf-core/setup-nextflow@v3
 
       - name: Lint module ${{ matrix.tags }}
         run: nf-core modules lint ${{ matrix.tags }}
@@ -155,7 +155,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.x"
           cache: "pip"
@@ -164,7 +164,7 @@ jobs:
         run: python -m pip install --upgrade pip -r tests/requirements.txt
 
       - name: Setup Nextflow ${{ matrix.NXF_VER }}
-        uses: nf-core/setup-nextflow@v2
+        uses: nf-core/setup-nextflow@v3
         with:
           version: "${{ matrix.NXF_VER }}"
 
@@ -182,7 +182,7 @@ jobs:
 
       - name: Set up miniconda
         if: matrix.profile == 'conda'
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
           channels: conda-forge,bioconda,defaults
@@ -208,7 +208,7 @@ jobs:
           batcat --decorations=always --color=always /home/runner/pytest_workflow_*/*/log.{out,err}
 
       - name: Setting global variables
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         id: parsed
         with:
           script: |
@@ -217,7 +217,7 @@ jobs:
 
       - name: Upload logs on failure
         if: failure()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v7
         with:
           name: logs-${{ matrix.profile }}-${{ steps.parsed.outputs.result }}
           path: |
@@ -247,7 +247,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Setup Nextflow
-        uses: nf-core/setup-nextflow@v2
+        uses: nf-core/setup-nextflow@v3
         with:
           version: ${{ matrix.NXF_VER }}
 
@@ -270,7 +270,7 @@ jobs:
 
       - name: Set up miniconda
         if: matrix.profile == 'conda'
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
           channels: conda-forge,bioconda,defaults
