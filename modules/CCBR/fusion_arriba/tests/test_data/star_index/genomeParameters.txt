@@ -1,0 +1,3 @@
+### STAR genome parameters
+genomeFastaFiles    stub
+genomeSAindexNbases 9
